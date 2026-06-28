@@ -12,17 +12,17 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #ffffff; /* Clean White Background */
-            color: #1c1c1e; /* Bold Black Font */
+            background-color: #ffffff; 
+            color: #1c1c1e; 
             padding-top: 0;
         }
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px; /* Increased padding for larger area feel */
+            padding: 60px 20px; 
         }
         
-        /* HEADER STYLING (Dark Premium Layout) */
+        /* HEADER STYLING */
         header {
             background-color: #070D1E;
             border-bottom: 1px solid #1C2541;
@@ -37,7 +37,6 @@
             flex-wrap: wrap;
             gap: 15px;
         }
-        
         .logo {
             font-size: 26px;
             font-weight: 800;
@@ -48,20 +47,17 @@
         .logo span {
             color: #E50914;
         }
-        
         .nav-assembly {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
             gap: 10px;
         }
-        
         .nav-row-top {
             display: flex;
             align-items: center;
             gap: 25px;
         }
-        
         .blinking-phone {
             color: #ffffff;
             text-decoration: none;
@@ -78,7 +74,6 @@
             50% { opacity: 0.7; color: #E50914; text-shadow: 0 0 8px rgba(225,9,20,0.5); }
             100% { opacity: 1; text-shadow: 0 0 0px rgba(225,9,20,0); }
         }
-        
         .sub-nav-links {
             display: flex;
             gap: 15px;
@@ -93,7 +88,6 @@
         .sub-nav-links a:hover {
             color: #ffffff;
         }
-        
         .main-nav-links {
             display: flex;
             gap: 25px;
@@ -109,7 +103,7 @@
             color: #E50914;
         }
 
-        /* TRUE ROLLING MARQUEE TICKER STRIP */
+        /* ROLLING MARQUEE TICKER STRIP */
         .trust-ribbon {
             background-color: #000000;
             border-bottom: 3px solid #E50914;
@@ -153,10 +147,9 @@
         /* HERO AREA */
         .hero {
             margin: 40px 0 80px 0;
-            text-align: left;
         }
         h1 {
-            font-size: 56px; /* Larger Font */
+            font-size: 56px; 
             font-weight: 900;
             line-height: 1.1;
             margin-bottom: 25px;
@@ -164,8 +157,8 @@
             color: #070D1E;
         }
         p.subtitle {
-            font-size: 22px; /* Larger Font */
-            color: #48484a; /* Dark gray for clean readability */
+            font-size: 22px; 
+            color: #48484a; 
             max-width: 800px;
             line-height: 1.6;
             margin-bottom: 40px;
@@ -175,25 +168,25 @@
             background-color: #E50914;
             color: #ffffff;
             text-decoration: none;
-            padding: 16px 36px; /* Larger click area */
+            padding: 16px 36px; 
             font-weight: 700;
             border-radius: 6px;
             cursor: pointer;
             border: none;
-            font-size: 18px; /* Larger Font */
-            transition: background-color 0.2s ease, transform 0.1s ease;
+            font-size: 18px; 
+            transition: background-color 0.2s ease;
         }
         .cta-button:hover {
             background-color: #b20710;
         }
         
-        /* CONTENT PORTIONS & LARGE CARDS */
+        /* CONTENT PORTIONS */
         section {
-            margin-bottom: 100px; /* More breathing room */
+            margin-bottom: 100px; 
             scroll-margin-top: 40px;
         }
         h2 {
-            font-size: 38px; /* Bigger heading */
+            font-size: 38px; 
             font-weight: 800;
             margin-bottom: 12px;
             letter-spacing: -1px;
@@ -201,40 +194,46 @@
         }
         .section-desc {
             color: #48484a;
-            font-size: 20px; /* Bigger font */
+            font-size: 20px; 
             margin-bottom: 45px;
         }
-
-        /* Larger Pillars Layout Info Area */
         .pillars-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* Wider default area */
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
             gap: 30px;
         }
         .pillar-card {
-            background-color: #f5f5f7; /* Soft light gray card background */
+            background-color: #f5f5f7; 
             border: 1px solid #d2d2d7;
-            padding: 40px; /* Significantly increased internal area spacing */
+            padding: 40px; 
             border-radius: 12px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s;
         }
         .pillar-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
         .pillar-card h3 {
-            font-size: 24px; /* Larger Font */
+            font-size: 24px; 
             font-weight: 800;
             margin-bottom: 18px;
             color: #070D1E;
         }
         .pillar-card p {
-            color: #323234; /* Rich legible dark tone */
-            font-size: 17px; /* Larger Font */
+            color: #323234; 
+            font-size: 17px; 
             line-height: 1.6;
         }
+        .pillar-card ul {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: #323234;
+            font-size: 16px;
+        }
+        .pillar-card ul li {
+            margin-bottom: 8px;
+        }
 
-        /* Portfolio Visuals Layout */
+        /* Portfolio */
         .concept-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -245,16 +244,15 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #d2d2d7;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .concept-card img {
             width: 100%;
-            height: 240px; /* Slightly taller images */
+            height: 240px; 
             object-fit: cover;
             display: block;
         }
         
-        /* Intake Form Area */
+        /* Intake Form & Footer */
         .footer-section {
             border-top: 2px solid #e5e5ea;
             padding-top: 80px;
@@ -282,22 +280,19 @@
             padding: 25px;
             border-radius: 8px;
         }
-        
-        /* Form Box Expansion */
         .consult-form {
             background-color: #f5f5f7;
             border: 1px solid #d2d2d7;
-            padding: 45px; /* Bigger internal form area */
+            padding: 45px; 
             border-radius: 12px;
             width: 100%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
         .form-group {
             margin-bottom: 25px;
         }
         .form-group label {
             display: block;
-            font-size: 16px; /* Larger text */
+            font-size: 16px; 
             font-weight: 700;
             margin-bottom: 10px;
             color: #070D1E;
@@ -314,7 +309,6 @@
         .form-group input:focus, .form-group textarea:focus {
             outline: none;
             border-color: #E50914;
-            box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
         }
         .form-group textarea {
             resize: vertical;
@@ -344,6 +338,7 @@
                         <a href="#">Home</a>
                         <a href="#about-us">About Us</a>
                         <a href="#services">Services</a>
+                        <a href="#pricing">Pricing</a>
                         <a href="#portfolio">Our Work</a>
                     </nav>
                 </div>
@@ -351,16 +346,14 @@
         </div>
     </header>
 
-    <!-- ROLLING / RUNNING MARQUEE STRIP -->
+    <!-- ROLLING STRIP -->
     <div class="trust-ribbon">
         <div class="marquee-track">
-            <!-- First loop set -->
             <div class="marquee-content">
                 <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
                 <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
                 <div class="ribbon-item">48h Concept Turnaround</div>
             </div>
-            <!-- Duplicated loop set for infinite loop illusion -->
             <div class="marquee-content">
                 <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
                 <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
@@ -379,7 +372,7 @@
             </div>
         </section>
 
-        <!-- WHY CHOOSE US / EXPANED PORTION INFO -->
+        <!-- WHY CHOOSE US -->
         <section id="about-us">
             <h2>Engineered for Fleet Impact</h2>
             <p class="section-desc">Why premium commercial installers and businesses trust our pre-visualization layouts.</p>
@@ -399,7 +392,7 @@
             </div>
         </section>
 
-        <!-- SERVICES PORTION INFO -->
+        <!-- SERVICES -->
         <section id="services">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -415,6 +408,44 @@
                 <div class="pillar-card">
                     <h3>Premium EV Restyling</h3>
                     <p>Specialized avant-garde visual mockups engineered specifically for modern electric vehicle dimensions like Teslas and Cybertrucks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ITEM #2: PRICING AND PACKAGE TIERS SECTION -->
+        <section id="pricing">
+            <h2>Design Packages & Pricing Tiers</h2>
+            <p class="section-desc">Transparent, flat-rate visual concept packages optimized for local businesses and fleet operators.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Tier 1: Accent & Spot Branding</h3>
+                    <p>Perfect for clean, minimalist layouts focusing on essential business identification.</p>
+                    <ul>
+                        <li>Custom company logo placement</li>
+                        <li>High-readability text decals</li>
+                        <li>Partial hood or door spot layouts</li>
+                        <li>Print-ready vector source files</li>
+                    </ul>
+                </div>
+                <div class="pillar-card" style="border: 2px solid #E50914;">
+                    <h3>Tier 2: Partial Wrap Design</h3>
+                    <p>Our most popular option. Maximizes visual impact while remaining budget-friendly for production.</p>
+                    <ul>
+                        <li>Integrated 25% to 50% vehicle coverage</li>
+                        <li>High-contrast rear & side layout focus</li>
+                        <li>Millimeter-accurate blueprint matching</li>
+                        <li>Includes 2 complete revision rounds</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h3>Tier 3: Premium Full 3D Fleet Wrap</h3>
+                    <p>Complete multi-angle visual dominance. Engineered for maximum branding and fleet recognition.</p>
+                    <ul>
+                        <li>100% full-coverage wrap pre-visualization</li>
+                        <li>3D multi-angle high-resolution renderings</li>
+                        <li>Advanced graphic asset integration</li>
+                        <li>Direct coordination with your local install shop</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -439,7 +470,7 @@
             </div>
         </section>
 
-        <!-- CONTACT INFO & ENHANCED INTAKE FORM -->
+        <!-- CONTACT INFO & INTAKE FORM -->
         <section id="quote-form" class="footer-section">
             <div class="footer-info">
                 <h3>Have a project in mind?</h3>
