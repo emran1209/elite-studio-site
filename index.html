@@ -59,6 +59,9 @@
             padding: 14px 28px;
             font-weight: 600;
             border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
             transition: background-color 0.2s ease;
         }
         .cta-button:hover {
@@ -113,7 +116,7 @@
         <section class="hero">
             <h1>Precision 3D Vehicle Wrap Layouts & Design.</h1>
             <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
-            <a href="mailto:info@eliteautodesignstudio.com" class="cta-button">Let's Work Together</a>
+            <button onclick="openEmailLayout(event)" class="cta-button">Let's Work Together</button>
         </section>
 
         <section>
@@ -137,8 +140,27 @@
         <section class="footer-section">
             <h3>Have a project in mind?</h3>
             <p>Tell us about your vehicle wrap or branding goals, and let's bring it to life.</p>
-            <a href="mailto:info@eliteautodesignstudio.com" class="cta-button">info@eliteautodesignstudio.com</a>
+            <button onclick="openEmailLayout(event)" class="cta-button">info@eliteautodesignstudio.com</button>
         </section>
     </div>
+
+    <script>
+        function openEmailLayout(e) {
+            e.preventDefault();
+            const email = "info@eliteautodesignstudio.com";
+            const subject = encodeURIComponent("Inquiry regarding Vehicle Wrap Design");
+            
+            // Check if user is on a mobile device
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                // Mobile devices handle mailto perfectly
+                window.location.href = `mailto:${email}?subject=${subject}`;
+            } else {
+                // Desktop users without a local client get routed to web-based Gmail safely
+                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
