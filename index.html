@@ -12,7 +12,7 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
         body {
-            background-color: #121212;
+            background-color: #0B132B; /* Premium Midnight Dark Blue */
             color: #F5F5F7;
             padding: 40px 20px;
         }
@@ -22,7 +22,7 @@
         }
         header {
             margin-bottom: 60px;
-            border-bottom: 1px solid #2c2c2e;
+            border-bottom: 1px solid #1C2541;
             padding-bottom: 20px;
         }
         .logo {
@@ -46,10 +46,15 @@
         }
         p.subtitle {
             font-size: 20px;
-            color: #8e8e93;
+            color: #A5A9B4;
             max-width: 600px;
             line-height: 1.5;
             margin-bottom: 30px;
+        }
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
         .cta-button {
             display: inline-block;
@@ -67,6 +72,13 @@
         .cta-button:hover {
             background-color: #b20710;
         }
+        .cta-button.secondary {
+            background-color: #1C2541;
+            border: 1px solid #3A506B;
+        }
+        .cta-button.secondary:hover {
+            background-color: #3A506B;
+        }
         h2 {
             font-size: 24px;
             font-weight: 700;
@@ -80,10 +92,10 @@
             margin-bottom: 80px;
         }
         .concept-card {
-            background-color: #1c1c1e;
+            background-color: #1C2541;
             border-radius: 8px;
             overflow: hidden;
-            border: 1px solid #2c2c2e;
+            border: 1px solid #3A506B;
         }
         .concept-card img {
             width: 100%;
@@ -94,7 +106,7 @@
         .footer-section {
             text-align: center;
             padding: 60px 0;
-            border-top: 1px solid #2c2c2e;
+            border-top: 1px solid #1C2541;
         }
         .footer-section h3 {
             font-size: 32px;
@@ -102,8 +114,14 @@
             margin-bottom: 15px;
         }
         .footer-section p {
-            color: #8e8e93;
+            color: #A5A9B4;
             margin-bottom: 30px;
+        }
+        .footer-contacts {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
     </style>
 </head>
@@ -116,7 +134,10 @@
         <section class="hero">
             <h1>Precision 3D Vehicle Wrap Layouts & Design.</h1>
             <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
-            <button onclick="openEmailLayout(event)" class="cta-button">Let's Work Together</button>
+            <div class="cta-group">
+                <button onclick="openEmailLayout(event)" class="cta-button">Let's Work Together</button>
+                <a href="tel:9498385729" class="cta-button secondary">Call: (949) 838-5729</a>
+            </div>
         </section>
 
         <section>
@@ -140,7 +161,10 @@
         <section class="footer-section">
             <h3>Have a project in mind?</h3>
             <p>Tell us about your vehicle wrap or branding goals, and let's bring it to life.</p>
-            <button onclick="openEmailLayout(event)" class="cta-button">info@eliteautodesignstudio.com</button>
+            <div class="footer-contacts">
+                <button onclick="openEmailLayout(event)" class="cta-button">info@eliteautodesignstudio.com</button>
+                <a href="tel:9498385729" class="cta-button secondary">(949) 838-5729</a>
+            </div>
         </section>
     </div>
 
@@ -150,14 +174,11 @@
             const email = "info@eliteautodesignstudio.com";
             const subject = encodeURIComponent("Inquiry regarding Vehicle Wrap Design");
             
-            // Check if user is on a mobile device
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             
             if (isMobile) {
-                // Mobile devices handle mailto perfectly
                 window.location.href = `mailto:${email}?subject=${subject}`;
             } else {
-                // Desktop users without a local client get routed to web-based Gmail safely
                 window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`, '_blank');
             }
         }
