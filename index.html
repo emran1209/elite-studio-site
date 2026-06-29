@@ -1,197 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elite Auto Design Studio | Premium Vehicle Wraps</title>
-  <style>
-    /* Global Resets & Layout */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #ffffff; color: #111827; scroll-behavior: smooth; line-height: 1.5; }
-    
-    /* Navigation Bar */
-    header { background-color: #111827; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
-    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; }
-    .logo { color: #ffffff; font-size: 22px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
-    .logo span { color: #dc2626; }
-    nav a { color: #9ca3af; text-decoration: none; margin-left: 28px; font-weight: 600; text-transform: uppercase; font-size: 13px; tracking-spacing: 0.5px; transition: color 0.3s; }
-    nav a:hover { color: #ffffff; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Auto Design Studio | Premium Vehicle Wrap Design</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        body {
+            background-color: #ffffff; 
+            color: #1c1c1e; 
+            padding-top: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px; 
+        }
+        
+        /* HEADER STYLING */
+        header {
+            background-color: #070D1E;
+            border-bottom: 1px solid #1C2541;
+            padding: 20px 20px;
+        }
+        .header-top-wrap {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #E50914;
+        }
+        .nav-assembly {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        .nav-row-top {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .blinking-phone {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 22px;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            animation: phonePulse 2s infinite ease-in-out;
+        }
+        @keyframes phonePulse {
+            0% { opacity: 1; text-shadow: 0 0 0px rgba(225,9,20,0); }
+            50% { opacity: 0.7; color: #E50914; text-shadow: 0 0 8px rgba(225,9,20,0.5); }
+            100% { opacity: 1; text-shadow: 0 0 0px rgba(225,9,20,0); }
+        }
+        .sub-nav-links {
+            display: flex;
+            gap: 15px;
+        }
+        .sub-nav-links a {
+            color: #A5A9B4;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .sub-nav-links a:hover {
+            color: #ffffff;
+        }
+        .main-nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .main-nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+        .main-nav-links a:hover {
+            color: #E50914;
+        }
 
-    /* Rolling Marquee Banner */
-    .marquee-container { background-color: #dc2626; color: white; padding: 12px 0; overflow: hidden; white-space: nowrap; margin-top: 65px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 13px; box-shadow: inset 0 -2px 5px rgba(0,0,0,0.1); }
-    .marquee-text { display: inline-block; padding-left: 100%; animation: marquee 30s linear infinite; }
-    @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+        /* ROLLING MARQUEE TICKER STRIP */
+        .trust-ribbon {
+            background-color: #000000;
+            border-bottom: 3px solid #E50914;
+            padding: 14px 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .marquee-content {
+            display: flex;
+            justify-content: space-around;
+            gap: 60px;
+            padding-right: 60px;
+        }
+        .ribbon-item {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .ribbon-item::before {
+            content: "•";
+            color: #E50914;
+            font-size: 20px;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
 
-    /* Hero Section */
-    .hero { background: linear-gradient(135deg, #111827 0%, #1f2937 100%); color: white; padding: 120px 24px; text-align: center; border-bottom: 4px solid #dc2626; }
-    .hero h1 { font-size: 52px; font-weight: 900; margin-bottom: 24px; text-transform: uppercase; letter-spacing: -0.5px; }
-    .hero p { font-size: 20px; color: #d1d5db; max-width: 750px; margin: 0 auto 36px auto; line-height: 1.7; }
-    .cta-btn { background-color: #dc2626; color: white; padding: 16px 36px; text-decoration: none; font-weight: 700; border-radius: 6px; text-transform: uppercase; tracking-spacing: 0.5px; transition: background-color 0.3s, transform 0.2s; display: inline-block; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3); }
-    .cta-btn:hover { background-color: #b91c1c; transform: translateY(-2px); }
+        /* HERO AREA */
+        .hero {
+            margin: 40px 0 80px 0;
+        }
+        h1 {
+            font-size: 56px; 
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            letter-spacing: -1.5px;
+            color: #070D1E;
+        }
+        p.subtitle {
+            font-size: 22px; 
+            color: #48484a; 
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #E50914;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 36px; 
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            font-size: 18px; 
+            transition: background-color 0.2s ease;
+        }
+        .cta-button:hover {
+            background-color: #b20710;
+        }
+        
+        /* CONTENT PORTIONS */
+        section {
+            margin-bottom: 100px; 
+            scroll-margin-top: 40px;
+        }
+        h2 {
+            font-size: 38px; 
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            color: #070D1E;
+        }
+        .section-desc {
+            color: #48484a;
+            font-size: 20px; 
+            margin-bottom: 45px;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 30px;
+        }
+        .pillar-card {
+            background-color: #f5f5f7; 
+            border: 1px solid #d2d2d7;
+            padding: 40px; 
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+        .pillar-card h3 {
+            font-size: 24px; 
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: #070D1E;
+        }
+        .pillar-card p {
+            color: #323234; 
+            font-size: 17px; 
+            line-height: 1.6;
+        }
+        .pillar-card ul {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: #323234;
+            font-size: 16px;
+        }
+        .pillar-card ul li {
+            margin-bottom: 8px;
+        }
 
-    /* Global Section Frameworks */
-    .section-padding { padding: 100px 24px; }
-    .section-title { text-align: center; margin-bottom: 64px; }
-    .section-title h2 { font-size: 36px; font-weight: 800; color: #111827; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
-    .section-title .bar { height: 4px; width: 70px; background-color: #dc2626; margin: 0 auto; border-radius: 2px; }
-
-    /* Services Layout Grid */
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 32px; max-width: 1150px; margin: 0 auto; }
-    .service-card { padding: 36px; border: 1px solid #e5e7eb; border-radius: 12px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); transition: transform 0.3s, box-shadow 0.3s; }
-    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); border-color: #d1d5db; }
-    .service-icon { font-size: 44px; margin-bottom: 20px; display: inline-block; }
-    .service-card h3 { font-size: 24px; font-weight: 700; color: #111827; margin-bottom: 14px; }
-    .service-card p { color: #4b5563; line-height: 1.65; font-size: 15px; }
-
-    /* Interactive Client Intake Form Layout */
-    .form-container { max-width: 650px; margin: 0 auto; background: #ffffff; padding: 48px; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); }
-    .form-group { margin-bottom: 24px; }
-    .form-group label { display: block; margin-bottom: 10px; font-weight: 700; color: #374151; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #d1d5db; border-radius: 6px; font-size: 16px; background-color: #f9fafb; transition: border-color 0.3s, background-color 0.3s; }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #111827; background-color: #ffffff; }
-    .submit-btn { background-color: #111827; color: white; width: 100%; padding: 16px; border: none; font-weight: 700; border-radius: 6px; text-transform: uppercase; cursor: pointer; transition: background-color 0.3s, transform 0.1s; font-size: 15px; letter-spacing: 0.5px; margin-top: 8px; box-shadow: 0 4px 12px rgba(17, 24, 39, 0.15); }
-    .submit-btn:hover { background-color: #dc2626; }
-    .submit-btn:active { transform: scale(0.99); }
-  </style>
+        /* Portfolio */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .concept-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #d2d2d7;
+        }
+        .concept-card img {
+            width: 100%;
+            height: 240px; 
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Intake Form & Footer */
+        .footer-section {
+            border-top: 2px solid #e5e5ea;
+            padding-top: 80px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+            align-items: start;
+        }
+        .footer-info h3 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #070D1E;
+        }
+        .footer-info p {
+            color: #48484a;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+        .contact-details-box {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            padding: 25px;
+            border-radius: 8px;
+        }
+        .consult-form {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            padding: 45px; 
+            border-radius: 12px;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px; 
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #070D1E;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            background-color: #ffffff;
+            border: 1px solid #d2d2d7;
+            border-radius: 6px;
+            color: #1c1c1e;
+            font-size: 16px;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #E50914;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Top Navigation Header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">Elite Auto <span>Design Studio</span></div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#work">Our Work</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Animated Running Text Marquee -->
-  <div class="marquee-container">
-    <div class="marquee-text">
-      ✦ Orange County's Premium 3D Pre-Visualization Design Studio ✦ Booking Custom Vehicle Concept Graphics for Summer 2026 ✦ Transforming Commercial Fleets into Rolling Billboards ✦
-    </div>
-  </div>
-
-  <!-- Hero Interactive Panel -->
-  <section id="home" class="hero">
-    <h1>Precision 3D Vehicle Wrap Layouts</h1>
-    <p>We forge flawless, production-ready vector wrap designs and stunning photorealistic 3D mockups so you can perfect your vehicle's look before the vinyl ever touches the paint.</p>
-    <a href="#contact" class="cta-btn">Get a Design Quote</a>
-  </section>
-
-  <!-- Complete 4-Column Services Section Grid Layout -->
-  <section id="services" class="section-padding" style="background-color: #ffffff;">
-    <div class="section-title">
-      <h2>Our Services</h2>
-      <div class="bar"></div>
-    </div>
-
-    <div class="services-grid">
-      
-      <!-- Service Package Block 1 -->
-      <div class="service-card">
-        <div class="service-icon">🚚</div>
-        <h3>Commercial Fleet Branding</h3>
-        <p>Turn your company vehicles into 24/7 rolling billboards. We design high-impact, high-visibility commercial layouts tailored specifically for local businesses looking to dominate their market. Every layout is mathematically optimized to fit your exact vehicle make and model.</p>
-      </div>
-
-      <!-- Service Package Block 2 -->
-      <div class="service-card">
-        <div class="service-icon">🔥</div>
-        <h3>Premium Custom Concept Wraps</h3>
-        <p>From sleek matte black and aggressive geometric patterns to vibrant color-shifting aesthetics. If you can dream it, we can design it. We specialize in bespoke, jaw-dropping personal vehicle transformations that stand completely out from the crowd on the road.</p>
-      </div>
-
-      <!-- Service Package Block 3 -->
-      <div class="service-card">
-        <div class="service-icon">📐</div>
-        <h3>Precision 3D Pre-Visualization</h3>
-        <p>Never guess what your vehicle will look like before the vinyl hits the paint. Our standout studio edge is full, high-fidelity 3D mockup rendering. You get to see a photorealistic, 360-degree digital preview of your exact wrap design on your exact vehicle model before printing.</p>
-      </div>
-
-      <!-- Service Package Block 4 -->
-      <div class="service-card">
-        <div class="service-icon">🖨️</div>
-        <h3>Production-Ready Deliverables</h3>
-        <p>We don't just hand you a pretty picture. You receive flawless, industry-standard blueprint dimensions and high-resolution, print-ready vector files universally accepted by any physical wrap installation or print shop in the country for a seamless application process.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Custom Pricing Matrix Placeholder -->
-  <section id="pricing" class="section-padding" style="background-color: #f9fafb;">
-    <div class="max-w-6xl mx-auto">
-      <div class="section-title">
-        <h2>Studio Pricing Tiers</h2>
-        <div class="bar"></div>
-      </div>
-      <p style="text-align: center; color: #4b5563; font-style: italic; font-size: 16px; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-        Custom design package rates are being finalized with our team. Please use the intake contact form below to get a detailed quote tailored to your vehicle layout parameters.
-      </p>
-    </div>
-  </section>
-
-  <!-- Digital Portfolio Gallery Placeholder -->
-  <section id="work" class="section-padding" style="background-color: #ffffff;">
-    <div class="max-w-6xl mx-auto">
-      <div class="section-title">
-        <h2>Our Design Work</h2>
-        <div class="bar"></div>
-      </div>
-      <p style="text-align: center; color: #4b5563; font-style: italic; font-size: 16px; max-width: 600px; margin: 0 auto; line-height: 1.6;">
-        Stunning 3D concept layout renders, interactive wrap wireframes, and project galleries are updating shortly.
-      </p>
-    </div>
-  </section>
-
-  <!-- Automated Client Intake Submission Section -->
-  <section id="contact" class="section-padding" style="background-color: #f3f4f6;">
-    <div class="section-title">
-      <h2>Start Your Project Layout</h2>
-      <div class="bar"></div>
-    </div>
-
-    <div class="form-container">
-      <form action="mailto:info@eliteautodesignstudio.com" method="post" enctype="text/plain">
-        <div class="form-group">
-          <label for="name">Your Name / Business Name</label>
-          <input type="text" id="name" name="Client Name" placeholder="e.g., John Doe / Irvine Plumbing Co." required>
+    <!-- HEADER BLOCK -->
+    <header>
+        <div class="header-top-wrap">
+            <div class="logo">Elite <span>Auto Design</span> Studio</div>
+            
+            <div class="nav-assembly">
+                <div class="nav-row-top">
+                    <div class="sub-nav-links">
+                        <a href="#about-us">Blogs</a>
+                        <a href="#about-us">Reviews</a>
+                        <a href="#quote-form">Contact Us</a>
+                    </div>
+                    <a href="tel:9498385729" class="blinking-phone">📞 (949) 838-5729</a>
+                </div>
+                
+                <div class="nav-row-bottom">
+                    <nav class="main-nav-links">
+                        <a href="#">Home</a>
+                        <a href="#about-us">About Us</a>
+                        <a href="#services">Services</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#portfolio">Our Work</a>
+                    </nav>
+                </div>
+            </div>
         </div>
-        
-        <div class="form-group">
-          <label for="vehicle">Vehicle Make, Model, and Year</label>
-          <input type="text" id="vehicle" name="Vehicle Specs" placeholder="e.g., 2024 Ford Transit Cargo or Tesla Cybertruck" required>
-        </div>
+    </header>
 
-        <div class="form-group">
-          <label for="project-type">Project Niche</label>
-          <select id="project-type" name="Project Style Type">
-            <option value="Commercial Branding">Commercial Fleet Branding</option>
-            <option value="Custom Personal Wrap">Premium Custom Concept Wrap</option>
-            <option value="3D Rendering Only">Precision 3D Pre-Visualization Only</option>
-          </select>
+    <!-- ROLLING STRIP -->
+    <div class="trust-ribbon">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
+                <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
+                <div class="ribbon-item">48h Concept Turnaround</div>
+            </div>
+            <div class="marquee-content">
+                <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
+                <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
+                <div class="ribbon-item">48h Concept Turnaround</div>
+            </div>
         </div>
-
-        <div class="form-group">
-          <label for="details">Design Ideas & Specific Requests</label>
-          <textarea id="details" name="Design Vision Notes" rows="5" placeholder="Tell us about your brand colors, logo placement preferences, or wrap design goals..."></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">Submit Design Request</button>
-      </form>
     </div>
-  </section>
 
-  <!-- Studio Institutional Footer Area -->
-  <footer style="background-color: #111827; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937;">
-    <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
-  </footer>
+    <div class="container">
+        <!-- HERO BLOCK -->
+        <section class="hero">
+            <h1>Precision 3D Vehicle Wrap Layouts & Design.</h1>
+            <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
+            <div class="cta-group">
+                <a href="#quote-form" class="cta-button">Request a Design Consultation</a>
+            </div>
+        </section>
 
+        <!-- WHY CHOOSE US -->
+        <section id="about-us">
+            <h2>Engineered for Fleet Impact</h2>
+            <p class="section-desc">Why premium commercial installers and businesses trust our pre-visualization layouts.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Precision 3D Layouts</h3>
+                    <p>Designed to millimeter-accurate vehicle blueprints so wrap shops can print and install perfectly without warping or stretching key graphics.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Marketing-Driven Design</h3>
+                    <p>We optimize layout hierarchy, ensuring your logo, industry message, and contact details are clean, crisp, and fully readable at 40+ mph on the highway.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Risk-Free Pre-Visualization</h3>
+                    <p>See exactly how your commercial branding commands attention from every angle before you spend thousands on physical vinyl production.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services">
+            <h2>Our Specialized Services</h2>
+            <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Full Commercial Wraps</h3>
+                    <p>Complete multi-angle corporate designs maximizing branding space across entire trucks, vans, or delivery fleets.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Partial & Accent Layouts</h3>
+                    <p>Cost-effective branding focusing high-impact graphics strategically on doors, hoods, or rear panels.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Premium EV Restyling</h3>
+                    <p>Specialized avant-garde visual mockups engineered specifically for modern electric vehicle dimensions like Teslas and Cybertrucks.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ITEM #2: PRICING AND PACKAGE TIERS SECTION -->
+        <section id="pricing">
+            <h2>Design Packages & Pricing Tiers</h2>
+            <p class="section-desc">Transparent, flat-rate visual concept packages optimized for local businesses and fleet operators.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Tier 1: Accent & Spot Branding</h3>
+                    <p>Perfect for clean, minimalist layouts focusing on essential business identification.</p>
+                    <ul>
+                        <li>Custom company logo placement</li>
+                        <li>High-readability text decals</li>
+                        <li>Partial hood or door spot layouts</li>
+                        <li>Print-ready vector source files</li>
+                    </ul>
+                </div>
+                <div class="pillar-card" style="border: 2px solid #E50914;">
+                    <h3>Tier 2: Partial Wrap Design</h3>
+                    <p>Our most popular option. Maximizes visual impact while remaining budget-friendly for production.</p>
+                    <ul>
+                        <li>Integrated 25% to 50% vehicle coverage</li>
+                        <li>High-contrast rear & side layout focus</li>
+                        <li>Millimeter-accurate blueprint matching</li>
+                        <li>Includes 2 complete revision rounds</li>
+                    </ul>
+                </div>
+                <div class="pillar-card">
+                    <h3>Tier 3: Premium Full 3D Fleet Wrap</h3>
+                    <p>Complete multi-angle visual dominance. Engineered for maximum branding and fleet recognition.</p>
+                    <ul>
+                        <li>100% full-coverage wrap pre-visualization</li>
+                        <li>3D multi-angle high-resolution renderings</li>
+                        <li>Advanced graphic asset integration</li>
+                        <li>Direct coordination with your local install shop</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO IMAGES GRID -->
+        <section id="portfolio">
+            <h2>Featured Design Concepts</h2>
+            <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <img src="mockup1.png" alt="Featured Design Concept 1">
+                </div>
+                <div class="concept-card">
+                    <img src="mockup2.png" alt="Featured Design Concept 2">
+                </div>
+                <div class="concept-card">
+                    <img src="mockup3.png" alt="Featured Design Concept 3">
+                </div>
+                <div class="concept-card">
+                    <img src="mockup4.png" alt="Featured Design Concept 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT INFO & INTAKE FORM -->
+        <section id="quote-form" class="footer-section">
+            <div class="footer-info">
+                <h3>Have a project in mind?</h3>
+                <p>Tell us about your vehicle make, model, and branding goals, and let's construct a premium 3D design rollout for your business fleet.</p>
+                
+                <div class="contact-details-box">
+                    <div style="margin-bottom: 12px; font-weight: 700; font-size: 17px;">Email: <a href="#" onclick="openEmailLayout(event)" style="color: #E50914; text-decoration: none;">info@eliteautodesignstudio.com</a></div>
+                    <div style="font-weight: 700; font-size: 17px;">Direct Line: <a href="tel:9498385729" style="color: #070D1E; text-decoration: none;">(949) 838-5729</a></div>
+                </div>
+            </div>
+
+            <!-- INTAKE FORM BOX -->
+            <form class="consult-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="client-name">Your Name</label>
+                    <input type="text" id="client-name" required placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="vehicle-info">Vehicle Year, Make, & Model</label>
+                    <input type="text" id="vehicle-info" required placeholder="e.g., 2024 Tesla Cybertruck">
+                </div>
+                <div class="form-group">
+                    <label for="project-details">Project Goals & Ideas</label>
+                    <textarea id="project-details" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
+                </div>
+                <button type="submit" class="cta-button" style="width: 100%;">Submit Consultation Request</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        function openEmailLayout(e) {
+            if (e) e.preventDefault();
+            const email = "info@eliteautodesignstudio.com";
+            const subject = encodeURIComponent("Inquiry regarding Vehicle Wrap Design");
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                window.location.href = `mailto:${email}?subject=${subject}`;
+            } else {
+                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`, '_blank');
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('client-name').value;
+            const vehicle = document.getElementById('vehicle-info').value;
+            const details = document.getElementById('project-details').value;
+            
+            const emailBody = encodeURIComponent(`Hello Elite Auto Design Studio,\n\nI would like to request a design consultation.\n\nName: ${name}\nVehicle: ${vehicle}\n\nProject Details:\n${details}`);
+            const email = "info@eliteautodesignstudio.com";
+            const subject = encodeURIComponent(`Design Consultation Request from ${name}`);
+            
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = `mailto:${email}?subject=${subject}&body=${emailBody}`;
+            } else {
+                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${emailBody}`, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
