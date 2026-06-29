@@ -1,51 +1,193 @@
-<section id="services" style="padding: 80px 20px; background-color: #ffffff; font-family: sans-serif;">
-  <div style="max-width: 1100px; margin: 0 auto;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Auto Design Studio | Premium Vehicle Wraps</title>
+  <style>
+    /* Global Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; background-color: #ffffff; color: #111827; scroll-behavior: smooth; }
     
-    <!-- Section Heading -->
-    <div style="text-align: center; margin-bottom: 60px;">
-      <h2 style="font-size: 32px; font-weight: bold; color: #111827; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Our Services</h2>
-      <div style="height: 4px; width: 80px; background-color: #dc2626; margin: 0 auto;"></div>
+    /* Navigation Bar */
+    header { background-color: #111827; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 20px; }
+    .logo { color: #ffffff; font-size: 22px; font-weight: bold; text-transform: uppercase; tracking-spacing: 1px; }
+    .logo span { color: #dc2626; }
+    nav a { color: #9ca3af; text-decoration: none; margin-left: 25px; font-weight: 600; text-transform: uppercase; font-size: 14px; transition: color 0.3s; }
+    nav a:hover { color: #ffffff; }
+
+    /* Marquee Banner */
+    .marquee-container { background-color: #dc2626; color: white; padding: 10px 0; overflow: hidden; white-space: nowrap; margin-top: 68px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 14px; }
+    .marquee-text { display: inline-block; padding-left: 100%; animation: marquee 25s linear infinite; }
+    @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
+
+    /* Hero Section */
+    .hero { background-color: #111827; color: white; padding: 100px 20px; text-align: center; }
+    .hero h1 { font-size: 48px; font-weight: 800; margin-bottom: 20px; text-transform: uppercase; }
+    .hero p { font-size: 20px; color: #9ca3af; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.6; }
+    .cta-btn { background-color: #dc2626; color: white; padding: 14px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; text-transform: uppercase; transition: background 0.3s; display: inline-block; }
+    .cta-btn:hover { background-color: #b91c1c; }
+
+    /* Section Global Headers */
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title h2 { font-size: 32px; font-weight: bold; color: #111827; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+    .section-title .bar { height: 4px; width: 80px; background-color: #dc2626; margin: 0 auto; }
+
+    /* Contact Form Styles */
+    .form-container { max-width: 600px; margin: 0 auto; background: #f9fafb; padding: 40px; border-radius: 8px; border: 1px solid #e5e7eb; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #374151; text-transform: uppercase; font-size: 13px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 5px; font-size: 16px; }
+    .submit-btn { background-color: #111827; color: white; width: 100%; padding: 14px; border: none; font-weight: bold; border-radius: 5px; text-transform: uppercase; cursor: pointer; transition: background 0.3s; font-size: 16px; }
+    .submit-btn:hover { background-color: #dc2626; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Elite Auto <span>Design Studio</span></div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#work">Our Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Services Grid Layout -->
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
-      
-      <!-- Service 1 -->
-      <div style="padding: 30px; border: 1px solid #e5e7eb; rounded-style: solid; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-        <div style="font-size: 40px; margin-bottom: 15px;">🚚</div>
-        <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Commercial Fleet Branding</h3>
-        <p style="color: #4b5563; line-height: 1.6; margin: 0;">
-          Turn your company vehicles into 24/7 rolling billboards. We design high-impact, high-visibility commercial layouts tailored specifically for local businesses looking to dominate their market. Every layout is mathematically optimized to fit your exact vehicle make and model.
-        </p>
-      </div>
-
-      <!-- Service 2 -->
-      <div style="padding: 30px; border: 1px solid #e5e7eb; rounded-style: solid; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-        <div style="font-size: 40px; margin-bottom: 15px;">🔥</div>
-        <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Premium Custom Concept Wraps</h3>
-        <p style="color: #4b5563; line-height: 1.6; margin: 0;">
-          From sleek matte black and aggressive geometric patterns to vibrant color-shifting aesthetics. If you can dream it, we can design it. We specialize in bespoke, jaw-dropping personal vehicle transformations that stand completely out from the crowd on the road.
-        </p>
-      </div>
-
-      <!-- Service 3 -->
-      <div style="padding: 30px; border: 1px solid #e5e7eb; rounded-style: solid; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-        <div style="font-size: 40px; margin-bottom: 15px;">📐</div>
-        <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Precision 3D Pre-Visualization</h3>
-        <p style="color: #4b5563; line-height: 1.6; margin: 0;">
-          Never guess what your vehicle will look like before the vinyl hits the paint. Our standout studio edge is full, high-fidelity 3D mockup rendering. You get to see a photorealistic, 360-degree digital preview of your exact wrap design on your exact vehicle model before printing.
-        </p>
-      </div>
-
-      <!-- Service 4 -->
-      <div style="padding: 30px; border: 1px solid #e5e7eb; rounded-style: solid; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-        <div style="font-size: 40px; margin-bottom: 15px;">🖨️</div>
-        <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Production-Ready Deliverables</h3>
-        <p style="color: #4b5563; line-height: 1.6; margin: 0;">
-          We don't just hand you a pretty picture. You receive flawless, industry-standard blueprint dimensions and high-resolution, print-ready vector files universally accepted by any physical wrap installation or print shop in the country for a seamless application process.
-        </p>
-      </div>
-
+  <!-- Rolling Marquee Banner -->
+  <div class="marquee-container">
+    <div class="marquee-text">
+      ✦ Orange County's Premium 3D Pre-Visualization Design Studio ✦ Booking Custom Vehicle Concept Graphics for Summer 2026 ✦ Transforming Commercial Fleets into Rolling Billboards ✦
     </div>
   </div>
-</section>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Precision 3D Vehicle Wrap Layouts</h1>
+    <p>We forge flawless, production-ready vector wrap designs and stunning photorealistic 3D mockups so you can perfect your vehicle's look before the vinyl ever touches the paint.</p>
+    <a href="#contact" class="cta-btn">Get a Design Quote</a>
+  </section>
+
+  <!-- Services Section (The Grid layout from image_5e316b.png) -->
+  <section id="services" style="padding: 80px 20px; background-color: #ffffff;">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <div class="bar"></div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px;">
+        
+        <!-- Service 1 -->
+        <div style="padding: 30px; border: 1px solid #e5e7eb; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+          <div style="font-size: 40px; margin-bottom: 15px;">🚚</div>
+          <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Commercial Fleet Branding</h3>
+          <p style="color: #4b5563; line-height: 1.6; margin: 0;">
+            Turn your company vehicles into 24/7 rolling billboards. We design high-impact, high-visibility commercial layouts tailored specifically for local businesses looking to dominate their market. Every layout is mathematically optimized to fit your exact vehicle make and model.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div style="padding: 30px; border: 1px solid #e5e7eb; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+          <div style="font-size: 40px; margin-bottom: 15px;">🔥</div>
+          <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Premium Custom Concept Wraps</h3>
+          <p style="color: #4b5563; line-height: 1.6; margin: 0;">
+            From sleek matte black and aggressive geometric patterns to vibrant color-shifting aesthetics. If you can dream it, we can design it. We specialize in bespoke, jaw-dropping personal vehicle transformations that stand completely out from the crowd on the road.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div style="padding: 30px; border: 1px solid #e5e7eb; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+          <div style="font-size: 40px; margin-bottom: 15px;">📐</div>
+          <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Precision 3D Pre-Visualization</h3>
+          <p style="color: #4b5563; line-height: 1.6; margin: 0;">
+            Never guess what your vehicle will look like before the vinyl hits the paint. Our standout studio edge is full, high-fidelity 3D mockup rendering. You get to see a photorealistic, 360-degree digital preview of your exact wrap design on your exact vehicle model before printing.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div style="padding: 30px; border: 1px solid #e5e7eb; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
+          <div style="font-size: 40px; margin-bottom: 15px;">🖨️</div>
+          <h3 style="font-size: 22px; font-weight: bold; color: #111827; margin: 0 0 12px 0;">Production-Ready Deliverables</h3>
+          <p style="color: #4b5563; line-height: 1.6; margin: 0;">
+            We don't just hand you a pretty picture. You receive flawless, industry-standard blueprint dimensions and high-resolution, print-ready vector files universally accepted by any physical wrap installation or print shop in the country for a seamless application process.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section (Placeholder for upcoming updates) -->
+  <section id="pricing" style="padding: 80px 20px; background-color: #f3f4f6;">
+    <div class="max-w-6xl mx-auto">
+      <div class="section-title">
+        <h2>Studio Pricing Tiers</h2>
+        <div class="bar"></div>
+      </div>
+      <p style="text-align: center; color: #4b5563; font-style: italic;">Custom design package rates are being finalized with our team. Please use the contact form below to get a custom quote tailored to your specific vehicle layout project.</p>
+    </div>
+  </section>
+
+  <!-- Our Work / Portfolio Section -->
+  <section id="work" style="padding: 80px 20px; background-color: #ffffff;">
+    <div class="max-w-6xl mx-auto">
+      <div class="section-title">
+        <h2>Our Design Work</h2>
+        <div class="bar"></div>
+      </div>
+      <p style="text-align: center; color: #4b5563; font-style: italic;">Stunning 3D concept layout renders and portfolio galleries are updating shortly.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section (Automated Client Intake Form Setup) -->
+  <section id="contact" style="padding: 80px 20px; background-color: #f9fafb;">
+    <div class="section-title">
+      <h2>Start Your Project Layout</h2>
+      <div class="bar"></div>
+    </div>
+
+    <div class="form-container">
+      <form action="mailto:info@eliteautodesignstudio.com" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label for="name">Your Name / Business Name</label>
+          <input type="text" id="name" name="Client Name" placeholder="e.g., John Doe / Irvine Plumbing Co." required>
+        </div>
+        
+        <div class="form-group">
+          <label for="vehicle">Vehicle Make, Model, and Year</label>
+          <input type="text" id="vehicle" name="Vehicle Specs" placeholder="e.g., 2024 Ford Transit Cargo or Tesla Cybertruck" required>
+        </div>
+
+        <div class="form-group">
+          <label for="project-type">Project Niche</label>
+          <select id="project-type" name="Project Style Type">
+            <option value="Commercial Branding">Commercial Fleet Branding</option>
+            <option value="Custom Personal Wrap">Premium Custom Concept Wrap</option>
+            <option value="3D Rendering Only">Precision 3D Pre-Visualization Only</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="details">Design Ideas & Specific Requests</label>
+          <textarea id="details" name="Design Vision Notes" rows="5" placeholder="Tell us about your brand colors, logo placement preferences, or wrap design goals..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Design Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Simple Footer -->
+  <footer style="background-color: #111827; color: #6b7280; padding: 30px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937;">
+    &copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with passion.
+  </footer>
+
+</body>
+</html>
