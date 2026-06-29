@@ -22,11 +22,11 @@
             padding: 60px 20px; 
         }
         
-        /* HEADER EXACT REPLICATION FROM IMAGE_91E5B9.PNG */
+        /* HEADER EXACT REPLICATION WITH FIXED FONT SIZES & PHONE */
         header {
             background-color: #ffffff;
-            border-bottom: 3px solid #E50914; /* Red/Orange accent line running along the bottom */
-            padding: 15px 40px;
+            border-bottom: 3px solid #E50914; 
+            padding: 20px 40px; /* Enhanced padding for a cleaner structural depth */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -39,7 +39,7 @@
             align-items: center;
         }
         .logo {
-            font-size: 24px;
+            font-size: 28px; /* Increased font size for clarity */
             font-weight: 900;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -52,29 +52,43 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 15px;
+            gap: 16px;
         }
         
         /* Top Row Style */
         .nav-row-top {
             display: flex;
             align-items: center;
-            gap: 0;
+            gap: 20px;
+        }
+        .sub-nav-links {
+            display: flex;
+            align-items: center;
         }
         .sub-nav-links a {
             color: #48484a;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 15px; /* Bumped up font size */
             font-weight: 600;
             transition: color 0.2s;
         }
         .sub-nav-links a:hover {
             color: #E50914;
         }
+        .header-phone {
+            color: #E50914;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 24px; /* Beautiful, large matching phone typography */
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
         .divider {
             color: #e5e5ea;
-            margin: 0 12px;
-            font-size: 14px;
+            margin: 0 14px;
+            font-size: 15px;
             font-weight: 300;
         }
         
@@ -91,7 +105,7 @@
         .main-nav-links a {
             color: #1c1c1e;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 18px; /* Increased navigation item prominence */
             font-weight: 700;
             transition: color 0.2s;
         }
@@ -99,16 +113,16 @@
             color: #E50914;
         }
         
-        /* Action Button matching snapshot placement */
+        /* Action Button Layout Alignment */
         .header-cta-button {
             display: inline-block;
             background-color: #E50914;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 28px; 
+            padding: 14px 32px; /* Enhanced action button visibility */
             font-weight: 700;
-            border-radius: 25px; /* Pill shape */
-            font-size: 15px; 
+            border-radius: 25px; 
+            font-size: 16px; 
             transition: background-color 0.2s ease;
             text-align: center;
         }
@@ -331,7 +345,7 @@
 </head>
 <body>
 
-    <!-- REPLICATED WHITE NAV HEADER -->
+    <!-- CORRECTED NAVIGATION HEADER -->
     <header>
         <div class="header-top-wrap">
             <!-- Left Side Logo -->
@@ -339,7 +353,7 @@
             
             <!-- Right Side Dual-Row Assembly -->
             <div class="nav-assembly">
-                <!-- Top Row (Utility Links with Grid Lines) -->
+                <!-- Top Row (Utility Links with Dividers + Large Phone Number) -->
                 <div class="nav-row-top">
                     <div class="sub-nav-links">
                         <a href="#blog">Blogs</a>
@@ -348,6 +362,8 @@
                         <span class="divider">|</span>
                         <a href="#quote-form">Contact Us</a>
                     </div>
+                    <span class="divider">|</span>
+                    <a href="tel:9498385729" class="header-phone">📞 (949) 838-5729</a>
                 </div>
                 
                 <!-- Bottom Row (Bold Main Navigation & Pill Button) -->
