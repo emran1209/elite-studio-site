@@ -475,11 +475,13 @@
 </head>
 <body>
 
+    <!-- TOP NAV HEADER -->
     <header>
         <div class="header-top-wrap">
             <div class="logo" onclick="switchTab('home')">Elite <span>Auto Design</span> Studio</div>
             
             <div class="nav-assembly">
+                <!-- Upper Utilities Row -->
                 <div class="nav-row-top">
                     <div class="sub-nav-links">
                         <a onclick="switchTab('blog')">Blogs</a>
@@ -492,6 +494,7 @@
                     <a href="tel:9498385729" class="header-phone">📞 (949) 838-5729</a>
                 </div>
                 
+                <!-- Lower Navigation Toggles -->
                 <div class="nav-row-bottom">
                     <nav class="main-nav-links">
                         <a id="nav-home" onclick="switchTab('home')" class="active">Home</a>
@@ -508,6 +511,7 @@
         </div>
     </header>
 
+    <!-- ROLLING MARQUEE TICKER STRIP -->
     <div class="trust-ribbon">
         <div class="marquee-track">
             <div class="marquee-content">
@@ -525,6 +529,7 @@
 
     <div class="container">
 
+        <!-- TAB 1: MASTER HOME BLOCK -->
         <section id="tab-home" class="content-section active-tab">
             <div class="hero">
                 <h1>Precision 3D Vehicle Wrap Layouts & Design.</h1>
@@ -532,6 +537,7 @@
                 <a onclick="switchTab('contact')" class="header-cta-button">Request a Design Consultation</a>
             </div>
 
+            <!-- Home Teaser A: Our Work Images -->
             <div style="margin-top: 40px;">
                 <h2>Featured Design Concepts</h2>
                 <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
@@ -545,6 +551,7 @@
 
             <hr class="home-divider-line">
 
+            <!-- Home Teaser B: Services Grid -->
             <div>
                 <h2>Our Specialized Services</h2>
                 <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -574,6 +581,7 @@
 
             <hr class="home-divider-line">
 
+            <!-- Home Teaser C: Core Trust Pillars -->
             <div>
                 <h2>Engineered for Fleet Impact</h2>
                 <p class="section-desc">Why premium commercial installers and businesses trust our pre-visualization layouts.</p>
@@ -594,6 +602,7 @@
             </div>
         </section>
 
+        <!-- TAB 2: PORTFOLIO (OUR WORK) ONLY -->
         <section id="tab-portfolio" class="content-section">
             <h2>Featured Design Concepts</h2>
             <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
@@ -605,6 +614,7 @@
             </div>
         </section>
 
+        <!-- TAB 3: SERVICES ONLY -->
         <section id="tab-services" class="content-section">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -632,46 +642,15 @@
             </div>
         </section>
 
+        <!-- TAB 4: PRICING ONLY (Vehicle Wraps on Top, Print Collateral in Bottom) -->
         <section id="tab-pricing" class="content-section">
             <h2>Transparent Pricing for Every Project</h2>
             <p class="section-desc">High-end digital concept blueprints and brand assets with clear, flat-rate pricing structures.</p>
             
-            <div class="pricing-subheading">Corporate Brand Collateral</div>
-            <div class="pillars-grid" style="margin-bottom: 40px;">
-                <div class="pillar-card">
-                    <div>
-                        <h3>Business Cards</h3>
-                        <div class="price-tag">from $149 <span>/ setup</span></div>
-                        <p>Bespoke double-sided layouts with digital or physical print finishes in mind.</p>
-                    </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
-                    </div>
-                </div>
-                <div class="pillar-card">
-                    <div>
-                        <h3>Flyers & Brochures</h3>
-                        <div class="price-tag">from $249 <span>/ concept</span></div>
-                        <p>Eye-catching marketing assets designed for events, print distribution, or digital media handouts.</p>
-                    </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
-                    </div>
-                </div>
-                <div class="pillar-card">
-                    <div>
-                        <h3>Banners & Signage</h3>
-                        <div class="price-tag">from $349 <span>/ layout</span></div>
-                        <p>High-visibility corporate banners, yard signs, a-frames, and temporary retail windows.</p>
-                    </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
-                    </div>
-                </div>
-            </div>
-
+            <!-- SUB-SECTION 1: PREMIUM VEHICLE WRAPS (NOW ON TOP) -->
             <div class="pricing-subheading">Premium 3D Vehicle Wrap Layouts</div>
-            <div class="pillars-grid">
+            <div class="pillars-grid" style="margin-bottom: 60px;">
+                <!-- Tier 1 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 1: Accent & Spot Branding</h3>
@@ -685,6 +664,7 @@
                     </div>
                     <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Select Tier</a></div>
                 </div>
+                <!-- Tier 2 -->
                 <div class="pillar-card" style="border: 2px solid #E50914;">
                     <div>
                         <h3>Tier 2: Partial Wrap Design</h3>
@@ -698,6 +678,7 @@
                     </div>
                     <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Select Tier</a></div>
                 </div>
+                <!-- Tier 3 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 3: Premium Full 3D Fleet Wrap</h3>
@@ -712,8 +693,47 @@
                     <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Select Tier</a></div>
                 </div>
             </div>
+
+            <!-- SUB-SECTION 2: CORPORATE BRANDING COLLATERAL (NOW IN BOTTOM) -->
+            <div class="pricing-subheading">Corporate Brand Collateral</div>
+            <div class="pillars-grid">
+                <!-- Item 1 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Business Cards</h3>
+                        <div class="price-tag">from $149 <span>/ setup</span></div>
+                        <p>Bespoke double-sided layouts with digital or physical print finishes in mind.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Flyers & Brochures</h3>
+                        <div class="price-tag">from $249 <span>/ concept</span></div>
+                        <p>Eye-catching marketing assets designed for events, print distribution, or digital media handouts.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Banners & Signage</h3>
+                        <div class="price-tag">from $349 <span>/ layout</span></div>
+                        <p>High-visibility corporate banners, yard signs, a-frames, and temporary retail windows.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- TAB 5: BLOGS ONLY -->
         <section id="tab-blog" class="content-section">
             <h2>Studio Insights & Guides</h2>
             <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
@@ -729,6 +749,7 @@
             </div>
         </section>
 
+        <!-- TAB 6: REVIEWS ONLY -->
         <section id="tab-reviews" class="content-section">
             <h2>Client Experiences</h2>
             <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
@@ -744,6 +765,7 @@
             </div>
         </section>
 
+        <!-- TAB 7: CONTACT / INTAKE FORM ONLY -->
         <section id="tab-contact" class="content-section">
             <div class="footer-section">
                 <div class="footer-info">
@@ -767,40 +789,37 @@
                         <label for="project-details">Project Goals & Ideas</label>
                         <textarea id="project-details" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
                     </div>
-                    <button type="submit" class="header-cta-button" style="width: 100%; border: none;">Submit Consultation Request</button>
+                    <input type="submit" class="header-cta-button" style="width: 100%; border: none;" value="Submit Consultation Request">
                 </form>
             </div>
         </section>
 
     </div>
 
+    <!-- GLOBAL FOOTER -->
     <footer style="background-color: #070D1E; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937; margin-top: 60px;">
         <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
+    <!-- INTERACTIVE TAB CONTROLLER JAVASCRIPT -->
     <script>
         function switchTab(tabId) {
-            // Hide all sections cleanly
             const sections = document.querySelectorAll('.content-section');
             sections.forEach(sec => sec.classList.remove('active-tab'));
             
-            // Remove active underline accent from all main nav links
             const links = document.querySelectorAll('.main-nav-links a');
             links.forEach(lnk => lnk.classList.remove('active'));
             
-            // Show the exact clicked layout container
             const targetSection = document.getElementById('tab-' + tabId);
             if (targetSection) {
                 targetSection.classList.add('active-tab');
             }
             
-            // Highlight current navigation label
             const targetLink = document.getElementById('nav-' + tabId);
             if (targetLink) {
                 targetLink.classList.add('active');
             }
             
-            // Jump smoothly back to top of viewport
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
