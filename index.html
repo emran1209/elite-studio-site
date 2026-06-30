@@ -39,7 +39,7 @@
             align-items: center;
         }
         .logo {
-            font-size: 32px; /* Large, heavy-set branding scale */
+            font-size: 32px; 
             font-weight: 900;
             letter-spacing: 0.5px;
             text-transform: uppercase;
@@ -55,7 +55,7 @@
             gap: 18px;
         }
         
-        /* Top Row Style - Phone brought right next to utility links */
+        /* Top Row Style */
         .nav-row-top {
             display: flex;
             align-items: center;
@@ -68,7 +68,7 @@
         .sub-nav-links a {
             color: #1c1c1e;
             text-decoration: none;
-            font-size: 17px; /* Enlarged utility text */
+            font-size: 17px; 
             font-weight: 700;
             transition: color 0.2s;
         }
@@ -79,7 +79,7 @@
             color: #E50914;
             text-decoration: none;
             font-weight: 800;
-            font-size: 26px; /* High-impact phone scale */
+            font-size: 26px; 
             letter-spacing: -0.5px;
             display: flex;
             align-items: center;
@@ -91,7 +91,7 @@
             font-weight: 400;
         }
         
-        /* Bottom Row Style - Bold main navigation scale */
+        /* Bottom Row Style */
         .nav-row-bottom {
             display: flex;
             align-items: center;
@@ -104,7 +104,7 @@
         .main-nav-links a {
             color: #1c1c1e;
             text-decoration: none;
-            font-size: 20px; /* Large, bold navigation links */
+            font-size: 20px; 
             font-weight: 800;
             transition: color 0.2s;
         }
@@ -112,7 +112,7 @@
             color: #E50914;
         }
         
-        /* Action Button matching pill style and size scale */
+        /* Action Button */
         .header-cta-button {
             display: inline-block;
             background-color: #E50914;
@@ -128,6 +128,83 @@
         }
         .header-cta-button:hover {
             background-color: #b20710;
+        }
+
+        /* SMARTPHONE / MOBILE MEDIA QUERY OPTIMIZATION */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 15px;
+            }
+            .header-top-wrap {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                text-align: center;
+            }
+            .logo {
+                font-size: 24px;
+            }
+            .nav-assembly {
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+            }
+            .nav-row-top {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .sub-nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            .sub-nav-links a {
+                font-size: 14px;
+            }
+            .header-phone {
+                font-size: 20px;
+            }
+            .nav-row-bottom {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            .main-nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .main-nav-links a {
+                font-size: 15px;
+            }
+            .divider {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+            .header-cta-button {
+                width: 100%;
+                max-width: 280px;
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p.subtitle {
+                font-size: 18px;
+            }
+            .hero {
+                padding: 30px 20px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            .section-desc {
+                font-size: 17px;
+            }
+            .consult-form {
+                padding: 25px 20px;
+            }
         }
 
         /* ROLLING MARQUEE TICKER STRIP */
@@ -227,7 +304,7 @@
             margin-bottom: 8px;
         }
 
-        /* Portfolio Concept Graphics Layout */
+        /* Portfolio Layout */
         .concept-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -247,7 +324,7 @@
             display: block;
         }
         
-        /* HERO FRAME (Moved to lower page body position) */
+        /* HERO FRAME */
         .hero {
             background: #f5f5f7;
             border: 1px solid #d2d2d7;
@@ -272,7 +349,7 @@
             line-height: 1.6;
         }
 
-        /* Interactive Split Container for Form & Contact Metadata */
+        /* Form Container Split */
         .footer-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -337,11 +414,13 @@
 </head>
 <body>
 
+    <!-- TOP NAV HEADER -->
     <header>
         <div class="header-top-wrap">
             <div class="logo">Elite <span>Auto Design</span> Studio</div>
             
             <div class="nav-assembly">
+                <!-- Upper Row (Blogs | Reviews | Contact Us | Phone) -->
                 <div class="nav-row-top">
                     <div class="sub-nav-links">
                         <a href="#blog">Blogs</a>
@@ -354,6 +433,7 @@
                     <a href="tel:9498385729" class="header-phone">📞 (949) 838-5729</a>
                 </div>
                 
+                <!-- Lower Row (Main Menu Anchors & Dynamic Pill Button) -->
                 <div class="nav-row-bottom">
                     <nav class="main-nav-links">
                         <a href="#">Home</a>
@@ -370,6 +450,7 @@
         </div>
     </header>
 
+    <!-- ROLLING MARQUEE TICKER STRIP -->
     <div class="trust-ribbon">
         <div class="marquee-track">
             <div class="marquee-content">
@@ -387,6 +468,7 @@
 
     <div class="container">
 
+        <!-- 1. FEATURED DESIGN CONCEPTS -->
         <section id="portfolio">
             <h2>Featured Design Concepts</h2>
             <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
@@ -406,6 +488,7 @@
             </div>
         </section>
 
+        <!-- 2. EXPANDED SERVICES SECTION -->
         <section id="services">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -433,6 +516,7 @@
             </div>
         </section>
 
+        <!-- 3. PRICING TIERS SECTION -->
         <section id="pricing">
             <h2>Design Packages & Pricing Tiers</h2>
             <p class="section-desc">Transparent, flat-rate visual concept packages optimized for local businesses and fleet operators.</p>
@@ -470,12 +554,14 @@
             </div>
         </section>
 
+        <!-- 4. BRANDING HERO FRAME -->
         <section class="hero">
             <h1>Precision 3D Vehicle Wrap Layouts & Design.</h1>
             <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
             <a href="#quote-form" class="header-cta-button">Request a Design Consultation</a>
         </section>
 
+        <!-- 5. HAVE A PROJECT IN MIND / PROJECT REQUEST FORM -->
         <section id="quote-form" class="footer-section">
             <div class="footer-info">
                 <h3>Have a project in mind?</h3>
@@ -487,6 +573,7 @@
                 </div>
             </div>
 
+            <!-- INTAKE FORM BOX -->
             <form class="consult-form" onsubmit="handleFormSubmit(event)">
                 <div class="form-group">
                     <label for="client-name">Your Name</label>
@@ -504,6 +591,7 @@
             </form>
         </section>
 
+        <!-- 6. STUDIO INSIGHTS & GUIDES -->
         <section id="blog">
             <h2>Studio Insights & Guides</h2>
             <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
@@ -519,6 +607,7 @@
             </div>
         </section>
 
+        <!-- 7. CLIENT EXPERIENCES -->
         <section id="reviews">
             <h2>Client Experiences</h2>
             <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
@@ -536,10 +625,12 @@
 
     </div>
 
+    <!-- FOOTER AREA -->
     <footer style="background-color: #070D1E; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937; margin-top: 60px;">
         <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
+    <!-- INTAKE EMAIL HANDLERS -->
     <script>
         function openEmailLayout(e) {
             if (e) e.preventDefault();
