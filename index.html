@@ -130,6 +130,28 @@
             background-color: #b20710;
         }
 
+        /* PRICING SUBHEADING AND PRICE TAG STYLING */
+        .pricing-subheading {
+            font-size: 26px;
+            font-weight: 800;
+            color: #070D1E;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            border-left: 4px solid #E50914;
+            padding-left: 12px;
+        }
+        .price-tag {
+            font-size: 32px;
+            font-weight: 900;
+            color: #E50914;
+            margin-bottom: 15px;
+        }
+        .price-tag span {
+            font-size: 16px;
+            color: #48484a;
+            font-weight: 400;
+        }
+
         /* SMARTPHONE / MOBILE MEDIA QUERY OPTIMIZATION */
         @media (max-width: 768px) {
             header {
@@ -279,6 +301,9 @@
             padding: 40px; 
             border-radius: 12px;
             transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .pillar-card:hover {
             transform: translateY(-5px);
@@ -286,22 +311,60 @@
         .pillar-card h3 {
             font-size: 24px; 
             font-weight: 800;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
             color: #070D1E;
         }
         .pillar-card p {
             color: #323234; 
             font-size: 17px; 
             line-height: 1.6;
+            margin-bottom: 15px;
         }
         .pillar-card ul {
             margin-top: 15px;
             padding-left: 20px;
             color: #323234;
             font-size: 16px;
+            margin-bottom: 20px;
         }
         .pillar-card ul li {
             margin-bottom: 8px;
+        }
+        .card-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .price-btn-solid {
+            background-color: #070D1E;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: background-color 0.2s;
+        }
+        .price-btn-solid:hover {
+            background-color: #E50914;
+        }
+        .price-btn-outline {
+            background-color: transparent;
+            color: #070D1E;
+            border: 1px solid #070D1E;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+        .price-btn-outline:hover {
+            background-color: #070D1E;
+            color: #ffffff;
         }
 
         /* Portfolio Layout */
@@ -516,40 +579,108 @@
             </div>
         </section>
 
-        <!-- 3. PRICING TIERS SECTION -->
+        <!-- 3. SPLIT PRICING TIERS SECTION -->
         <section id="pricing">
-            <h2>Design Packages & Pricing Tiers</h2>
-            <p class="section-desc">Transparent, flat-rate visual concept packages optimized for local businesses and fleet operators.</p>
+            <h2>Transparent Pricing for Every Project</h2>
+            <p class="section-desc">High-end digital concept blueprints and brand assets with clear, flat-rate pricing structures.</p>
+            
+            <!-- SUB-SECTION A: CORPORATE BRANDING COLLATERAL -->
+            <div class="pricing-subheading">Corporate Brand Collateral</div>
+            <div class="pillars-grid" style="margin-bottom: 60px;">
+                <!-- Item 1 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Business Cards</h3>
+                        <div class="price-tag">from $149 <span>/ setup</span></div>
+                        <p>Bespoke double-sided layouts with digital or physical print finishes in mind. Premium layout structures designed to make a premium first impression.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Flyers & Brochures</h3>
+                        <div class="price-tag">from $249 <span>/ concept</span></div>
+                        <p>Eye-catching marketing assets designed for events, print distribution, or digital media handouts. Structured grid typography built to capture local commercial attention.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Banners & Signage</h3>
+                        <div class="price-tag">from $349 <span>/ layout</span></div>
+                        <p>High-visibility corporate banners, yard signs, a-frames, and temporary retail store window graphics structured precisely to match your business brand rollout.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUB-SECTION B: PREMIUM VEHICLE WRAPS -->
+            <div class="pricing-subheading">Premium 3D Vehicle Wrap Layouts</div>
             <div class="pillars-grid">
+                <!-- Tier 1 -->
                 <div class="pillar-card">
-                    <h3>Tier 1: Accent & Spot Branding</h3>
-                    <p>Perfect for clean, minimalist layouts focusing on essential business identification.</p>
-                    <ul>
-                        <li>Custom company logo placement</li>
-                        <li>High-readability text decals</li>
-                        <li>Partial hood or door spot layouts</li>
-                        <li>Print-ready vector source files</li>
-                    </ul>
+                    <div>
+                        <h3>Tier 1: Accent & Spot Branding</h3>
+                        <div class="price-tag">from $450 <span>/ asset</span></div>
+                        <p>Perfect for clean, minimalist layouts focusing on essential business identification.</p>
+                        <ul>
+                            <li>Custom company logo placement</li>
+                            <li>High-readability text decals</li>
+                            <li>Partial hood or door spot layouts</li>
+                            <li>Print-ready vector source files</li>
+                        </ul>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
                 </div>
+                <!-- Tier 2 -->
                 <div class="pillar-card" style="border: 2px solid #E50914;">
-                    <h3>Tier 2: Partial Wrap Design</h3>
-                    <p>Our most popular option. Maximizes visual impact while remaining budget-friendly for production.</p>
-                    <ul>
-                        <li>Integrated 25% to 50% vehicle coverage</li>
-                        <li>High-contrast rear & side layout focus</li>
-                        <li>Millimeter-accurate blueprint matching</li>
-                        <li>Includes 2 complete revision rounds</li>
-                    </ul>
+                    <div>
+                        <h3>Tier 2: Partial Wrap Design</h3>
+                        <div class="price-tag">from $750 <span>/ layout</span></div>
+                        <p>Our most popular option. Maximizes visual impact while remaining budget-friendly for production.</p>
+                        <ul>
+                            <li>Integrated 25% to 50% vehicle coverage</li>
+                            <li>High-contrast rear & side layout focus</li>
+                            <li>Millimeter-accurate blueprint matching</li>
+                            <li>Includes 2 complete revision rounds</li>
+                        </ul>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid" style="background-color: #E50914;">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
                 </div>
+                <!-- Tier 3 -->
                 <div class="pillar-card">
-                    <h3>Tier 3: Premium Full 3D Fleet Wrap</h3>
-                    <p>Complete multi-angle visual dominance. Engineered for maximum branding and fleet recognition.</p>
-                    <ul>
-                        <li>100% full-coverage wrap pre-visualization</li>
-                        <li>3D multi-angle high-resolution renderings</li>
-                        <li>Advanced graphic asset integration</li>
-                        <li>Direct coordination with your local install shop</li>
-                    </ul>
+                    <div>
+                        <h3>Tier 3: Premium Full 3D Fleet Wrap</h3>
+                        <div class="price-tag">from $1450 <span>/ rollout</span></div>
+                        <p>Complete multi-angle visual dominance. Engineered for maximum branding and fleet recognition.</p>
+                        <ul>
+                            <li>100% full-coverage wrap pre-visualization</li>
+                            <li>3D multi-angle high-resolution renderings</li>
+                            <li>Advanced graphic asset integration</li>
+                            <li>Direct coordination with your local install shop</li>
+                        </ul>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="#quote-form" class="price-btn-solid">Learn More</a>
+                        <a href="#quote-form" class="price-btn-outline">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </section>
