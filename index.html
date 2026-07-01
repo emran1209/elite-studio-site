@@ -289,20 +289,6 @@
             gap: 30px;
             margin-top: 20px;
         }
-        
-        /* Dynamic 2-Column Alternative for Collateral */
-        .collateral-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 30px;
-            margin-top: 20px;
-        }
-        @media (max-width: 768px) {
-            .collateral-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
         .pillar-card {
             background-color: #f5f5f7; 
             border: 1px solid #d2d2d7;
@@ -656,12 +642,12 @@
             </div>
         </section>
 
-        <!-- TAB 4: PRICING ONLY (PROJECT-BASED MODEL) -->
+        <!-- TAB 4: PRICING ONLY -->
         <section id="tab-pricing" class="content-section">
             <h2>Project-Based Pricing Structures</h2>
             <p class="section-desc">Bespoke digital design layouts priced accurately according to your project's technical complexity and scale.</p>
             
-            <!-- SUB-SECTION 1: PREMIUM VEHICLE WRAPS (PROJECT BASED) -->
+            <!-- SUB-SECTION 1: PREMIUM VEHICLE WRAPS -->
             <div class="pricing-subheading">Premium 3D Vehicle Wrap Layouts</div>
             <div class="pillars-grid" style="margin-bottom: 60px;">
                 <!-- Tier 1 -->
@@ -709,9 +695,9 @@
                 </div>
             </div>
 
-            <!-- SUB-SECTION 2: CORPORATE BRANDING COLLATERAL (BANNERS REMOVED - CLEAN 2 COLUMN) -->
+            <!-- SUB-SECTION 2: CORPORATE BRANDING COLLATERAL (RESTORED TO 3-COLUMN) -->
             <div class="pricing-subheading">Corporate Brand Collateral</div>
-            <div class="collateral-grid">
+            <div class="pillars-grid">
                 <!-- Item 1 -->
                 <div class="pillar-card">
                     <div>
@@ -729,6 +715,17 @@
                         <h3>Flyers & Brochures</h3>
                         <div class="price-tag">from $249 <span>/ concept</span></div>
                         <p>High-impact, eye-catching structural marketing assets custom-designed for local print distribution or digital media handouts.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="pillar-card">
+                    <div>
+                        <h3>Banners & Signage</h3>
+                        <div class="price-tag">from $349 <span>/ layout</span></div>
+                        <p>High-visibility corporate banners, yard signs, a-frames, and temporary retail store window graphic layouts built to match your brand rollout.</p>
                     </div>
                     <div class="card-button-group">
                         <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
