@@ -1,21 +1,365 @@
-<!-- PASTE ONLY THIS TINY PIECE INSIDE YOUR ORIGINAL WEBSITE LAYER -->
-<div class="rolling-slider-container">
-  <div class="rolling-slides">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Auto Design Studio | Premium Vehicle Wraps & Branding</title>
+  <style>
+    /* --- GLOBAL STYLES & PREMIUM DARK THEME --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     
-    <div class="slide-card">
-      <h2>Precision-Engineered Designs</h2>
-      <p>Meticulous attention to detail from the initial blueprint to the final high-resolution asset.</p>
-    </div>
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-    <div class="slide-card">
-      <h2>Collaborative Vision to Reality</h2>
-      <p>Your brand, your direction. We work hand-in-hand with you to tailor concepts that align perfectly with your business goals.</p>
-    </div>
+    /* --- NAVIGATION BAR --- */
+    header {
+      background-color: rgba(26, 26, 26, 0.95);
+      border-bottom: 2px solid #00bcd4;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    <div class="slide-card">
-      <h2>High-Impact Brand Visibility</h2>
-      <p>Turn your assets into powerful marketing tools designed to command attention and drive commercial success out on the road.</p>
-    </div>
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
 
+    .logo span {
+      color: #00bcd4;
+    }
+
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    /* --- HERO/WELCOME SECTION --- */
+    .hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #161616 0%, #0b0b0b 100%);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #b0bec5;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .cta-btn {
+      background-color: #00bcd4;
+      color: #0b0b0b;
+      padding: 12px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #00e5ff;
+      transform: translateY(-2px);
+    }
+
+    /* --- SECTION HEADER STYLE --- */
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 60px 0 20px 0;
+      color: #ffffff;
+    }
+    .section-title span {
+      color: #00bcd4;
+    }
+
+    /* --- AUTOMATIC ROLLING SLIDER --- */
+    .rolling-slider-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #161616;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      border: 1px solid #252525;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rolling-slides {
+      display: flex;
+      width: 300%; 
+      animation: slideSequence 16s infinite ease-in-out;
+    }
+
+    .slide-card {
+      width: 100%;
+      padding: 60px 40px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .slide-card h2 {
+      font-size: 2.4rem;
+      color: #00bcd4; 
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .slide-card p {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #e0e0e0;
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    @keyframes slideSequence {
+      0%, 28% { transform: translateX(0%); }          
+      33%, 61% { transform: translateX(-33.33%); }    
+      66%, 95% { transform: translateX(-66.66%); }    
+      100% { transform: translateX(0%); }             
+    }
+
+    /* --- SERVICES SECTION --- */
+    .services-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-box {
+      background-color: #161616;
+      border: 1px solid #252525;
+      padding: 30px;
+      border-radius: 6px;
+      flex: 1;
+      min-width: 280px;
+      max-width: 360px;
+      text-align: center;
+      transition: border-color 0.3s ease;
+    }
+
+    .service-box:hover {
+      border-color: #00bcd4;
+    }
+
+    .service-box h3 {
+      color: #00bcd4;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    /* --- PORTFOLIO PLACEHOLDER --- */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      padding: 0 20px;
+    }
+
+    .portfolio-item {
+      background-color: #222;
+      height: 220px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #888;
+      font-weight: bold;
+      border: 1px dashed #444;
+    }
+
+    /* --- CONTACT SECTION --- */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto 80px auto;
+      background-color: #161616;
+      padding: 40px;
+      border-radius: 8px;
+      border: 1px solid #252525;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #b0bec5;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: #0b0b0b;
+      border: 1px solid #333;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: #00bcd4;
+      outline: none;
+    }
+
+    .submit-btn {
+      background-color: #00bcd4;
+      color: #0b0b0b;
+      border: none;
+      padding: 12px 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #666;
+      font-size: 0.95rem;
+      border-top: 1px solid #161616;
+      background-color: #090909;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. Header Navigation -->
+  <header>
+    <div class="logo">Elite Auto <span>Design Studio</span></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- 2. Hero Section -->
+  <section id="home" class="hero">
+    <h1>Custom Vehicle Wraps & Branding</h1>
+    <p>Premium digital execution meticulously tailored to drive commercial success and elevate your presence out on the road.</p>
+    <a href="#contact" class="cta-btn">Get A Free Consultation</a>
+  </section>
+
+  <!-- 3. Dynamic Values Rolling Loop (Replaced the 48H section) -->
+  <div class="rolling-slider-container">
+    <div class="rolling-slides">
+      <div class="slide-card">
+        <h2>Precision-Engineered Designs</h2>
+        <p>Meticulous attention to detail from the initial blueprint to the final high-resolution asset.</p>
+      </div>
+      <div class="slide-card">
+        <h2>Collaborative Vision to Reality</h2>
+        <p>Your brand, your direction. We work hand-in-hand with you to tailor concepts that align perfectly with your business goals.</p>
+      </div>
+      <div class="slide-card">
+        <h2>High-Impact Brand Visibility</h2>
+        <p>Turn your assets into powerful marketing tools designed to command attention and drive commercial success out on the road.</p>
+      </div>
+    </div>
   </div>
-</div>
+
+  <!-- 4. Services Section -->
+  <h2 id="services" class="section-title">Our <span>Services</span></h2>
+  <section class="services-grid">
+    <div class="service-box">
+      <h3>Commercial Wraps</h3>
+      <p>Full and partial premium branding wraps tailored perfectly to your commercial fleet vehicle specs.</p>
+    </div>
+    <div class="service-box">
+      <h3>Brand Identity</h3>
+      <p>Custom logos, coordinated color codes, and complete asset layout packages built for maximum impact.</p>
+    </div>
+    <div class="service-box">
+      <h3>Design Consultation</h3>
+      <p>Deep-dive review sessions to accurately match your corporate vision to layout prints seamlessly.</p>
+    </div>
+  </section>
+
+  <!-- 5. Portfolio Section -->
+  <h2 id="portfolio" class="section-title">Our <span>Portfolio</span></h2>
+  <section class="portfolio-grid">
+    <div class="portfolio-item">Mockup Gallery Space #1</div>
+    <div class="portfolio-item">Mockup Gallery Space #2</div>
+    <div class="portfolio-item">Mockup Gallery Space #3</div>
+  </section>
+
+  <!-- 6. Contact Form Section -->
+  <h2 id="contact" class="section-title">Let's Work <span>Together</span></h2>
+  <section class="contact-form">
+    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Inquiry submitted!');">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required placeholder="john@example.com">
+      </div>
+      <div class="form-group">
+        <label for="details">Project Requirements (e.g. Vehicle Model, Dimensions)</label>
+        <textarea id="details" rows="5" required placeholder="Tell us about your custom design needs..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit Project Details</button>
+    </form>
+  </section>
+
+  <!-- 7. Footer -->
+  <footer>
+    &copy; 2026 Elite Auto Design Studio. All rights reserved.
+  </footer>
+
+</body>
+</html>
