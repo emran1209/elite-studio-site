@@ -548,7 +548,7 @@
                         <span class="divider">|</span>
                         <a id="nav-pricing" onclick="switchTab('pricing')">Pricing</a>
                     </nav>
-                    <a onclick="switchTab('contact')" class="header-cta-button">Discuss Your Project</a>
+                    <a onclick="switchTab('contact')" class="header-cta-button">Request a Free Consultation</a>
                 </div>
             </div>
         </div>
@@ -577,7 +577,7 @@
             <div class="hero">
                 <h1>Precision Vehicle Wrap Layouts & Design.</h1>
                 <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
-                <a onclick="switchTab('contact')" class="header-cta-button">Request a Design Consultation</a>
+                <a onclick="switchTab('contact')" class="header-cta-button">Request a Free Design Consultation</a>
             </div>
 
             <!-- DYNAMIC VALUES ROLLING SLIDER LOOP -->
@@ -856,7 +856,7 @@
                         <label for="project-details">Project Goals & Ideas</label>
                         <textarea id="project-details" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
                     </div>
-                    <input type="submit" class="header-cta-button" style="width: 100%; border: none;" value="Submit Consultation Request">
+                    <input type="submit" class="header-cta-button" style="width: 100%; border: none;" value="Submit Free Consultation Request">
                 </form>
             </div>
         </section>
@@ -908,9 +908,9 @@
             const vehicle = document.getElementById('vehicle-info').value;
             const details = document.getElementById('project-details').value;
             
-            const emailBody = encodeURIComponent(`Hello Elite Auto Design Studio,\n\nI would like to request a design consultation.\n\nName: ${name}\nVehicle: ${vehicle}\n\nProject Details:\n${details}`);
+            const emailBody = encodeURIComponent(`Hello Elite Auto Design Studio,\n\nI would like to request a free design consultation.\n\nName: ${name}\nVehicle: ${vehicle}\n\nProject Details:\n${details}`);
             const email = "info@eliteautodesignstudio.com";
-            const subject = encodeURIComponent(`Design Consultation Request from ${name}`);
+            const subject = encodeURIComponent(`Free Design Consultation Request from ${name}`);
             
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             if (isMobile) {
