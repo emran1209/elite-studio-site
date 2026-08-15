@@ -388,27 +388,30 @@
             background-color: #E50914;
         }
 
-        /* Portfolio Layout */
-        .concept-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
+        /* Portfolio Showcase Placeholder Card */
+        .showcase-placeholder-card {
+            background-color: #f5f5f7;
+            border: 2px dashed #d2d2d7;
+            border-radius: 12px;
+            padding: 60px 30px;
+            text-align: center;
             margin-top: 20px;
         }
-        .concept-card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #d2d2d7;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        .showcase-placeholder-card h3 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #070D1E;
+            margin-bottom: 12px;
+            text-transform: uppercase;
         }
-        .concept-card img {
-            width: 100%;
-            height: 250px; 
-            object-fit: cover;
-            display: block;
+        .showcase-placeholder-card p {
+            font-size: 18px;
+            color: #48484a;
+            max-width: 650px;
+            margin: 0 auto 25px auto;
+            line-height: 1.6;
         }
-        
+
         /* HERO FRAME */
         .hero {
             background: #f5f5f7;
@@ -603,15 +606,14 @@
 
             <hr class="home-divider-line">
 
-            <!-- Home Teaser A: Our Work Images -->
+            <!-- Home Teaser A: Our Work (Placeholder Card) -->
             <div style="margin-top: 40px;">
                 <h2>Featured Design Concepts</h2>
                 <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
-                <div class="concept-grid">
-                    <div class="concept-card"><img src="mockup1.png" alt="Featured Design Concept 1"></div>
-                    <div class="concept-card"><img src="mockup2.png" alt="Featured Design Concept 2"></div>
-                    <div class="concept-card"><img src="mockup3.png" alt="Featured Design Concept 3"></div>
-                    <div class="concept-card"><img src="mockup4.png" alt="Featured Design Concept 4"></div>
+                <div class="showcase-placeholder-card">
+                    <h3>2026 Fleet & Commercial Showcase</h3>
+                    <p>Our upcoming collection of bespoke 3D vehicle renders and commercial fleet identity mockups is currently being refreshed.</p>
+                    <a onclick="switchTab('contact')" class="header-cta-button">Request a Free 3D Concept Mockup</a>
                 </div>
             </div>
 
@@ -672,11 +674,10 @@
         <section id="tab-portfolio" class="content-section">
             <h2>Featured Design Concepts</h2>
             <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
-            <div class="concept-grid">
-                <div class="concept-card"><img src="mockup1.png" alt="Featured Design Concept 1"></div>
-                <div class="concept-card"><img src="mockup2.png" alt="Featured Design Concept 2"></div>
-                <div class="concept-card"><img src="mockup3.png" alt="Featured Design Concept 3"></div>
-                <div class="concept-card"><img src="mockup4.png" alt="Featured Design Concept 4"></div>
+            <div class="showcase-placeholder-card">
+                <h3>2026 Fleet & Commercial Showcase</h3>
+                <p>Our upcoming collection of bespoke 3D vehicle renders and commercial fleet identity mockups is currently being refreshed.</p>
+                <a onclick="switchTab('contact')" class="header-cta-button">Request a Free 3D Concept Mockup</a>
             </div>
         </section>
 
