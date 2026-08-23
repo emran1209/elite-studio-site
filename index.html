@@ -385,6 +385,89 @@
             color: #94a3b8;
         }
 
+        /* PREPRESS SPEC CARD */
+        .spec-guarantee-box {
+            background: #ffffff;
+            border: 2px solid #E50914;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0 50px 0;
+        }
+        .spec-guarantee-box h3 {
+            color: #070D1E;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .spec-guarantee-box ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        .spec-guarantee-box ul li {
+            font-size: 15px;
+            color: #323234;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+        .spec-guarantee-box ul li strong {
+            color: #070D1E;
+        }
+
+        /* FAQ ACCORDION STYLING */
+        .faq-container {
+            margin-top: 30px;
+        }
+        .faq-item {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #070D1E;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-question:hover {
+            color: #E50914;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 20px 20px 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #48484a;
+            border-top: 1px solid #e5e5ea;
+            padding-top: 15px;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-icon {
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: #E50914;
+        }
+
         /* Grid Panels */
         .pillars-grid {
             display: grid;
@@ -595,6 +678,13 @@
             resize: vertical;
             height: 120px;
         }
+        #form-status-msg {
+            margin-top: 15px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 16px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -608,6 +698,8 @@
                 <!-- Upper Utilities Row -->
                 <div class="nav-row-top">
                     <div class="sub-nav-links">
+                        <a onclick="switchTab('faq')">FAQ</a>
+                        <span class="divider">|</span>
                         <a onclick="switchTab('blog')">Blogs</a>
                         <span class="divider">|</span>
                         <a onclick="switchTab('reviews')">Reviews</a>
@@ -666,19 +758,16 @@
                 <h2>How It Works</h2>
                 <p class="section-desc">Our streamlined 3-step digital soft-copy design and delivery process.</p>
                 <div class="steps-grid">
-                    <!-- Step 1 -->
                     <div class="step-card">
                         <div class="step-number">1</div>
                         <h3>Bespoke 3D Blueprinting</h3>
                         <p>Share your vehicle make, model, and branding goals. We engineer custom, millimeter-accurate 3D wrap layouts tailored specifically to your vehicle's contours and panel lines.</p>
                     </div>
-                    <!-- Step 2 -->
                     <div class="step-card">
                         <div class="step-number">2</div>
                         <h3>Digital 360° Review & Revisions</h3>
                         <p>Receive high-resolution, multi-angle photorealistic renders of your vehicle. We collaborate directly with you to refine and approve every detail before finalization.</p>
                     </div>
-                    <!-- Step 3 -->
                     <div class="step-card">
                         <div class="step-number">3</div>
                         <h3>Production-Ready Soft Copy</h3>
@@ -690,17 +779,14 @@
             <!-- DYNAMIC VALUES ROLLING SLIDER LOOP -->
             <div class="value-slider-box">
                 <div class="value-track">
-                    <!-- Slide 1 -->
                     <div class="value-slide">
                         <h2>Precision-Engineered Designs</h2>
                         <p>Meticulous attention to detail from the initial blueprint to the final high-resolution asset.</p>
                     </div>
-                    <!-- Slide 2 -->
                     <div class="value-slide">
                         <h2>Collaborative Vision to Reality</h2>
                         <p>Your brand, your direction. We work hand-in-hand with you to tailor concepts that align perfectly with your business goals.</p>
                     </div>
-                    <!-- Slide 3 -->
                     <div class="value-slide">
                         <h2>High-Impact Brand Visibility</h2>
                         <p>Turn your assets into powerful marketing tools designed to command attention and drive commercial success out on the road.</p>
@@ -771,22 +857,46 @@
 
             <hr class="home-divider-line">
 
-            <!-- Home Teaser C: Core Trust Pillars -->
+            <!-- Home Teaser C: FAQ Section -->
             <div>
-                <h2>Engineered for Fleet Impact</h2>
-                <p class="section-desc">Why premium commercial installers and businesses trust our pre-visualization layouts.</p>
-                <div class="pillars-grid">
-                    <div class="pillar-card">
-                        <h3>Precision Layouts</h3>
-                        <p>Designed to millimeter-accurate vehicle blueprints so wrap shops can print and install perfectly without warping or stretching key graphics.</p>
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-desc">Everything you need to know about our digital design deliverables and workflow.</p>
+                <div class="faq-container">
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>What exact digital files will I receive?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            You receive a complete master production package including scaled vector source files (.AI, .EPS, Vector .PDF) with fonts converted to outlines, multi-angle 3D approval renderings (.PNG/.JPEG), and a 1-page installation spec guide with panel bleed measurements.
+                        </div>
                     </div>
-                    <div class="pillar-card">
-                        <h3>Marketing-Driven Design</h3>
-                        <p>We optimize layout hierarchy, ensuring your logo, industry message, and contact details are clean, crisp, and fully readable at 40+ mph on the highway.</p>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Do you physically print or install vinyl on vehicles?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We are a specialized digital prepress and 3D pre-visualization design studio. We deliver certified, print-ready digital soft copies that any local wrap installer or commercial print shop can print and install without layout errors.
+                        </div>
                     </div>
-                    <div class="pillar-card">
-                        <h3>Risk-Free Pre-Visualization</h3>
-                        <p>See exactly how your commercial branding commands attention from every angle before you spend thousands on physical vinyl production.</p>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>How many design revisions are included?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Every custom design package includes 2 dedicated rounds of revisions on the 3D digital mockups. We work closely with you on colors, logo sizing, and typography until you are 100% satisfied with the preview before final vector export.
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>What types of vehicles do you design for?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We design for all vehicle classes—commercial cargo vans (Ford Transit, Sprinter, Ram ProMaster), box trucks, pickup fleets, trailers, electric vehicles (Tesla Cybertruck, Model 3/Y), sports cars, and motorcycles.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -825,6 +935,18 @@
         <section id="tab-services" class="content-section">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
+            
+            <!-- PREPRESS QUALITY GUARANTEE BADGE -->
+            <div class="spec-guarantee-box">
+                <h3>🛡️ Certified Prepress & Vector Quality Guarantee</h3>
+                <ul>
+                    <li>✅ <strong>Scaled Blueprints:</strong> Engineered at 1:1 or 1:10 scale matching exact factory vehicle contour blueprints.</li>
+                    <li>✅ <strong>Prepress Bleed Included:</strong> 2 to 3-inch bleed allowances around doors, handles, windows, and seam edges.</li>
+                    <li>✅ <strong>Industry Color Matching:</strong> CMYK color profiles calibrated for 3M IJ180Cv3 and Avery Dennison MPI 1105 media.</li>
+                    <li>✅ <strong>Universal Compatibility:</strong> Master `.AI`, `.EPS`, and vector `.PDF` files accepted by 100% of US wrap installers.</li>
+                </ul>
+            </div>
+
             <div class="pillars-grid">
                 <div class="pillar-card">
                     <div style="font-size: 32px; margin-bottom: 12px;">🚚</div>
@@ -854,10 +976,8 @@
             <h2>Project-Based Pricing Structures</h2>
             <p class="section-desc">Bespoke digital design layouts priced accurately according to your project's technical complexity and scale.</p>
             
-            <!-- SUB-SECTION 1: PREMIUM VEHICLE WRAPS -->
             <div class="pricing-subheading">Premium Vehicle Wrap Layouts</div>
             <div class="pillars-grid" style="margin-bottom: 60px;">
-                <!-- Tier 1 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 1: Accent & Spot Branding</h3>
@@ -872,7 +992,6 @@
                     </div>
                     <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a></div>
                 </div>
-                <!-- Tier 2 -->
                 <div class="pillar-card" style="border: 2px solid #E50914;">
                     <div>
                         <h3>Tier 2: Partial Wrap Design</h3>
@@ -886,7 +1005,6 @@
                     </div>
                     <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a></div>
                 </div>
-                <!-- Tier 3 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 3: Premium Full Wrap</h3>
@@ -902,46 +1020,80 @@
                 </div>
             </div>
 
-            <!-- SUB-SECTION 2: CORPORATE BRANDING COLLATERAL -->
             <div class="pricing-subheading">Corporate Brand Collateral</div>
             <div class="pillars-grid">
-                <!-- Item 1 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Business Cards</h3>
                         <div class="price-tag">from $149 <span>/ setup</span></div>
                         <p>Bespoke double-sided corporate card layouts structured cleanly with premium physical finishes in mind.</p>
                     </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
-                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
                 </div>
-                <!-- Item 2 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Flyers & Brochures</h3>
                         <div class="price-tag">from $249 <span>/ concept</span></div>
                         <p>High-impact, eye-catching structural marketing assets custom-designed for local print distribution or digital media handouts.</p>
                     </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
-                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
                 </div>
-                <!-- Item 3 -->
                 <div class="pillar-card">
                     <div>
                         <h3>Corporate Signage</h3>
                         <div class="price-tag">from $349 <span>/ layout</span></div>
                         <p>High-visibility corporate structural signage, storefront window graphics, and a-frame layout displays built to showcase your brick-and-mortar presence.</p>
                     </div>
-                    <div class="card-button-group">
-                        <a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: FAQ TAB -->
+        <section id="tab-faq" class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-desc">Detailed answers about our digital pre-visualization and soft-copy deliverables.</p>
+            <div class="faq-container">
+                <div class="faq-item active" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What exact digital files will I receive?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You receive a complete master production package including scaled vector source files (.AI, .EPS, Vector .PDF) with fonts converted to outlines, multi-angle 3D approval renderings (.PNG/.JPEG), and a 1-page installation spec guide with panel bleed measurements.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Do you physically print or install vinyl on vehicles?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We are a specialized digital prepress and 3D pre-visualization design studio. We deliver certified, print-ready digital soft copies that any local wrap installer or commercial print shop can print and install without layout errors.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How many design revisions are included?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Every custom design package includes 2 dedicated rounds of revisions on the 3D digital mockups. We work closely with you on colors, logo sizing, and typography until you are 100% satisfied with the preview before final vector export.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What types of vehicles do you design for?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We design for all vehicle classes—commercial cargo vans (Ford Transit, Sprinter, Ram ProMaster), box trucks, pickup fleets, trailers, electric vehicles (Tesla Cybertruck, Model 3/Y), sports cars, and motorcycles.
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 5: BLOGS ONLY -->
+        <!-- TAB 6: BLOGS ONLY -->
         <section id="tab-blog" class="content-section">
             <h2>Studio Insights & Guides</h2>
             <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
@@ -957,7 +1109,7 @@
             </div>
         </section>
 
-        <!-- TAB 6: REVIEWS ONLY -->
+        <!-- TAB 7: REVIEWS ONLY -->
         <section id="tab-reviews" class="content-section">
             <h2>Client Experiences</h2>
             <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
@@ -973,31 +1125,41 @@
             </div>
         </section>
 
-        <!-- TAB 7: CONTACT / INTAKE FORM ONLY -->
+        <!-- TAB 8: CONTACT / INTAKE FORM (DIRECT API BACKEND) -->
         <section id="tab-contact" class="content-section">
             <div class="footer-section">
                 <div class="footer-info">
                     <h3>Have a project in mind?</h3>
                     <p>Tell us about your vehicle make, model, and branding goals, and let's construct a premium design rollout for your business fleet.</p>
                     <div class="contact-details-box">
-                        <div style="margin-bottom: 12px; font-weight: 700; font-size: 17px;">Email: <a href="#" onclick="openEmailLayout(event)" style="color: #E50914; text-decoration: none;">info@eliteautodesignstudio.com</a></div>
+                        <div style="margin-bottom: 12px; font-weight: 700; font-size: 17px;">Email: <a href="mailto:info@eliteautodesignstudio.com" style="color: #E50914; text-decoration: none;">info@eliteautodesignstudio.com</a></div>
                         <div style="font-weight: 700; font-size: 17px;">Direct Line: <a href="tel:9498385729" style="color: #070D1E; text-decoration: none;">(949) 838-5729</a></div>
                     </div>
                 </div>
-                <form class="consult-form" onsubmit="handleFormSubmit(event)">
+                <form class="consult-form" id="consultation-form" onsubmit="handleAjaxSubmit(event)">
+                    <!-- Web3Forms Free Direct Email Backend Access Key -->
+                    <input type="hidden" name="access_key" value="7e171cb6-5c54-469b-8be8-a28a3f81e35a">
+                    <input type="hidden" name="subject" value="New Design Inquiry from Website">
+                    <input type="hidden" name="from_name" value="Elite Auto Design Studio Lead">
+
                     <div class="form-group">
                         <label for="client-name">Your Name</label>
-                        <input type="text" id="client-name" required placeholder="John Doe">
+                        <input type="text" id="client-name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Your Email Address</label>
+                        <input type="email" id="client-email" name="email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
                         <label for="vehicle-info">Vehicle Year, Make, & Model</label>
-                        <input type="text" id="vehicle-info" required placeholder="e.g., 2024 Tesla Cybertruck">
+                        <input type="text" id="vehicle-info" name="vehicle" required placeholder="e.g., 2024 Tesla Cybertruck">
                     </div>
                     <div class="form-group">
                         <label for="project-details">Project Goals & Ideas</label>
-                        <textarea id="project-details" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
+                        <textarea id="project-details" name="message" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
                     </div>
-                    <input type="submit" class="header-cta-button" style="width: 100%; border: none;" value="Submit Free Consultation Request">
+                    <input type="submit" id="submit-btn" class="header-cta-button" style="width: 100%; border: none; cursor: pointer;" value="Submit Free Consultation Request">
+                    <p id="form-status-msg"></p>
                 </form>
             </div>
         </section>
@@ -1009,7 +1171,7 @@
         <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
-    <!-- INTERACTIVE TAB CONTROLLER JAVASCRIPT -->
+    <!-- INTERACTIVE TAB & AJAX CONTROLLER -->
     <script>
         function switchTab(tabId) {
             const sections = document.querySelectorAll('.content-section');
@@ -1031,33 +1193,50 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function openEmailLayout(e) {
-            if (e) e.preventDefault();
-            const email = "info@eliteautodesignstudio.com";
-            const subject = encodeURIComponent("Inquiry regarding Vehicle Wrap Design");
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            if (isMobile) {
-                window.location.href = `mailto:${email}?subject=${subject}`;
-            } else {
-                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}`, '_blank');
-            }
+        function toggleFaq(element) {
+            element.classList.toggle('active');
         }
 
-        function handleFormSubmit(e) {
+        async function handleAjaxSubmit(e) {
             e.preventDefault();
-            const name = document.getElementById('client-name').value;
-            const vehicle = document.getElementById('vehicle-info').value;
-            const details = document.getElementById('project-details').value;
+            const form = document.getElementById('consultation-form');
+            const statusMsg = document.getElementById('form-status-msg');
+            const submitBtn = document.getElementById('submit-btn');
             
-            const emailBody = encodeURIComponent(`Hello Elite Auto Design Studio,\n\nI would like to request a free design consultation.\n\nName: ${name}\nVehicle: ${vehicle}\n\nProject Details:\n${details}`);
-            const email = "info@eliteautodesignstudio.com";
-            const subject = encodeURIComponent(`Free Design Consultation Request from ${name}`);
-            
-            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-            if (isMobile) {
-                window.location.href = `mailto:${email}?subject=${subject}&body=${emailBody}`;
-            } else {
-                window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${emailBody}`, '_blank');
+            submitBtn.value = "Sending Request...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+                const result = await response.json();
+                if (response.status === 200) {
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#15803d";
+                    statusMsg.innerText = "Thank you! Your request has been received. We will contact you within 24 hours.";
+                    form.reset();
+                } else {
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#E50914";
+                    statusMsg.innerText = result.message || "Submission failed. Please email us directly.";
+                }
+            } catch (error) {
+                statusMsg.style.display = "block";
+                statusMsg.style.color = "#E50914";
+                statusMsg.innerText = "Something went wrong. Please reach out via phone or email directly.";
+            } finally {
+                submitBtn.value = "Submit Free Consultation Request";
+                submitBtn.disabled = false;
             }
         }
     </script>
