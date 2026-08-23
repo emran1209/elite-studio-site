@@ -239,6 +239,9 @@
             .consult-form {
                 padding: 25px 20px;
             }
+            .steps-grid {
+                grid-template-columns: 1fr !important;
+            }
         }
 
         /* ROLLING MARQUEE TICKER STRIP */
@@ -323,6 +326,63 @@
             33%, 61% { transform: translateX(-33.33%); }    
             66%, 95% { transform: translateX(-66.66%); }    
             100% { transform: translateX(0%); }             
+        }
+
+        /* HOW IT WORKS 3-STEP PROCESS BAR */
+        .how-it-works-box {
+            background-color: #070D1E;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 50px 30px;
+            margin: 40px 0 60px 0;
+            box-shadow: 0 10px 25px rgba(7, 13, 30, 0.15);
+        }
+        .how-it-works-box h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .how-it-works-box .section-desc {
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .step-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 35px 25px;
+            position: relative;
+            text-align: left;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: #E50914;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .step-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .step-card p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #94a3b8;
         }
 
         /* Grid Panels */
@@ -437,7 +497,7 @@
             padding: 60px;
             border-radius: 16px;
             text-align: center;
-            margin: 20px 0 60px 0;
+            margin: 20px 0 40px 0;
         }
         .hero h1 {
             font-size: 48px; 
@@ -599,6 +659,32 @@
                 <h1>Precision Vehicle Wrap Layouts & Design.</h1>
                 <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
                 <a onclick="switchTab('contact')" class="header-cta-button">Request a Free Design Consultation</a>
+            </div>
+
+            <!-- HOW IT WORKS 3-STEP PROCESS BAR -->
+            <div class="how-it-works-box">
+                <h2>How It Works</h2>
+                <p class="section-desc">Our streamlined 3-step digital soft-copy design and delivery process.</p>
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Bespoke 3D Blueprinting</h3>
+                        <p>Share your vehicle make, model, and branding goals. We engineer custom, millimeter-accurate 3D wrap layouts tailored specifically to your vehicle's contours and panel lines.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Digital 360° Review & Revisions</h3>
+                        <p>Receive high-resolution, multi-angle photorealistic renders of your vehicle. We collaborate directly with you to refine and approve every detail before finalization.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Production-Ready Soft Copy</h3>
+                        <p>Receive master vector source files (.AI, .EPS, .PDF) with exact scale, print bleed, and panel guides universally accepted by any local wrap shop or print installer nationwide.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- DYNAMIC VALUES ROLLING SLIDER LOOP -->
