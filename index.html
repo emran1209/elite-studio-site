@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elite Auto Design Studio | Digital Vehicle Wrap Prepress & 3D Pre-Visualization</title>
-    <meta name="description" content="Precision digital vehicle wrap blueprints, 3D pre-visualization mockups, and certified vector production packages for fleet owners and wrap shops nationwide.">
+    <meta name="description" content="Precision digital vehicle wrap blueprints, 3D pre-visualization mockups, and certified prepress vector packages for fleet operators and wrap installers nationwide.">
 
     <style>
         :root {
-            --primary: #E50914;
-            --primary-hover: #b20710;
-            --dark: #070D1E;
-            --dark-card: #0F172A;
-            --dark-subtle: #1E293B;
-            --light: #F8FAFC;
-            --muted: #94A3B8;
-            --border: rgba(255, 255, 255, 0.1);
+            --primary: #D32F2F;
+            --primary-hover: #b71c1c;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
         }
 
         * {
@@ -27,148 +26,152 @@
         }
 
         body {
-            background-color: var(--dark);
-            color: var(--light);
+            background-color: var(--bg-page);
+            color: var(--text-main);
             line-height: 1.6;
         }
 
         /* TOP BAR */
+        .top-bar-wrap {
+            background: #ffffff;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
         .top-bar {
-            background: #040711;
-            padding: 8px 24px;
-            font-size: 13px;
-            border-bottom: 1px solid var(--border);
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 10px 24px;
             display: flex;
             justify-content: flex-end;
-            gap: 20px;
+            align-items: center;
+            gap: 24px;
+            font-size: 14px;
+            font-weight: 600;
         }
 
         .top-bar a {
-            color: var(--muted);
+            color: #0f172a;
             text-decoration: none;
             transition: color 0.2s;
         }
 
         .top-bar a:hover {
-            color: var(--light);
+            color: var(--primary);
         }
 
-        /* NAVIGATION */
+        .top-phone {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary);
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* MAIN NAVIGATION */
         header {
+            background: #ffffff;
+            border-bottom: 2px solid #e2e8f0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(7, 13, 30, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
 
         .nav-container {
             max-width: 1240px;
             margin: 0 auto;
-            padding: 14px 24px;
+            padding: 16px 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
         .brand-logo {
-            font-size: 22px;
+            font-size: 26px;
             font-weight: 900;
             text-transform: uppercase;
             text-decoration: none;
-            color: var(--light);
-            letter-spacing: 0.5px;
+            color: #0f172a;
+            letter-spacing: -0.5px;
         }
 
         .brand-logo span {
             color: var(--primary);
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
             align-items: center;
-            gap: 22px;
+            gap: 28px;
         }
 
-        .nav-links a {
-            color: var(--muted);
+        .nav-menu a {
+            color: #0f172a;
             text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 700;
             transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--light);
-        }
-
-        .nav-phone {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: 800;
-            font-size: 15px;
-            color: var(--light);
-            text-decoration: none;
-        }
-
-        .nav-phone span {
+        .nav-menu a:hover {
             color: var(--primary);
         }
 
-        .btn-cta {
+        .btn-consultation {
             background: var(--primary);
-            color: #ffffff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 14px;
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 800;
             text-decoration: none;
             transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 14px rgba(211, 47, 47, 0.35);
         }
 
-        .btn-cta:hover {
+        .btn-consultation:hover {
             background: var(--primary-hover);
             transform: translateY(-1px);
         }
 
-        /* HERO */
-        .hero {
+        /* HERO SECTION */
+        .hero-section {
             max-width: 1240px;
             margin: 0 auto;
-            padding: 80px 24px 60px 24px;
+            padding: 60px 24px;
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
             gap: 40px;
             align-items: center;
         }
 
-        .badge {
+        .hero-badge {
             display: inline-block;
-            background: rgba(229, 9, 20, 0.15);
-            color: #ff858a;
-            border: 1px solid var(--primary);
-            padding: 4px 12px;
-            border-radius: 50px;
+            background: rgba(211, 47, 47, 0.1);
+            color: var(--primary);
             font-size: 12px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            padding: 6px 14px;
+            border-radius: 30px;
             margin-bottom: 16px;
         }
 
-        .hero h1 {
-            font-size: 46px;
-            line-height: 1.15;
+        .hero-title {
+            font-size: 44px;
             font-weight: 900;
-            margin-bottom: 18px;
+            line-height: 1.15;
+            color: #0f172a;
+            margin-bottom: 16px;
         }
 
-        .hero p {
+        .hero-desc {
             font-size: 17px;
-            color: var(--muted);
+            color: var(--text-muted);
             margin-bottom: 28px;
         }
 
@@ -178,60 +181,78 @@
             flex-wrap: wrap;
         }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--light);
-            border: 1px solid var(--border);
-            padding: 12px 24px;
-            border-radius: 6px;
+        .btn-solid {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
             font-weight: 700;
             text-decoration: none;
             transition: background 0.2s;
         }
 
-        .btn-outline:hover {
-            background: var(--dark-subtle);
+        .btn-solid:hover {
+            background: var(--primary-hover);
         }
 
-        .guarantee-box {
-            background: var(--dark-card);
+        .btn-secondary {
+            background: #ffffff;
+            color: #0f172a;
+            border: 1px solid var(--border);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #f1f5f9;
+        }
+
+        .hero-card {
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 32px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
         }
 
-        .guarantee-box h3 {
+        .hero-card h3 {
             font-size: 20px;
-            margin-bottom: 16px;
-            color: var(--light);
+            font-weight: 800;
+            margin-bottom: 18px;
+            color: #0f172a;
         }
 
-        .guarantee-box ul {
+        .hero-card ul {
             list-style: none;
         }
 
-        .guarantee-box li {
+        .hero-card li {
             position: relative;
-            padding-left: 26px;
+            padding-left: 28px;
             margin-bottom: 12px;
-            color: var(--muted);
+            color: #334155;
             font-size: 15px;
+            font-weight: 500;
         }
 
-        .guarantee-box li::before {
+        .hero-card li::before {
             content: "✓";
             position: absolute;
             left: 0;
             color: var(--primary);
             font-weight: 900;
+            font-size: 16px;
         }
 
-        /* SECTION BASE */
+        /* GENERAL SECTION STYLING */
         section {
-            padding: 80px 24px;
+            padding: 70px 24px;
         }
 
-        .container {
+        .section-wrap {
             max-width: 1240px;
             margin: 0 auto;
         }
@@ -255,15 +276,16 @@
         .section-title {
             font-size: 32px;
             font-weight: 900;
-            margin-bottom: 12px;
+            color: #0f172a;
+            margin-bottom: 10px;
         }
 
         .section-desc {
             font-size: 16px;
-            color: var(--muted);
+            color: var(--text-muted);
         }
 
-        /* OUR WORK / PORTFOLIO */
+        /* OUR WORK */
         .work-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -271,10 +293,11 @@
         }
 
         .work-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             transition: transform 0.2s;
         }
 
@@ -282,17 +305,16 @@
             transform: translateY(-4px);
         }
 
-        .work-img-placeholder {
+        .work-img {
             height: 200px;
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            background: #e2e8f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--muted);
+            color: #475569;
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
-            border-bottom: 1px solid var(--border);
         }
 
         .work-body {
@@ -301,52 +323,49 @@
 
         .work-body h4 {
             font-size: 18px;
+            color: #0f172a;
             margin-bottom: 6px;
         }
 
         .work-body p {
             font-size: 14px;
-            color: var(--muted);
+            color: var(--text-muted);
         }
 
-        /* WORKFLOW / SERVICES */
-        .services-bg {
-            background: var(--dark-card);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .step-grid {
+        /* SERVICES / WORKFLOW */
+        .workflow-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
         }
 
-        .step-card {
-            background: var(--dark-subtle);
+        .workflow-card {
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 30px 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
         .step-num {
-            color: var(--primary);
-            font-weight: 900;
             font-size: 13px;
-            letter-spacing: 1px;
+            font-weight: 900;
+            color: var(--primary);
             text-transform: uppercase;
+            letter-spacing: 1px;
             margin-bottom: 10px;
             display: block;
         }
 
-        .step-card h4 {
+        .workflow-card h4 {
             font-size: 18px;
+            color: #0f172a;
             margin-bottom: 10px;
         }
 
-        .step-card p {
+        .workflow-card p {
             font-size: 14px;
-            color: var(--muted);
+            color: var(--text-muted);
         }
 
         /* PRICING */
@@ -357,7 +376,7 @@
         }
 
         .pricing-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 36px 28px;
@@ -365,6 +384,7 @@
             flex-direction: column;
             justify-content: space-between;
             position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
         }
 
         .pricing-card.featured {
@@ -388,12 +408,13 @@
         .price-num {
             font-size: 38px;
             font-weight: 900;
+            color: #0f172a;
             margin: 12px 0;
         }
 
         .price-num span {
             font-size: 14px;
-            color: var(--muted);
+            color: var(--text-muted);
             font-weight: normal;
         }
 
@@ -407,7 +428,7 @@
             padding-left: 24px;
             margin-bottom: 10px;
             font-size: 14px;
-            color: var(--muted);
+            color: #334155;
         }
 
         .pricing-card li::before {
@@ -418,7 +439,7 @@
             font-weight: 900;
         }
 
-        /* REVIEWS / TESTIMONIALS */
+        /* REVIEWS */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -426,10 +447,11 @@
         }
 
         .review-card {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 10px;
             padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
         }
 
         .stars {
@@ -440,7 +462,7 @@
 
         .review-text {
             font-size: 14px;
-            color: var(--muted);
+            color: #334155;
             margin-bottom: 16px;
             font-style: italic;
         }
@@ -448,13 +470,13 @@
         .reviewer-meta {
             font-size: 13px;
             font-weight: 700;
-            color: var(--light);
+            color: #0f172a;
         }
 
         .reviewer-meta span {
             display: block;
             font-weight: normal;
-            color: var(--muted);
+            color: var(--text-muted);
             font-size: 12px;
         }
 
@@ -468,31 +490,33 @@
         }
 
         .faq-item {
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
         }
 
         .faq-item h4 {
             font-size: 16px;
             margin-bottom: 8px;
-            color: var(--light);
+            color: #0f172a;
         }
 
         .faq-item p {
             font-size: 14px;
-            color: var(--muted);
+            color: var(--text-muted);
         }
 
-        /* CONTACT SECTION */
+        /* CONTACT FORM SECTION */
         .contact-wrap {
-            max-width: 860px;
+            max-width: 800px;
             margin: 0 auto;
-            background: var(--dark-card);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
         }
 
         .form-grid {
@@ -508,35 +532,35 @@
 
         .form-label {
             display: block;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 700;
             margin-bottom: 6px;
-            text-transform: uppercase;
-            color: var(--muted);
+            color: #0f172a;
         }
 
         .form-input, .form-select, .form-textarea {
             width: 100%;
-            background: var(--dark-subtle);
-            border: 1px solid var(--border);
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
-            padding: 12px;
+            padding: 12px 14px;
             font-size: 14px;
-            color: var(--light);
+            color: #0f172a;
         }
 
         .form-input:focus, .form-select:focus, .form-textarea:focus {
             outline: none;
             border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.15);
         }
 
         .form-textarea {
             resize: vertical;
-            min-height: 100px;
+            min-height: 110px;
         }
 
         #form-status {
-            margin-top: 14px;
+            margin-top: 16px;
             text-align: center;
             font-size: 14px;
             font-weight: 600;
@@ -544,24 +568,24 @@
 
         /* FOOTER */
         footer {
-            border-top: 1px solid var(--border);
-            padding: 30px 24px;
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 36px 24px;
             text-align: center;
-            font-size: 13px;
-            color: var(--muted);
+            font-size: 14px;
         }
 
         footer a {
-            color: var(--muted);
+            color: #cbd5e1;
             text-decoration: none;
         }
 
         footer a:hover {
-            color: var(--primary);
+            color: #ffffff;
         }
 
         @media (max-width: 860px) {
-            .hero {
+            .hero-section {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
@@ -574,8 +598,12 @@
             .form-full {
                 grid-column: span 1;
             }
-            .nav-links {
+            .nav-menu {
                 display: none;
+            }
+            .top-bar {
+                justify-content: center;
+                flex-wrap: wrap;
             }
         }
     </style>
@@ -583,42 +611,43 @@
 <body>
 
     <!-- TOP BAR -->
-    <div class="top-bar">
-        <a href="#faq">FAQ</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact Us</a>
+    <div class="top-bar-wrap">
+        <div class="top-bar">
+            <a href="#faq">FAQ</a>
+            <a href="#work">Blogs</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact Us</a>
+            <a href="tel:9498385729" class="top-phone">📞 (949) 838-5729</a>
+        </div>
     </div>
 
-    <!-- MAIN NAVBAR -->
+    <!-- MAIN NAVIGATION -->
     <header>
         <div class="nav-container">
-            <a href="#" class="brand-logo">Elite <span>Auto Design</span> Studio</a>
-            <ul class="nav-links">
+            <a href="#" class="brand-logo">ELITE <span>AUTO DESIGN</span> STUDIO</a>
+            <ul class="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#work">Our Work</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="tel:9498385729" class="nav-phone"><span>📞</span> (949) 838-5729</a></li>
             </ul>
-            <a href="#contact" class="btn-cta">Request a Free Consultation</a>
+            <a href="#contact" class="btn-consultation">Request a Free Consultation</a>
         </div>
     </header>
 
     <!-- HERO SECTION -->
     <main>
-        <div class="hero">
+        <section class="hero-section">
             <div>
-                <span class="badge">Prepress & 3D Pre-Visualization</span>
-                <h1>Commercial Vehicle Wrap Design That Sells.</h1>
-                <p>Turn your work trucks and commercial vans into high-converting mobile billboards. We deliver certified, print-ready vector packages and photorealistic 3D visual mockups.</p>
+                <span class="hero-badge">Prepress & 3D Pre-Visualization</span>
+                <h1 class="hero-title">Commercial Vehicle Wrap Design That Sells.</h1>
+                <p class="hero-desc">Turn your work trucks and commercial vans into high-converting mobile billboards. We deliver certified, print-ready vector packages and photorealistic 3D visual mockups.</p>
                 <div class="hero-actions">
-                    <a href="#contact" class="btn-cta" style="padding: 12px 24px; font-size: 15px;">Request Free Consultation</a>
-                    <a href="#pricing" class="btn-outline">View Design Tiers</a>
+                    <a href="#contact" class="btn-solid">Request Free Consultation</a>
+                    <a href="#pricing" class="btn-secondary">View Design Tiers</a>
                 </div>
             </div>
-            <div class="guarantee-box">
+            <div class="hero-card">
                 <h3>Prepress Vector Guarantee</h3>
                 <ul>
                     <li>1:10 Scaled Architectural Blueprints</li>
@@ -628,11 +657,11 @@
                     <li>Direct Shop Compatibility (.AI, .EPS, PDF)</li>
                 </ul>
             </div>
-        </div>
+        </section>
 
-        <!-- OUR WORK / PORTFOLIO -->
-        <section id="work">
-            <div class="container">
+        <!-- OUR WORK -->
+        <section id="work" style="background: #ffffff;">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Portfolio</span>
                     <h2 class="section-title">Commercial Concepts & Layouts</h2>
@@ -640,21 +669,21 @@
                 </div>
                 <div class="work-grid">
                     <div class="work-card">
-                        <div class="work-img-placeholder">3D Concept: Ford Transit High Roof</div>
+                        <div class="work-img">3D Concept: Ford Transit High Roof</div>
                         <div class="work-body">
                             <h4>Plumbing & HVAC Fleet Layout</h4>
                             <p>Partial side and rear door coverage with maximum highway typography contrast.</p>
                         </div>
                     </div>
                     <div class="work-card">
-                        <div class="work-img-placeholder">3D Concept: Ram ProMaster 2500</div>
+                        <div class="work-img">3D Concept: Ram ProMaster 2500</div>
                         <div class="work-body">
                             <h4>Electrical Contractor Van</h4>
                             <p>Seamless quarter-panel contour blend with phone and licensing callouts.</p>
                         </div>
                     </div>
                     <div class="work-card">
-                        <div class="work-img-placeholder">3D Concept: Chevy Silverado Service Truck</div>
+                        <div class="work-img">3D Concept: Chevy Silverado Service Truck</div>
                         <div class="work-body">
                             <h4>Commercial Roofing Rig</h4>
                             <p>Spot branding and tailgate layout optimized for utility bed configurations.</p>
@@ -664,26 +693,26 @@
             </div>
         </section>
 
-        <!-- SERVICES / WORKFLOW -->
-        <section class="services-bg" id="services">
-            <div class="container">
+        <!-- SERVICES / PROCESS -->
+        <section id="services">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Our Process</span>
                     <h2 class="section-title">From Concept to Print-Ready Files</h2>
                     <p class="section-desc">Our 3-step digital pre-visualization workflow eliminates print delays and installation mistakes.</p>
                 </div>
-                <div class="step-grid">
-                    <div class="step-card">
+                <div class="workflow-grid">
+                    <div class="workflow-card">
                         <span class="step-num">Step 01</span>
                         <h4>Vehicle Blueprinting</h4>
                         <p>We match your vehicle make, year, and model against millimeter-accurate body templates to ensure flawless alignment around door handles, trims, and rivets.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="workflow-card">
                         <span class="step-num">Step 02</span>
                         <h4>3D Proofing & Revisions</h4>
                         <p>Review your custom fleet graphics on photorealistic 3D mockups from all angles before sending anything to the print shop.</p>
                     </div>
-                    <div class="step-card">
+                    <div class="workflow-card">
                         <span class="step-num">Step 03</span>
                         <h4>Certified Vector Release</h4>
                         <p>Receive print-ready vector packages (.AI, .EPS, Vector PDF) with installer bleeds universally accepted by wrap installers nationwide.</p>
@@ -693,8 +722,8 @@
         </section>
 
         <!-- PRICING -->
-        <section id="pricing">
-            <div class="container">
+        <section id="pricing" style="background: #ffffff;">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Pricing</span>
                     <h2 class="section-title">Design Packages & Flat Rates</h2>
@@ -705,7 +734,7 @@
                         <div>
                             <h4>Tier 1: Spot & Accent</h4>
                             <div class="price-num">$350 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--muted);">Ideal for doors, tailgates, and high-impact contact decals.</p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Ideal for doors, tailgates, and high-impact contact decals.</p>
                             <ul>
                                 <li>Logo placement & contact info setup</li>
                                 <li>2 angles of digital 2D/3D proofs</li>
@@ -713,7 +742,7 @@
                                 <li>Master print-ready vector export</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn-outline" style="text-align: center; display: block; margin-top: 20px;">Select Tier 1</a>
+                        <a href="#contact" class="btn-secondary" style="text-align: center; display: block; margin-top: 20px;">Select Tier 1</a>
                     </div>
 
                     <div class="pricing-card featured">
@@ -721,7 +750,7 @@
                         <div>
                             <h4>Tier 2: Partial Wrap</h4>
                             <div class="price-num">$500 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--muted);">Optimal ROI: Partial sides, rear doors, and vehicle contours.</p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Optimal ROI: Partial sides, rear doors, and vehicle contours.</p>
                             <ul>
                                 <li>Full side & rear layout design</li>
                                 <li>Photorealistic 3D proofing (4 angles)</li>
@@ -730,14 +759,14 @@
                                 <li>Standard 2-inch installer bleed setup</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn-cta" style="text-align: center; display: block; margin-top: 20px;">Select Tier 2</a>
+                        <a href="#contact" class="btn-solid" style="text-align: center; display: block; margin-top: 20px;">Select Tier 2</a>
                     </div>
 
                     <div class="pricing-card">
                         <div>
                             <h4>Tier 3: Full Commercial</h4>
                             <div class="price-num">$750 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--muted);">Total coverage transformation for vans, box trucks, and trailers.</p>
+                            <p style="font-size: 14px; color: var(--text-muted);">Total coverage transformation for vans, box trucks, and trailers.</p>
                             <ul>
                                 <li>Complete 360° vehicle coverage</li>
                                 <li>Contour & window perf mapping</li>
@@ -746,15 +775,15 @@
                                 <li>Installer blueprint & panel map guide</li>
                             </ul>
                         </div>
-                        <a href="#contact" class="btn-outline" style="text-align: center; display: block; margin-top: 20px;">Select Tier 3</a>
+                        <a href="#contact" class="btn-secondary" style="text-align: center; display: block; margin-top: 20px;">Select Tier 3</a>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- REVIEWS -->
-        <section class="services-bg" id="reviews">
-            <div class="container">
+        <section id="reviews">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Client Feedback</span>
                     <h2 class="section-title">Trusted by Contractors & Shops</h2>
@@ -781,8 +810,8 @@
         </section>
 
         <!-- FAQ -->
-        <section id="faq">
-            <div class="container">
+        <section id="faq" style="background: #ffffff;">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Common Questions</span>
                     <h2 class="section-title">Frequently Asked Questions</h2>
@@ -805,8 +834,8 @@
         </section>
 
         <!-- CONTACT US -->
-        <section class="services-bg" id="contact">
-            <div class="container">
+        <section id="contact">
+            <div class="section-wrap">
                 <div class="section-header">
                     <span class="section-tag">Direct Intake</span>
                     <h2 class="section-title">Start Your Wrap Project</h2>
@@ -850,7 +879,7 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn-cta" style="width: 100%; padding: 15px; font-size: 15px; border: none; cursor: pointer;">Submit Free Consultation Request</button>
+                        <button type="submit" class="btn-solid" style="width: 100%; padding: 16px; font-size: 16px; border: none; cursor: pointer; border-radius: 8px;">Submit Free Consultation Request</button>
                         <div id="form-status"></div>
                     </form>
                 </div>
@@ -861,17 +890,17 @@
     <!-- FOOTER -->
     <footer>
         <p>© 2026 Elite Auto Design Studio. All rights reserved. | Irvine, California</p>
-        <p style="margin-top: 6px;">Direct Line: <a href="tel:9498385729">(949) 838-5729</a> | <a href="mailto:info@eliteautodesignstudio.com">info@eliteautodesignstudio.com</a></p>
+        <p style="margin-top: 8px;">Direct Line: <a href="tel:9498385729">(949) 838-5729</a> | <a href="mailto:info@eliteautodesignstudio.com">info@eliteautodesignstudio.com</a></p>
     </footer>
 
-    <!-- Form Script -->
+    <!-- Form Handler Script -->
     <script>
         const form = document.getElementById('contact-form');
         const status = document.getElementById('form-status');
 
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            status.style.color = '#94A3B8';
+            status.style.color = '#64748b';
             status.innerHTML = 'Sending consultation request...';
 
             const formData = new FormData(form);
@@ -889,16 +918,16 @@
             .then(async (response) => {
                 let json = await response.json();
                 if (response.status == 200) {
-                    status.style.color = '#22c55e';
+                    status.style.color = '#16a34a';
                     status.innerHTML = '✓ Request received! We will be in touch within 24 hours.';
                     form.reset();
                 } else {
-                    status.style.color = '#E50914';
+                    status.style.color = '#D32F2F';
                     status.innerHTML = json.message || 'Something went wrong. Please call us directly!';
                 }
             })
             .catch(error => {
-                status.style.color = '#E50914';
+                status.style.color = '#D32F2F';
                 status.innerHTML = 'Submission error. Please call (949) 838-5729 directly.';
             });
         });
