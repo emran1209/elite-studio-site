@@ -3,934 +3,1242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Auto Design Studio | Digital Vehicle Wrap Prepress & 3D Pre-Visualization</title>
-    <meta name="description" content="Precision digital vehicle wrap blueprints, 3D pre-visualization mockups, and certified prepress vector packages for fleet operators and wrap installers nationwide.">
-
+    <title>Elite Auto Design Studio | Premium Vehicle Wrap Design</title>
     <style>
-        :root {
-            --primary: #D32F2F;
-            --primary-hover: #b71c1c;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --bg-page: #f8fafc;
-            --bg-card: #ffffff;
-            --border: #e2e8f0;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-
         body {
-            background-color: var(--bg-page);
-            color: var(--text-main);
-            line-height: 1.6;
+            background-color: #ffffff; 
+            color: #1c1c1e; 
+            padding-top: 0;
         }
-
-        /* TOP BAR */
-        .top-bar-wrap {
-            background: #ffffff;
-            border-bottom: 1px solid #f1f5f9;
-        }
-
-        .top-bar {
-            max-width: 1240px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 10px 24px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 24px;
-            font-size: 14px;
-            font-weight: 600;
+            padding: 40px 20px; 
         }
-
-        .top-bar a {
-            color: #0f172a;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .top-bar a:hover {
-            color: var(--primary);
-        }
-
-        .top-phone {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--primary);
-            font-weight: 800;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        /* MAIN NAVIGATION */
+        
+        /* HEADER REPLICATION - ENLARGED FONTS */
         header {
-            background: #ffffff;
-            border-bottom: 2px solid #e2e8f0;
+            background-color: #ffffff;
+            border-bottom: 3px solid #E50914; 
+            padding: 22px 40px; 
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
         }
-
-        .nav-container {
-            max-width: 1240px;
+        .header-top-wrap {
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 16px 24px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        .brand-logo {
-            font-size: 26px;
-            font-weight: 900;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: #0f172a;
-            letter-spacing: -0.5px;
-        }
-
-        .brand-logo span {
-            color: var(--primary);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
             align-items: center;
-            gap: 28px;
         }
-
-        .nav-menu a {
-            color: #0f172a;
+        .logo {
+            font-size: 32px; 
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #070D1E;
+            cursor: pointer;
+        }
+        .logo span {
+            color: #E50914;
+        }
+        .nav-assembly {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 18px;
+        }
+        
+        /* Top Row Style */
+        .nav-row-top {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+        .sub-nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .sub-nav-links a {
+            color: #1c1c1e;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 17px; 
             font-weight: 700;
             transition: color 0.2s;
+            cursor: pointer;
         }
-
-        .nav-menu a:hover {
-            color: var(--primary);
+        .sub-nav-links a:hover {
+            color: #E50914;
         }
-
-        .btn-consultation {
-            background: var(--primary);
-            color: #ffffff !important;
-            padding: 12px 24px;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 800;
+        .header-phone {
+            color: #E50914;
             text-decoration: none;
-            transition: background 0.2s, transform 0.2s;
-            box-shadow: 0 4px 14px rgba(211, 47, 47, 0.35);
-        }
-
-        .btn-consultation:hover {
-            background: var(--primary-hover);
-            transform: translateY(-1px);
-        }
-
-        /* HERO SECTION */
-        .hero-section {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 60px 24px;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 40px;
+            font-weight: 800;
+            font-size: 26px; 
+            letter-spacing: -0.5px;
+            display: flex;
             align-items: center;
         }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(211, 47, 47, 0.1);
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 6px 14px;
-            border-radius: 30px;
-            margin-bottom: 16px;
+        .divider {
+            color: #d2d2d7;
+            margin: 0 16px;
+            font-size: 16px;
+            font-weight: 400;
         }
-
-        .hero-title {
-            font-size: 44px;
-            font-weight: 900;
-            line-height: 1.15;
-            color: #0f172a;
-            margin-bottom: 16px;
-        }
-
-        .hero-desc {
-            font-size: 17px;
-            color: var(--text-muted);
-            margin-bottom: 28px;
-        }
-
-        .hero-actions {
+        
+        /* Bottom Row Style */
+        .nav-row-bottom {
             display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
+            align-items: center;
+            gap: 35px;
         }
-
-        .btn-solid {
-            background: var(--primary);
+        .main-nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .main-nav-links a {
+            color: #1c1c1e;
+            text-decoration: none;
+            font-size: 20px; 
+            font-weight: 800;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        .main-nav-links a:hover, .main-nav-links a.active {
+            color: #E50914;
+        }
+        
+        /* Action Button */
+        .header-cta-button {
+            display: inline-block;
+            background-color: #E50914;
             color: #ffffff;
-            padding: 14px 28px;
-            border-radius: 8px;
-            font-weight: 700;
             text-decoration: none;
-            transition: background 0.2s;
+            padding: 14px 36px; 
+            font-weight: 800;
+            border-radius: 30px; 
+            font-size: 18px; 
+            transition: background-color 0.2s ease;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(229, 9, 20, 0.15);
+            cursor: pointer;
+        }
+        .header-cta-button:hover {
+            background-color: #b20710;
         }
 
-        .btn-solid:hover {
-            background: var(--primary-hover);
+        /* TAB SHOW/HIDE LOGIC CLASSES */
+        .content-section {
+            display: none; 
+        }
+        .content-section.active-tab {
+            display: block; 
         }
 
-        .btn-secondary {
-            background: #ffffff;
-            color: #0f172a;
-            border: 1px solid var(--border);
-            padding: 14px 28px;
-            border-radius: 8px;
+        /* PRICING STYLING */
+        .pricing-subheading {
+            font-size: 26px;
+            font-weight: 800;
+            color: #070D1E;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+            border-left: 4px solid #E50914;
+            padding-left: 12px;
+        }
+        .price-tag {
+            font-size: 32px;
+            font-weight: 900;
+            color: #E50914;
+            margin-bottom: 15px;
+        }
+        .price-tag span {
+            font-size: 16px;
+            color: #48484a;
+            font-weight: 400;
+        }
+
+        /* SMARTPHONE / MOBILE MEDIA QUERY OPTIMIZATION */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 15px;
+            }
+            .header-top-wrap {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                text-align: center;
+            }
+            .logo {
+                font-size: 24px;
+            }
+            .nav-assembly {
+                align-items: center;
+                gap: 12px;
+                width: 100%;
+            }
+            .nav-row-top {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .sub-nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
+            .sub-nav-links a {
+                font-size: 14px;
+            }
+            .header-phone {
+                font-size: 20px;
+            }
+            .nav-row-bottom {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            .main-nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .main-nav-links a {
+                font-size: 15px;
+            }
+            .divider {
+                margin: 0 6px;
+                font-size: 13px;
+            }
+            .header-cta-button {
+                width: 100%;
+                max-width: 280px;
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero p.subtitle {
+                font-size: 18px;
+            }
+            .hero {
+                padding: 30px 20px;
+            }
+            h2 {
+                font-size: 28px;
+            }
+            .section-desc {
+                font-size: 17px;
+            }
+            .consult-form {
+                padding: 25px 20px;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* ROLLING MARQUEE TICKER STRIP */
+        .trust-ribbon {
+            background-color: #000000;
+            border-bottom: 3px solid #E50914;
+            padding: 14px 0;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 25s linear infinite;
+        }
+        .marquee-content {
+            display: flex;
+            justify-content: space-around;
+            gap: 60px;
+            padding-right: 60px;
+        }
+        .ribbon-item {
+            font-size: 15px;
             font-weight: 700;
-            text-decoration: none;
-            transition: background 0.2s;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 1px;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+        .ribbon-item::before {
+            content: "•";
+            color: #E50914;
+            font-size: 20px;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
         }
 
-        .btn-secondary:hover {
-            background: #f1f5f9;
-        }
-
-        .hero-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
+        /* VALUE CARDS SLIDER */
+        .value-slider-box {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #f5f5f7;
             border-radius: 12px;
-            padding: 32px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #d2d2d7;
+            overflow: hidden;
+            position: relative;
+        }
+        .value-track {
+            display: flex;
+            width: 300%; 
+            animation: rotateValueSequence 15s infinite ease-in-out;
+        }
+        .value-slide {
+            width: 100%;
+            padding: 45px 35px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+        .value-slide h2 {
+            font-size: 32px;
+            color: #E50914; 
+            margin-bottom: 12px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+        .value-slide p {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #323234;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        @keyframes rotateValueSequence {
+            0%, 28% { transform: translateX(0%); }          
+            33%, 61% { transform: translateX(-33.33%); }    
+            66%, 95% { transform: translateX(-66.66%); }    
+            100% { transform: translateX(0%); }             
         }
 
-        .hero-card h3 {
+        /* HOW IT WORKS 3-STEP PROCESS BAR */
+        .how-it-works-box {
+            background-color: #070D1E;
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 50px 30px;
+            margin: 40px 0 60px 0;
+            box-shadow: 0 10px 25px rgba(7, 13, 30, 0.15);
+        }
+        .how-it-works-box h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .how-it-works-box .section-desc {
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .step-card {
+            background-color: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 35px 25px;
+            position: relative;
+            text-align: left;
+        }
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background-color: #E50914;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        .step-card h3 {
             font-size: 20px;
             font-weight: 800;
-            margin-bottom: 18px;
-            color: #0f172a;
+            color: #ffffff;
+            margin-bottom: 10px;
         }
-
-        .hero-card ul {
-            list-style: none;
-        }
-
-        .hero-card li {
-            position: relative;
-            padding-left: 28px;
-            margin-bottom: 12px;
-            color: #334155;
+        .step-card p {
             font-size: 15px;
+            line-height: 1.6;
+            color: #94a3b8;
+        }
+
+        /* PREPRESS SPEC CARD */
+        .spec-guarantee-box {
+            background: #ffffff;
+            border: 2px solid #E50914;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0 50px 0;
+        }
+        .spec-guarantee-box h3 {
+            color: #070D1E;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .spec-guarantee-box ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+        .spec-guarantee-box ul li {
+            font-size: 15px;
+            color: #323234;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            line-height: 1.5;
+        }
+        .spec-guarantee-box ul li strong {
+            color: #070D1E;
+        }
+
+        /* FAQ ACCORDION STYLING */
+        .faq-container {
+            margin-top: 30px;
+        }
+        .faq-item {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #070D1E;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-question:hover {
+            color: #E50914;
+        }
+        .faq-answer {
+            display: none;
+            padding: 0 20px 20px 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #48484a;
+            border-top: 1px solid #e5e5ea;
+            padding-top: 15px;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-icon {
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: #E50914;
+        }
+
+        /* Grid Panels */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .pillar-card {
+            background-color: #f5f5f7; 
+            border: 1px solid #d2d2d7;
+            padding: 40px; 
+            border-radius: 12px;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+        .pillar-card h3 {
+            font-size: 24px; 
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: #070D1E;
+        }
+        .pillar-card p {
+            color: #323234; 
+            font-size: 17px; 
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .pillar-card ul {
+            margin-top: 15px;
+            padding-left: 20px;
+            color: #323234;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .pillar-card ul li {
+            margin-bottom: 8px;
+        }
+        .card-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .price-btn-solid {
+            background-color: #070D1E;
+            color: #ffffff;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            font-size: 15px;
+            transition: background-color 0.2s;
+        }
+        .price-btn-solid:hover {
+            background-color: #E50914;
+        }
+
+        /* Portfolio Cards */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .concept-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #d2d2d7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .concept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .concept-card img {
+            width: 100%;
+            height: 280px; 
+            object-fit: cover;
+            display: block;
+        }
+        .concept-caption {
+            padding: 18px 20px;
+            background-color: #f5f5f7;
+            border-top: 1px solid #e5e5ea;
+        }
+        .concept-caption h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #070D1E;
+            margin-bottom: 4px;
+        }
+        .concept-caption p {
+            font-size: 14px;
+            color: #6b7280;
             font-weight: 500;
         }
 
-        .hero-card li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 900;
-            font-size: 16px;
-        }
-
-        /* GENERAL SECTION STYLING */
-        section {
-            padding: 70px 24px;
-        }
-
-        .section-wrap {
-            max-width: 1240px;
-            margin: 0 auto;
-        }
-
-        .section-header {
+        /* HERO FRAME */
+        .hero {
+            background: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            padding: 60px;
+            border-radius: 16px;
             text-align: center;
-            max-width: 700px;
-            margin: 0 auto 48px auto;
+            margin: 20px 0 40px 0;
         }
-
-        .section-tag {
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: block;
-            margin-bottom: 6px;
-        }
-
-        .section-title {
-            font-size: 32px;
+        .hero h1 {
+            font-size: 48px; 
             font-weight: 900;
-            color: #0f172a;
-            margin-bottom: 10px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            color: #070D1E;
         }
-
+        .hero p.subtitle {
+            font-size: 22px; 
+            color: #48484a; 
+            max-width: 850px;
+            margin: 0 auto 35px auto;
+            line-height: 1.6;
+        }
+        h2 {
+            font-size: 40px; 
+            font-weight: 900;
+            margin-bottom: 14px;
+            letter-spacing: -1px;
+            color: #070D1E;
+            text-transform: uppercase;
+        }
         .section-desc {
-            font-size: 16px;
-            color: var(--text-muted);
+            color: #48484a;
+            font-size: 21px; 
+            margin-bottom: 20px;
+        }
+        .home-divider-line {
+            height: 2px;
+            background-color: #e5e5ea;
+            margin: 60px 0;
+            border: none;
         }
 
-        /* OUR WORK */
-        .work-grid {
+        /* Form Layout Split */
+        .footer-section {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 60px;
+            align-items: start;
+            margin-top: 20px;
         }
-
-        .work-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            transition: transform 0.2s;
-        }
-
-        .work-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .work-img {
-            height: 200px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #475569;
-            font-weight: 700;
-            font-size: 14px;
-            text-transform: uppercase;
-        }
-
-        .work-body {
-            padding: 20px;
-        }
-
-        .work-body h4 {
-            font-size: 18px;
-            color: #0f172a;
-            margin-bottom: 6px;
-        }
-
-        .work-body p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        /* SERVICES / WORKFLOW */
-        .workflow-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-
-        .workflow-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 30px 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .step-num {
-            font-size: 13px;
-            font-weight: 900;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .workflow-card h4 {
-            font-size: 18px;
-            color: #0f172a;
-            margin-bottom: 10px;
-        }
-
-        .workflow-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        /* PRICING */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-
-        .pricing-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 36px 28px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--primary);
-        }
-
-        .pricing-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: #ffffff;
-            font-size: 11px;
+        .footer-info h3 {
+            font-size: 42px;
             font-weight: 800;
-            text-transform: uppercase;
-            padding: 3px 12px;
-            border-radius: 20px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #070D1E;
         }
-
-        .price-num {
-            font-size: 38px;
-            font-weight: 900;
-            color: #0f172a;
-            margin: 12px 0;
+        .footer-info p {
+            color: #48484a;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
         }
-
-        .price-num span {
-            font-size: 14px;
-            color: var(--text-muted);
-            font-weight: normal;
-        }
-
-        .pricing-card ul {
-            list-style: none;
-            margin: 20px 0 30px 0;
-        }
-
-        .pricing-card li {
-            position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            font-size: 14px;
-            color: #334155;
-        }
-
-        .pricing-card li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: 900;
-        }
-
-        /* REVIEWS */
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-        }
-
-        .review-card {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 24px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        }
-
-        .stars {
-            color: #f59e0b;
-            font-size: 16px;
-            margin-bottom: 12px;
-        }
-
-        .review-text {
-            font-size: 14px;
-            color: #334155;
-            margin-bottom: 16px;
-            font-style: italic;
-        }
-
-        .reviewer-meta {
-            font-size: 13px;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .reviewer-meta span {
-            display: block;
-            font-weight: normal;
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-
-        /* FAQ */
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid var(--border);
+        .contact-details-box {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            padding: 25px;
             border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
         }
-
-        .faq-item h4 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #0f172a;
-        }
-
-        .faq-item p {
-            font-size: 14px;
-            color: var(--text-muted);
-        }
-
-        /* CONTACT FORM SECTION */
-        .contact-wrap {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 1px solid var(--border);
+        .consult-form {
+            background-color: #f5f5f7;
+            border: 1px solid #d2d2d7;
+            padding: 45px; 
             border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .form-full {
-            grid-column: span 2;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 6px;
-            color: #0f172a;
-        }
-
-        .form-input, .form-select, .form-textarea {
             width: 100%;
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 16px; 
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #070D1E;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            background-color: #ffffff;
+            border: 1px solid #d2d2d7;
             border-radius: 6px;
-            padding: 12px 14px;
-            font-size: 14px;
-            color: #0f172a;
+            color: #1c1c1e;
+            font-size: 16px;
         }
-
-        .form-input:focus, .form-select:focus, .form-textarea:focus {
+        .form-group input:focus, .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.15);
+            border-color: #E50914;
         }
-
-        .form-textarea {
+        .form-group textarea {
             resize: vertical;
-            min-height: 110px;
+            height: 120px;
         }
-
-        #form-status {
-            margin-top: 16px;
+        #form-status-msg {
+            margin-top: 15px;
+            font-weight: 700;
             text-align: center;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 36px 24px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        footer a {
-            color: #cbd5e1;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #ffffff;
-        }
-
-        @media (max-width: 860px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-            .form-full {
-                grid-column: span 1;
-            }
-            .nav-menu {
-                display: none;
-            }
-            .top-bar {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
+            font-size: 16px;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP BAR -->
-    <div class="top-bar-wrap">
-        <div class="top-bar">
-            <a href="#faq">FAQ</a>
-            <a href="#work">Blogs</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact Us</a>
-            <a href="tel:9498385729" class="top-phone">📞 (949) 838-5729</a>
-        </div>
-    </div>
-
-    <!-- MAIN NAVIGATION -->
+    <!-- TOP NAV HEADER -->
     <header>
-        <div class="nav-container">
-            <a href="#" class="brand-logo">ELITE <span>AUTO DESIGN</span> STUDIO</a>
-            <ul class="nav-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-            <a href="#contact" class="btn-consultation">Request a Free Consultation</a>
+        <div class="header-top-wrap">
+            <div class="logo" onclick="switchTab('home')">Elite <span>Auto Design</span> Studio</div>
+            
+            <div class="nav-assembly">
+                <!-- Upper Utilities Row -->
+                <div class="nav-row-top">
+                    <div class="sub-nav-links">
+                        <a onclick="switchTab('faq')">FAQ</a>
+                        <span class="divider">|</span>
+                        <a onclick="switchTab('blog')">Blogs</a>
+                        <span class="divider">|</span>
+                        <a onclick="switchTab('reviews')">Reviews</a>
+                        <span class="divider">|</span>
+                        <a onclick="switchTab('contact')">Contact Us</a>
+                        <span class="divider">|</span>
+                    </div>
+                    <a href="tel:9498385729" class="header-phone">📞 (949) 838-5729</a>
+                </div>
+                
+                <!-- Lower Navigation Toggles -->
+                <div class="nav-row-bottom">
+                    <nav class="main-nav-links">
+                        <a id="nav-home" onclick="switchTab('home')" class="active">Home</a>
+                        <span class="divider">|</span>
+                        <a id="nav-portfolio" onclick="switchTab('portfolio')">Our Work</a>
+                        <span class="divider">|</span>
+                        <a id="nav-services" onclick="switchTab('services')">Services</a>
+                        <span class="divider">|</span>
+                        <a id="nav-pricing" onclick="switchTab('pricing')">Pricing</a>
+                    </nav>
+                    <a onclick="switchTab('contact')" class="header-cta-button">Request a Free Consultation</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <main>
-        <section class="hero-section">
-            <div>
-                <span class="hero-badge">Prepress & 3D Pre-Visualization</span>
-                <h1 class="hero-title">Commercial Vehicle Wrap Design That Sells.</h1>
-                <p class="hero-desc">Turn your work trucks and commercial vans into high-converting mobile billboards. We deliver certified, print-ready vector packages and photorealistic 3D visual mockups.</p>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn-solid">Request Free Consultation</a>
-                    <a href="#pricing" class="btn-secondary">View Design Tiers</a>
+    <!-- ROLLING MARQUEE TICKER STRIP -->
+    <div class="trust-ribbon">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
+                <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
+                <div class="ribbon-item">Bespoke Commercial Identity</div>
+            </div>
+            <div class="marquee-content">
+                <div class="ribbon-item">Premium Vehicle Wrap Layouts</div>
+                <div class="ribbon-item">100% Digital Pre-Visualization Accuracy</div>
+                <div class="ribbon-item">Bespoke Commercial Identity</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- TAB 1: MASTER HOME BLOCK -->
+        <section id="tab-home" class="content-section active-tab">
+            <div class="hero">
+                <h1>Precision Vehicle Wrap Layouts & Design.</h1>
+                <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
+                <a onclick="switchTab('contact')" class="header-cta-button">Request a Free Design Consultation</a>
+            </div>
+
+            <!-- HOW IT WORKS 3-STEP PROCESS BAR -->
+            <div class="how-it-works-box">
+                <h2>How It Works</h2>
+                <p class="section-desc">Our streamlined 3-step digital soft-copy design and delivery process.</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Bespoke 3D Blueprinting</h3>
+                        <p>Share your vehicle make, model, and branding goals. We engineer custom, millimeter-accurate 3D wrap layouts tailored specifically to your vehicle's contours and panel lines.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Digital 360° Review & Revisions</h3>
+                        <p>Receive high-resolution, multi-angle photorealistic renders of your vehicle. We collaborate directly with you to refine and approve every detail before finalization.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>Production-Ready Soft Copy</h3>
+                        <p>Receive master vector source files (.AI, .EPS, .PDF) with exact scale, print bleed, and panel guides universally accepted by any local wrap shop or print installer nationwide.</p>
+                    </div>
                 </div>
             </div>
-            <div class="hero-card">
-                <h3>Prepress Vector Guarantee</h3>
+
+            <!-- DYNAMIC VALUES ROLLING SLIDER LOOP -->
+            <div class="value-slider-box">
+                <div class="value-track">
+                    <div class="value-slide">
+                        <h2>Precision-Engineered Designs</h2>
+                        <p>Meticulous attention to detail from the initial blueprint to the final high-resolution asset.</p>
+                    </div>
+                    <div class="value-slide">
+                        <h2>Collaborative Vision to Reality</h2>
+                        <p>Your brand, your direction. We work hand-in-hand with you to tailor concepts that align perfectly with your business goals.</p>
+                    </div>
+                    <div class="value-slide">
+                        <h2>High-Impact Brand Visibility</h2>
+                        <p>Turn your assets into powerful marketing tools designed to command attention and drive commercial success out on the road.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="home-divider-line">
+
+            <!-- Home Teaser A: Our Work Images -->
+            <div style="margin-top: 40px;">
+                <h2>Featured Design Concepts</h2>
+                <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
+                <div class="concept-grid">
+                    <div class="concept-card">
+                        <img src="./Hypernimbus%20Cybertruck.jpeg" alt="Hypernimbus Geometric Cybertruck Wrap" onerror="this.onerror=null; this.src='Hypernimbus Cybertruck.jpeg';">
+                        <div class="concept-caption">
+                            <h4>Hypernimbus Geometric Matrix</h4>
+                            <p>Custom Tesla Cybertruck EV Concept</p>
+                        </div>
+                    </div>
+                    <div class="concept-card">
+                        <img src="./IMG_1087.jpeg" alt="Matte Black to Sunburst Yellow Cybertruck" onerror="this.onerror=null; this.src='IMG_1087.jpg';">
+                        <div class="concept-caption">
+                            <h4>Solar Flare Ombré Shift</h4>
+                            <p>Satin Dual-Tone Gradient Layout</p>
+                        </div>
+                    </div>
+                    <div class="concept-card">
+                        <img src="./IMG_3178.jpeg" alt="Teal Superbike Custom Concept" onerror="this.onerror=null; this.src='IMG_3178.jpg';">
+                        <div class="concept-caption">
+                            <h4>Aerodynamic Aero-Teal</h4>
+                            <p>Precision Superbike Livery Package</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="home-divider-line">
+
+            <!-- Home Teaser B: Services Grid -->
+            <div>
+                <h2>Our Specialized Services</h2>
+                <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🚚</div>
+                        <h3>Commercial Fleet Branding</h3>
+                        <p>Turn your company vehicles into 24/7 rolling billboards. We design high-impact, high-visibility commercial layouts tailored specifically for local businesses looking to dominate their market.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🔥</div>
+                        <h3>Premium Custom Concept Wraps</h3>
+                        <p>From sleek matte black and aggressive geometric patterns to vibrant color-shifting aesthetics. We specialize in bespoke, jaw-dropping personal vehicle transformations.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 32px; margin-bottom: 12px;">📐</div>
+                        <h3>Precision Pre-Visualization</h3>
+                        <p>Our standout studio edge is full, high-fidelity mockup rendering. You get to see a photorealistic, 360-degree digital preview of your exact wrap design on your vehicle model.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div style="font-size: 32px; margin-bottom: 12px;">🖨️</div>
+                        <h3>Production-Ready Deliverables</h3>
+                        <p>You receive flawless, industry-standard blueprint dimensions and high-resolution, print-ready vector files universally accepted by any physical wrap installation or print shop.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="home-divider-line">
+
+            <!-- Home Teaser C: FAQ Section -->
+            <div>
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-desc">Everything you need to know about our digital design deliverables and workflow.</p>
+                <div class="faq-container">
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>What exact digital files will I receive?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            You receive a complete master production package including scaled vector source files (.AI, .EPS, Vector .PDF) with fonts converted to outlines, multi-angle 3D approval renderings (.PNG/.JPEG), and a 1-page installation spec guide with panel bleed measurements.
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>Do you physically print or install vinyl on vehicles?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We are a specialized digital prepress and 3D pre-visualization design studio. We deliver certified, print-ready digital soft copies that any local wrap installer or commercial print shop can print and install without layout errors.
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>How many design revisions are included?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Every custom design package includes 2 dedicated rounds of revisions on the 3D digital mockups. We work closely with you on colors, logo sizing, and typography until you are 100% satisfied with the preview before final vector export.
+                        </div>
+                    </div>
+                    <div class="faq-item" onclick="toggleFaq(this)">
+                        <div class="faq-question">
+                            <span>What types of vehicles do you design for?</span>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We design for all vehicle classes—commercial cargo vans (Ford Transit, Sprinter, Ram ProMaster), box trucks, pickup fleets, trailers, electric vehicles (Tesla Cybertruck, Model 3/Y), sports cars, and motorcycles.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: PORTFOLIO (OUR WORK) ONLY -->
+        <section id="tab-portfolio" class="content-section">
+            <h2>Featured Design Concepts</h2>
+            <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <img src="./Hypernimbus%20Cybertruck.jpeg" alt="Hypernimbus Geometric Cybertruck Wrap" onerror="this.onerror=null; this.src='Hypernimbus Cybertruck.jpeg';">
+                    <div class="concept-caption">
+                        <h4>Hypernimbus Geometric Matrix</h4>
+                        <p>Custom Tesla Cybertruck EV Concept</p>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <img src="./IMG_1087.jpeg" alt="Matte Black to Sunburst Yellow Cybertruck" onerror="this.onerror=null; this.src='IMG_1087.jpg';">
+                    <div class="concept-caption">
+                        <h4>Solar Flare Ombré Shift</h4>
+                        <p>Satin Dual-Tone Gradient Layout</p>
+                    </div>
+                </div>
+                <div class="concept-card">
+                    <img src="./IMG_3178.jpeg" alt="Teal Superbike Custom Concept" onerror="this.onerror=null; this.src='IMG_3178.jpg';">
+                    <div class="concept-caption">
+                        <h4>Aerodynamic Aero-Teal</h4>
+                        <p>Precision Superbike Livery Package</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: SERVICES ONLY -->
+        <section id="tab-services" class="content-section">
+            <h2>Our Specialized Services</h2>
+            <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
+            
+            <!-- PREPRESS QUALITY GUARANTEE BADGE -->
+            <div class="spec-guarantee-box">
+                <h3>🛡️ Certified Prepress & Vector Quality Guarantee</h3>
                 <ul>
-                    <li>1:10 Scaled Architectural Blueprints</li>
-                    <li>2-Inch Installer Bleed & Panel Guides</li>
-                    <li>Photorealistic 360° 3D Proofs</li>
-                    <li>CMYK Color Calibrated for Wide-Format Print</li>
-                    <li>Direct Shop Compatibility (.AI, .EPS, PDF)</li>
+                    <li>✅ <strong>Scaled Blueprints:</strong> Engineered at 1:1 or 1:10 scale matching exact factory vehicle contour blueprints.</li>
+                    <li>✅ <strong>Prepress Bleed Included:</strong> 2 to 3-inch bleed allowances around doors, handles, windows, and seam edges.</li>
+                    <li>✅ <strong>Industry Color Matching:</strong> CMYK color profiles calibrated for 3M IJ180Cv3 and Avery Dennison MPI 1105 media.</li>
+                    <li>✅ <strong>Universal Compatibility:</strong> Master `.AI`, `.EPS`, and vector `.PDF` files accepted by 100% of US wrap installers.</li>
                 </ul>
             </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🚚</div>
+                    <h3>Commercial Fleet Branding</h3>
+                    <p>Turn your company vehicles into 24/7 rolling billboards. We design high-impact, high-visibility commercial layouts tailored specifically for local businesses looking to dominate their market.</p>
+                </div>
+                <div class="pillar-card">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🔥</div>
+                    <h3>Premium Custom Concept Wraps</h3>
+                    <p>From sleek matte black and aggressive geometric patterns to vibrant color-shifting aesthetics. We specialize in bespoke, jaw-dropping personal vehicle transformations.</p>
+                </div>
+                <div class="pillar-card">
+                    <div style="font-size: 32px; margin-bottom: 12px;">📐</div>
+                    <h3>Precision Pre-Visualization</h3>
+                    <p>Our standout studio edge is full, high-fidelity mockup rendering. You get to see a photorealistic, 360-degree digital preview of your exact wrap design on your vehicle model.</p>
+                </div>
+                <div class="pillar-card">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🖨️</div>
+                    <h3>Production-Ready Deliverables</h3>
+                    <p>You receive flawless, industry-standard blueprint dimensions and high-resolution, print-ready vector files universally accepted by any physical wrap installation or print shop.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- OUR WORK -->
-        <section id="work" style="background: #ffffff;">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Portfolio</span>
-                    <h2 class="section-title">Commercial Concepts & Layouts</h2>
-                    <p class="section-desc">Clean, high-visibility 3D vehicle designs engineered specifically for service contractors and fleet operators.</p>
+        <!-- TAB 4: PRICING ONLY -->
+        <section id="tab-pricing" class="content-section">
+            <h2>Project-Based Pricing Structures</h2>
+            <p class="section-desc">Bespoke digital design layouts priced accurately according to your project's technical complexity and scale.</p>
+            
+            <div class="pricing-subheading">Premium Vehicle Wrap Layouts</div>
+            <div class="pillars-grid" style="margin-bottom: 60px;">
+                <div class="pillar-card">
+                    <div>
+                        <h3>Tier 1: Accent & Spot Branding</h3>
+                        <div class="price-tag">from $350<span>*</span></div>
+                        <p style="margin-bottom:10px;">Ideal for minimal setups focusing on clean, essential company decals and text layouts.</p>
+                        <ul>
+                            <li>Custom company logo placement</li>
+                            <li>High-readability contact details</li>
+                            <li>Print-ready vector source blueprints</li>
+                            <li>*Final quote varies based on asset complexity</li>
+                        </ul>
+                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a></div>
                 </div>
-                <div class="work-grid">
-                    <div class="work-card">
-                        <div class="work-img">3D Concept: Ford Transit High Roof</div>
-                        <div class="work-body">
-                            <h4>Plumbing & HVAC Fleet Layout</h4>
-                            <p>Partial side and rear door coverage with maximum highway typography contrast.</p>
-                        </div>
+                <div class="pillar-card" style="border: 2px solid #E50914;">
+                    <div>
+                        <h3>Tier 2: Partial Wrap Design</h3>
+                        <div class="price-tag" style="font-size: 26px; line-height: 1.3; margin-bottom: 23px;">Project-Based / Custom</div>
+                        <p style="margin-bottom:10px;">Our most requested setup. Tailored coverage (25% to 50%) built to maximize high-contrast commercial impact.</p>
+                        <ul>
+                            <li>Integrated multi-angle layout matching</li>
+                            <li>Custom blueprint optimization</li>
+                            <li>Dedicated design revision rounds</li>
+                        </ul>
                     </div>
-                    <div class="work-card">
-                        <div class="work-img">3D Concept: Ram ProMaster 2500</div>
-                        <div class="work-body">
-                            <h4>Electrical Contractor Van</h4>
-                            <p>Seamless quarter-panel contour blend with phone and licensing callouts.</p>
-                        </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a></div>
+                </div>
+                <div class="pillar-card">
+                    <div>
+                        <h3>Tier 3: Premium Full Wrap</h3>
+                        <div class="price-tag" style="font-size: 26px; line-height: 1.3; margin-bottom: 23px;">Bespoke Pricing</div>
+                        <p style="margin-bottom:10px;">Complete 100% canvas dominance. Engineered carefully for complex geometric patterns, premium EV styling, or large fleet box trucks.</p>
+                        <ul>
+                            <li>Full 360° photorealistic renderings</li>
+                            <li>Advanced graphic asset integration</li>
+                            <li>Direct layout coordination with print shop</li>
+                        </ul>
                     </div>
-                    <div class="work-card">
-                        <div class="work-img">3D Concept: Chevy Silverado Service Truck</div>
-                        <div class="work-body">
-                            <h4>Commercial Roofing Rig</h4>
-                            <p>Spot branding and tailgate layout optimized for utility bed configurations.</p>
-                        </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a></div>
+                </div>
+            </div>
+
+            <div class="pricing-subheading">Corporate Brand Collateral</div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div>
+                        <h3>Business Cards</h3>
+                        <div class="price-tag">from $149 <span>/ setup</span></div>
+                        <p>Bespoke double-sided corporate card layouts structured cleanly with premium physical finishes in mind.</p>
+                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
+                </div>
+                <div class="pillar-card">
+                    <div>
+                        <h3>Flyers & Brochures</h3>
+                        <div class="price-tag">from $249 <span>/ concept</span></div>
+                        <p>High-impact, eye-catching structural marketing assets custom-designed for local print distribution or digital media handouts.</p>
+                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
+                </div>
+                <div class="pillar-card">
+                    <div>
+                        <h3>Corporate Signage</h3>
+                        <div class="price-tag">from $349 <span>/ layout</span></div>
+                        <p>High-visibility corporate structural signage, storefront window graphics, and a-frame layout displays built to showcase your brick-and-mortar presence.</p>
+                    </div>
+                    <div class="card-button-group"><a onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: FAQ TAB -->
+        <section id="tab-faq" class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-desc">Detailed answers about our digital pre-visualization and soft-copy deliverables.</p>
+            <div class="faq-container">
+                <div class="faq-item active" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What exact digital files will I receive?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        You receive a complete master production package including scaled vector source files (.AI, .EPS, Vector .PDF) with fonts converted to outlines, multi-angle 3D approval renderings (.PNG/.JPEG), and a 1-page installation spec guide with panel bleed measurements.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Do you physically print or install vinyl on vehicles?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We are a specialized digital prepress and 3D pre-visualization design studio. We deliver certified, print-ready digital soft copies that any local wrap installer or commercial print shop can print and install without layout errors.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How many design revisions are included?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Every custom design package includes 2 dedicated rounds of revisions on the 3D digital mockups. We work closely with you on colors, logo sizing, and typography until you are 100% satisfied with the preview before final vector export.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What types of vehicles do you design for?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We design for all vehicle classes—commercial cargo vans (Ford Transit, Sprinter, Ram ProMaster), box trucks, pickup fleets, trailers, electric vehicles (Tesla Cybertruck, Model 3/Y), sports cars, and motorcycles.
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SERVICES / PROCESS -->
-        <section id="services">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Our Process</span>
-                    <h2 class="section-title">From Concept to Print-Ready Files</h2>
-                    <p class="section-desc">Our 3-step digital pre-visualization workflow eliminates print delays and installation mistakes.</p>
+        <!-- TAB 6: BLOGS ONLY -->
+        <section id="tab-blog" class="content-section">
+            <h2>Studio Insights & Guides</h2>
+            <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Maximizing Highway Readability</h3>
+                    <p style="margin-top: 10px;">Learn how choosing high-contrast colors and proper textual asset sizing keeps your business contact details crystal clear at 60 mph.</p>
                 </div>
-                <div class="workflow-grid">
-                    <div class="workflow-card">
-                        <span class="step-num">Step 01</span>
-                        <h4>Vehicle Blueprinting</h4>
-                        <p>We match your vehicle make, year, and model against millimeter-accurate body templates to ensure flawless alignment around door handles, trims, and rivets.</p>
-                    </div>
-                    <div class="workflow-card">
-                        <span class="step-num">Step 02</span>
-                        <h4>3D Proofing & Revisions</h4>
-                        <p>Review your custom fleet graphics on photorealistic 3D mockups from all angles before sending anything to the print shop.</p>
-                    </div>
-                    <div class="workflow-card">
-                        <span class="step-num">Step 03</span>
-                        <h4>Certified Vector Release</h4>
-                        <p>Receive print-ready vector packages (.AI, .EPS, Vector PDF) with installer bleeds universally accepted by wrap installers nationwide.</p>
-                    </div>
+                <div class="pillar-card">
+                    <h3>Why Pre-Visualization Saves Thousands</h3>
+                    <p style="margin-top: 10px;">Discover how catching graphical warping errors on a digital vehicle blueprint avoids costly physical vinyl print reprints.</p>
                 </div>
             </div>
         </section>
 
-        <!-- PRICING -->
-        <section id="pricing" style="background: #ffffff;">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Pricing</span>
-                    <h2 class="section-title">Design Packages & Flat Rates</h2>
-                    <p class="section-desc">Transparent flat-rate pricing. 50% deposit to begin blueprinting, balance upon final 3D proof approval.</p>
+        <!-- TAB 7: REVIEWS ONLY -->
+        <section id="tab-reviews" class="content-section">
+            <h2>Client Experiences</h2>
+            <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"The mockups allowed us to see exactly how our logo looked on the highway. Flawless transition from design to print!"</p>
+                    <h4 style="font-weight: 700; color: #070D1E;">— Local Business Fleet Manager</h4>
                 </div>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <div>
-                            <h4>Tier 1: Spot & Accent</h4>
-                            <div class="price-num">$350 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--text-muted);">Ideal for doors, tailgates, and high-impact contact decals.</p>
-                            <ul>
-                                <li>Logo placement & contact info setup</li>
-                                <li>2 angles of digital 2D/3D proofs</li>
-                                <li>1 revision round included</li>
-                                <li>Master print-ready vector export</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn-secondary" style="text-align: center; display: block; margin-top: 20px;">Select Tier 1</a>
-                    </div>
-
-                    <div class="pricing-card featured">
-                        <span class="pricing-badge">Most Popular</span>
-                        <div>
-                            <h4>Tier 2: Partial Wrap</h4>
-                            <div class="price-num">$500 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--text-muted);">Optimal ROI: Partial sides, rear doors, and vehicle contours.</p>
-                            <ul>
-                                <li>Full side & rear layout design</li>
-                                <li>Photorealistic 3D proofing (4 angles)</li>
-                                <li>2 dedicated revision rounds</li>
-                                <li>Prepress vector files (.AI, .EPS, PDF)</li>
-                                <li>Standard 2-inch installer bleed setup</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn-solid" style="text-align: center; display: block; margin-top: 20px;">Select Tier 2</a>
-                    </div>
-
-                    <div class="pricing-card">
-                        <div>
-                            <h4>Tier 3: Full Commercial</h4>
-                            <div class="price-num">$750 <span>/ vehicle</span></div>
-                            <p style="font-size: 14px; color: var(--text-muted);">Total coverage transformation for vans, box trucks, and trailers.</p>
-                            <ul>
-                                <li>Complete 360° vehicle coverage</li>
-                                <li>Contour & window perf mapping</li>
-                                <li>Unlimited concept drafts</li>
-                                <li>Certified production vector pack</li>
-                                <li>Installer blueprint & panel map guide</li>
-                            </ul>
-                        </div>
-                        <a href="#contact" class="btn-secondary" style="text-align: center; display: block; margin-top: 20px;">Select Tier 3</a>
-                    </div>
+                <div class="pillar-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"Highly precise vector assets. Our local install shop had zero issues with placement or stretching during application."</p>
+                    <h4 style="font-weight: 700; color: #070D1E;">— Custom EV Enthusiast</h4>
                 </div>
             </div>
         </section>
 
-        <!-- REVIEWS -->
-        <section id="reviews">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Client Feedback</span>
-                    <h2 class="section-title">Trusted by Contractors & Shops</h2>
-                    <p class="section-desc">What fleet operators and wrap installers say about working with our design team.</p>
-                </div>
-                <div class="reviews-grid">
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"The 3D mockups made it effortless to get sign-off from our partners. Our local wrap shop printed the files directly with zero bleed issues."</p>
-                        <div class="reviewer-meta">Marcus T. <span>Commercial HVAC Fleet Owner</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"As a wrap shop owner, having pre-calibrated vector blueprints sent over saved our prepress team hours of redraw time. Flawless work."</p>
-                        <div class="reviewer-meta">Dave R. <span>Vinyl Graphics & Wrap Installer</span></div>
-                    </div>
-                    <div class="review-card">
-                        <div class="stars">★★★★★</div>
-                        <p class="review-text">"Turnaround was fast, revisions were handled on the spot, and our new transit vans look like high-end corporate rigs on the freeway."</p>
-                        <div class="reviewer-meta">Sam K. <span>Plumbing & Mechanical Services</span></div>
+        <!-- TAB 8: CONTACT / INTAKE FORM (DIRECT API BACKEND) -->
+        <section id="tab-contact" class="content-section">
+            <div class="footer-section">
+                <div class="footer-info">
+                    <h3>Have a project in mind?</h3>
+                    <p>Tell us about your vehicle make, model, and branding goals, and let's construct a premium design rollout for your business fleet.</p>
+                    <div class="contact-details-box">
+                        <div style="margin-bottom: 12px; font-weight: 700; font-size: 17px;">Email: <a href="mailto:info@eliteautodesignstudio.com" style="color: #E50914; text-decoration: none;">info@eliteautodesignstudio.com</a></div>
+                        <div style="font-weight: 700; font-size: 17px;">Direct Line: <a href="tel:9498385729" style="color: #070D1E; text-decoration: none;">(949) 838-5729</a></div>
                     </div>
                 </div>
+                <form class="consult-form" id="consultation-form" onsubmit="handleAjaxSubmit(event)">
+                    <!-- Web3Forms Verified Access Key -->
+                    <input type="hidden" name="access_key" value="dd49db0b-8d91-4214-8a2e-1859eafe90f5">
+                    <input type="hidden" name="subject" value="New Design Inquiry from Website">
+                    <input type="hidden" name="from_name" value="Elite Auto Design Studio Lead">
+
+                    <div class="form-group">
+                        <label for="client-name">Your Name</label>
+                        <input type="text" id="client-name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Your Email Address</label>
+                        <input type="email" id="client-email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-info">Vehicle Year, Make, & Model</label>
+                        <input type="text" id="vehicle-info" name="vehicle" required placeholder="e.g., 2024 Tesla Cybertruck">
+                    </div>
+                    <div class="form-group">
+                        <label for="project-details">Project Goals & Ideas</label>
+                        <textarea id="project-details" name="message" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
+                    </div>
+                    <input type="submit" id="submit-btn" class="header-cta-button" style="width: 100%; border: none; cursor: pointer;" value="Submit Free Consultation Request">
+                    <p id="form-status-msg"></p>
+                </form>
             </div>
         </section>
 
-        <!-- FAQ -->
-        <section id="faq" style="background: #ffffff;">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Common Questions</span>
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                </div>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h4>Do you print or install the physical vinyl?</h4>
-                        <p>We are a dedicated digital design and prepress studio. We deliver certified, millimeter-accurate vector blueprint packages that any local wrap installer or sign shop can print and install immediately.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>What file formats do I receive?</h4>
-                        <p>You receive high-resolution master vector files (.AI, .EPS, Vector PDF) scaled with proper bleed margins and CMYK color profiles, plus multi-angle 3D visual mockups for proofing.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>What is the payment structure?</h4>
-                        <p>We require a standard 50% deposit to initiate the 3D blueprint queue, with the remaining 50% balance due upon your final proof approval before vector file transfer.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
 
-        <!-- CONTACT US -->
-        <section id="contact">
-            <div class="section-wrap">
-                <div class="section-header">
-                    <span class="section-tag">Direct Intake</span>
-                    <h2 class="section-title">Start Your Wrap Project</h2>
-                    <p class="section-desc">Submit your vehicle specs below and we will contact you within 24 business hours.</p>
-                </div>
-                <div class="contact-wrap">
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                        <input type="hidden" name="access_key" value="dd49db0b-8d91-4214-8a2e-1859eafe90f5">
-                        <input type="hidden" name="subject" value="New Lead: Elite Auto Design Consultation">
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                        <div class="form-grid">
-                            <div>
-                                <label class="form-label" for="name">Your Name / Business</label>
-                                <input class="form-input" type="text" id="name" name="name" placeholder="John Doe / OC Plumbing" required>
-                            </div>
-                            <div>
-                                <label class="form-label" for="email">Email Address</label>
-                                <input class="form-input" type="email" id="email" name="email" placeholder="john@company.com" required>
-                            </div>
-                            <div>
-                                <label class="form-label" for="phone">Phone Number</label>
-                                <input class="form-input" type="tel" id="phone" name="phone" placeholder="(949) 555-0199" required>
-                            </div>
-                            <div>
-                                <label class="form-label" for="package">Target Package</label>
-                                <select class="form-select" id="package" name="package">
-                                    <option value="Tier 2: Partial Wrap ($500)">Tier 2: Partial Wrap ($500)</option>
-                                    <option value="Tier 1: Spot & Accent ($350)">Tier 1: Spot & Accent ($350)</option>
-                                    <option value="Tier 3: Full Commercial Wrap ($750)">Tier 3: Full Commercial ($750)</option>
-                                    <option value="Sign/Wrap Shop Overflow Partnership">Sign/Wrap Shop Overflow Partnership</option>
-                                </select>
-                            </div>
-                            <div class="form-full">
-                                <label class="form-label" for="vehicle">Vehicle Make, Model & Year</label>
-                                <input class="form-input" type="text" id="vehicle" name="vehicle" placeholder="e.g., 2024 Ford Transit 250 High Roof" required>
-                            </div>
-                            <div class="form-full">
-                                <label class="form-label" for="message">Project Details / Goals</label>
-                                <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your brand colors, existing logos, or specific layout goals..."></textarea>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn-solid" style="width: 100%; padding: 16px; font-size: 16px; border: none; cursor: pointer; border-radius: 8px;">Submit Free Consultation Request</button>
-                        <div id="form-status"></div>
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Elite Auto Design Studio. All rights reserved. | Irvine, California</p>
-        <p style="margin-top: 8px;">Direct Line: <a href="tel:9498385729">(949) 838-5729</a> | <a href="mailto:info@eliteautodesignstudio.com">info@eliteautodesignstudio.com</a></p>
+    <!-- GLOBAL FOOTER -->
+    <footer style="background-color: #070D1E; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937; margin-top: 60px;">
+        <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
-    <!-- Form Handler Script -->
+    <!-- INTERACTIVE TAB & AJAX CONTROLLER -->
     <script>
-        const form = document.getElementById('contact-form');
-        const status = document.getElementById('form-status');
+        function switchTab(tabId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.remove('active-tab'));
+            
+            const links = document.querySelectorAll('.main-nav-links a');
+            links.forEach(lnk => lnk.classList.remove('active'));
+            
+            const targetSection = document.getElementById('tab-' + tabId);
+            if (targetSection) {
+                targetSection.classList.add('active-tab');
+            }
+            
+            const targetLink = document.getElementById('nav-' + tabId);
+            if (targetLink) {
+                targetLink.classList.add('active');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
-        form.addEventListener('submit', function(e) {
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+
+        async function handleAjaxSubmit(e) {
             e.preventDefault();
-            status.style.color = '#64748b';
-            status.innerHTML = 'Sending consultation request...';
+            const form = document.getElementById('consultation-form');
+            const statusMsg = document.getElementById('form-status-msg');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            submitBtn.value = "Sending Request...";
+            submitBtn.disabled = true;
 
             const formData = new FormData(form);
             const object = Object.fromEntries(formData);
             const json = JSON.stringify(object);
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    status.style.color = '#16a34a';
-                    status.innerHTML = '✓ Request received! We will be in touch within 24 hours.';
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+                const result = await response.json();
+                if (response.status === 200) {
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#15803d";
+                    statusMsg.innerText = "Thank you! Your request has been received. We will contact you within 24 hours.";
                     form.reset();
                 } else {
-                    status.style.color = '#D32F2F';
-                    status.innerHTML = json.message || 'Something went wrong. Please call us directly!';
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#E50914";
+                    statusMsg.innerText = result.message || "Submission failed. Please email us directly.";
                 }
-            })
-            .catch(error => {
-                status.style.color = '#D32F2F';
-                status.innerHTML = 'Submission error. Please call (949) 838-5729 directly.';
-            });
-        });
+            } catch (error) {
+                statusMsg.style.display = "block";
+                statusMsg.style.color = "#E50914";
+                statusMsg.innerText = "Something went wrong. Please reach out via phone or email directly.";
+            } finally {
+                submitBtn.value = "Submit Free Consultation Request";
+                submitBtn.disabled = false;
+            }
+        }
     </script>
 </body>
 </html>
