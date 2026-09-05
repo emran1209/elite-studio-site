@@ -117,13 +117,31 @@
             font-weight: 800;
             border-radius: 30px;
             font-size: 18px;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
             text-align: center;
             box-shadow: 0 4px 12px rgba(229, 9, 20, 0.15);
             cursor: pointer;
         }
         .header-cta-button:hover {
             background-color: #b20710;
+        }
+        .header-cta-button-outline {
+            display: inline-block;
+            background-color: transparent;
+            color: #E50914;
+            border: 2px solid #E50914;
+            text-decoration: none;
+            padding: 12px 34px;
+            font-weight: 800;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: all 0.2s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        .header-cta-button-outline:hover {
+            background-color: #E50914;
+            color: #ffffff;
         }
         .content-section {
             display: none;
@@ -201,7 +219,7 @@
                 margin: 0 6px;
                 font-size: 13px;
             }
-            .header-cta-button {
+            .header-cta-button, .header-cta-button-outline {
                 width: 100%;
                 max-width: 280px;
                 padding: 10px 20px;
@@ -713,7 +731,10 @@
             <div class="hero">
                 <h1>Precision Vehicle Wrap Layouts &amp; Design.</h1>
                 <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
-                <a href="javascript:void(0)" onclick="switchTab('contact')" class="header-cta-button">Request a Free Design Consultation</a>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="javascript:void(0)" onclick="switchTab('pricing')" class="header-cta-button">View Packages &amp; Pricing</a>
+                    <a href="javascript:void(0)" onclick="switchTab('contact')" class="header-cta-button-outline">Free Consultation</a>
+                </div>
             </div>
 
             <div class="how-it-works-box">
