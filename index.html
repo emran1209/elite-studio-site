@@ -91,7 +91,7 @@
         .nav-row-bottom {
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 20px;
         }
         .main-nav-links {
             display: flex;
@@ -108,40 +108,43 @@
         .main-nav-links a:hover, .main-nav-links a.active {
             color: #E50914;
         }
+        .header-btn-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
         .header-cta-button {
+            display: inline-block;
+            background-color: #070D1E;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            font-weight: 800;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+            text-align: center;
+            cursor: pointer;
+        }
+        .header-cta-button:hover {
+            background-color: #1e293b;
+        }
+        .header-pay-button {
             display: inline-block;
             background-color: #E50914;
             color: #ffffff;
             text-decoration: none;
-            padding: 14px 36px;
+            padding: 12px 24px;
             font-weight: 800;
             border-radius: 30px;
-            font-size: 18px;
-            transition: all 0.2s ease;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
             text-align: center;
             box-shadow: 0 4px 12px rgba(229, 9, 20, 0.15);
             cursor: pointer;
         }
-        .header-cta-button:hover {
+        .header-pay-button:hover {
             background-color: #b20710;
-        }
-        .header-cta-button-outline {
-            display: inline-block;
-            background-color: transparent;
-            color: #E50914;
-            border: 2px solid #E50914;
-            text-decoration: none;
-            padding: 12px 34px;
-            font-weight: 800;
-            border-radius: 30px;
-            font-size: 18px;
-            transition: all 0.2s ease;
-            text-align: center;
-            cursor: pointer;
-        }
-        .header-cta-button-outline:hover {
-            background-color: #E50914;
-            color: #ffffff;
         }
         .content-section {
             display: none;
@@ -219,7 +222,12 @@
                 margin: 0 6px;
                 font-size: 13px;
             }
-            .header-cta-button, .header-cta-button-outline {
+            .header-btn-group {
+                flex-direction: column;
+                width: 100%;
+                gap: 8px;
+            }
+            .header-cta-button, .header-pay-button {
                 width: 100%;
                 max-width: 280px;
                 padding: 10px 20px;
@@ -677,6 +685,7 @@
 </head>
 <body>
 
+    <!-- TOP NAV HEADER -->
     <header>
         <div class="header-top-wrap">
             <div class="logo" onclick="switchTab('home')">Elite <span>Auto Design</span> Studio</div>
@@ -704,12 +713,16 @@
                         <span class="divider">|</span>
                         <a id="nav-pricing" href="javascript:void(0)" onclick="switchTab('pricing')">Pricing</a>
                     </nav>
-                    <a href="javascript:void(0)" onclick="switchTab('contact')" class="header-cta-button">Request a Free Consultation</a>
+                    <div class="header-btn-group">
+                        <a id="nav-pay" href="javascript:void(0)" onclick="switchTab('pay')" class="header-pay-button">Pay Retainer Deposit</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="header-cta-button">Free Consultation</a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- ROLLING MARQUEE TICKER STRIP -->
     <div class="trust-ribbon">
         <div class="marquee-track">
             <div class="marquee-content">
@@ -727,16 +740,18 @@
 
     <div class="container">
 
+        <!-- TAB 1: MASTER HOME BLOCK -->
         <section id="tab-home" class="content-section active-tab">
             <div class="hero">
                 <h1>Precision Vehicle Wrap Layouts &amp; Design.</h1>
                 <p class="subtitle">A specialized digital design studio crafting high-impact branding, custom graphics, and full commercial wrap visualizations for growing businesses.</p>
                 <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="javascript:void(0)" onclick="switchTab('pricing')" class="header-cta-button">View Packages &amp; Pricing</a>
-                    <a href="javascript:void(0)" onclick="switchTab('contact')" class="header-cta-button-outline">Free Consultation</a>
+                    <a href="javascript:void(0)" onclick="switchTab('pricing')" class="header-pay-button" style="font-size: 18px; padding: 14px 32px;">View Packages &amp; Pricing</a>
+                    <a href="javascript:void(0)" onclick="switchTab('pay')" class="header-cta-button" style="font-size: 18px; padding: 14px 32px;">Pay 50% Retainer Deposit</a>
                 </div>
             </div>
 
+            <!-- HOW IT WORKS 3-STEP PROCESS BAR -->
             <div class="how-it-works-box">
                 <h2>How It Works</h2>
                 <p class="section-desc">Our streamlined 3-step digital soft-copy design and delivery process.</p>
@@ -759,6 +774,7 @@
                 </div>
             </div>
 
+            <!-- DYNAMIC VALUES ROLLING SLIDER LOOP -->
             <div class="value-slider-box">
                 <div class="value-track">
                     <div class="value-slide">
@@ -778,6 +794,7 @@
 
             <hr class="home-divider-line">
 
+            <!-- Home Teaser A: Our Work Images -->
             <div style="margin-top: 40px;">
                 <h2>Featured Design Concepts</h2>
                 <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
@@ -808,6 +825,7 @@
 
             <hr class="home-divider-line">
 
+            <!-- Home Teaser B: Services Grid -->
             <div>
                 <h2>Our Specialized Services</h2>
                 <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -837,6 +855,7 @@
 
             <hr class="home-divider-line">
 
+            <!-- Home Teaser C: FAQ Section -->
             <div>
                 <h2>Frequently Asked Questions</h2>
                 <p class="section-desc">Everything you need to know about our digital design deliverables and workflow.</p>
@@ -881,6 +900,7 @@
             </div>
         </section>
 
+        <!-- TAB 2: PORTFOLIO (OUR WORK) ONLY -->
         <section id="tab-portfolio" class="content-section">
             <h2>Featured Design Concepts</h2>
             <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
@@ -909,6 +929,7 @@
             </div>
         </section>
 
+        <!-- TAB 3: SERVICES ONLY -->
         <section id="tab-services" class="content-section">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -947,9 +968,10 @@
             </div>
         </section>
 
+        <!-- TAB 4: PRICING TAB (INFORMATION & ESTIMATES) -->
         <section id="tab-pricing" class="content-section">
             <h2>Project-Based Pricing Structures</h2>
-            <p class="section-desc">Bespoke digital design layouts priced accurately according to your project's technical complexity and scale.</p>
+            <p class="section-desc">Bespoke digital design layouts priced accurately according to technical scope and production time.</p>
             
             <div class="pricing-subheading">Premium Vehicle Wrap Layouts</div>
             <div class="pillars-grid" style="margin-bottom: 60px;">
@@ -962,39 +984,47 @@
                             <li>Custom company logo placement</li>
                             <li>High-readability contact details</li>
                             <li>Print-ready vector source blueprints</li>
-                            <li>*50% deposit required to commence rendering</li>
+                            <li>Standard 48-hour turn time</li>
                         </ul>
                     </div>
                     <div class="card-button-group">
-                        <a href="https://buy.stripe.com/eVq00kfuH7WbdzebC8ao800" target="_blank" rel="noopener noreferrer" class="price-btn-solid" style="background-color: #E50914;">Pay 50% Deposit ($175)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($175)</a>
                         <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
                     </div>
                 </div>
                 <div class="pillar-card" style="border: 2px solid #E50914;">
                     <div>
                         <h3>Tier 2: Partial Wrap Design</h3>
-                        <div class="price-tag" style="font-size: 26px; line-height: 1.3; margin-bottom: 23px;">Project-Based / Custom</div>
+                        <div class="price-tag">$650 <span>total ($325 deposit)</span></div>
                         <p style="margin-bottom:10px;">Our most requested setup. Tailored coverage (25% to 50%) built to maximize high-contrast commercial impact.</p>
                         <ul>
                             <li>Integrated multi-angle layout matching</li>
                             <li>Custom blueprint optimization</li>
                             <li>Dedicated design revision rounds</li>
+                            <li>Bleed margins &amp; seam guides</li>
                         </ul>
                     </div>
-                    <div class="card-button-group"><a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a></div>
+                    <div class="card-button-group">
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($325)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
+                    </div>
                 </div>
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 3: Premium Full Wrap</h3>
-                        <div class="price-tag" style="font-size: 26px; line-height: 1.3; margin-bottom: 23px;">Bespoke Pricing</div>
+                        <div class="price-tag">$1,100 <span>total ($550 deposit)</span></div>
                         <p style="margin-bottom:10px;">Complete 100% canvas dominance. Engineered carefully for complex geometric patterns, premium EV styling, or large fleet box trucks.</p>
                         <ul>
                             <li>Full 360&deg; photorealistic renderings</li>
                             <li>Advanced graphic asset integration</li>
                             <li>Direct layout coordination with print shop</li>
+                            <li>Full panel tiling &amp; install guides</li>
                         </ul>
                     </div>
-                    <div class="card-button-group"><a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a></div>
+                    <div class="card-button-group">
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($550)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
+                    </div>
                 </div>
             </div>
 
@@ -1027,6 +1057,59 @@
             </div>
         </section>
 
+        <!-- TAB 5: DEDICATED PAYMENT DESK (DIRECT ACH / CARD CHECKOUT HUB) -->
+        <section id="tab-pay" class="content-section">
+            <h2>Client Retainer Deposit Portal</h2>
+            <p class="section-desc">Submit your 50% project retainer securely to begin blueprint rendering and 3D design production.</p>
+
+            <div class="pillars-grid" style="margin-top: 30px;">
+                <!-- Tier 1 Checkout -->
+                <div class="pillar-card">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 800; color: #E50914; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;">Spot Decals &amp; Doors</div>
+                        <h3>Tier 1 Retainer Deposit</h3>
+                        <div class="price-tag">$175.00 <span style="font-size: 15px; color: #6b7280;">(50% of $350)</span></div>
+                        <p>Locks in project queue, scaled 1:1 prepress vector blueprint, and 2 initial concept variations.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="https://buy.stripe.com/eVq00kfuH7WbdzebC8ao800" target="_blank" rel="noopener noreferrer" class="price-btn-solid" style="background-color: #E50914; padding: 15px; font-size: 16px;">Pay $175 Deposit &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tier 2 Checkout -->
+                <div class="pillar-card" style="border: 2px solid #E50914;">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 800; color: #E50914; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;">Most Requested Commercial</div>
+                        <h3>Tier 2 Retainer Deposit</h3>
+                        <div class="price-tag">$325.00 <span style="font-size: 15px; color: #6b7280;">(50% of $650)</span></div>
+                        <p>Commences multi-angle 3D mockup renders, partial van/truck coverage blueprints, and bleed specifications.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="https://buy.stripe.com/cNi4gAeqDb8ncva5dKao801" target="_blank" rel="noopener noreferrer" class="price-btn-solid" style="background-color: #E50914; padding: 15px; font-size: 16px;">Pay $325 Deposit &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Tier 3 Checkout -->
+                <div class="pillar-card">
+                    <div>
+                        <div style="font-size: 13px; font-weight: 800; color: #E50914; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;">Full Coverage / EV / Fleet</div>
+                        <h3>Tier 3 Retainer Deposit</h3>
+                        <div class="price-tag">$550.00 <span style="font-size: 15px; color: #6b7280;">(50% of $1,100)</span></div>
+                        <p>Begins full 360&deg; photorealistic 3D visualization, master multi-panel vector tiling, and wrap shop coordination.</p>
+                    </div>
+                    <div class="card-button-group">
+                        <a href="https://buy.stripe.com/7sY9AU0zNccr66MdKgao802" target="_blank" rel="noopener noreferrer" class="price-btn-solid" style="background-color: #E50914; padding: 15px; font-size: 16px;">Pay $550 Deposit &rarr;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; background: #f5f5f7; border: 1px solid #d2d2d7; border-radius: 8px; padding: 25px; text-align: center;">
+                <h3 style="font-size: 18px; color: #070D1E; margin-bottom: 8px;">Direct Deposit &amp; Bank Transfer Available</h3>
+                <p style="font-size: 15px; color: #48484a; line-height: 1.6; max-width: 800px; margin: 0 auto;">Each secure Stripe link accepts <strong>Direct Bank Transfer (ACH Direct Debit)</strong>, <strong>Major Credit Cards (Visa, MasterCard, Amex)</strong>, and <strong>Apple Pay / Google Pay</strong>. Your transaction confirmation and invoice are issued instantly upon completion.</p>
+            </div>
+        </section>
+
+        <!-- TAB 6: FAQ TAB -->
         <section id="tab-faq" class="content-section">
             <h2>Frequently Asked Questions</h2>
             <p class="section-desc">Detailed answers about our digital pre-visualization and soft-copy deliverables.</p>
@@ -1070,6 +1153,7 @@
             </div>
         </section>
 
+        <!-- TAB 7: BLOGS ONLY -->
         <section id="tab-blog" class="content-section">
             <h2>Studio Insights &amp; Guides</h2>
             <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
@@ -1085,6 +1169,7 @@
             </div>
         </section>
 
+        <!-- TAB 8: REVIEWS ONLY -->
         <section id="tab-reviews" class="content-section">
             <h2>Client Experiences</h2>
             <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
@@ -1100,6 +1185,7 @@
             </div>
         </section>
 
+        <!-- TAB 9: CONTACT / INTAKE FORM (DIRECT API BACKEND) -->
         <section id="tab-contact" class="content-section">
             <div class="footer-section">
                 <div class="footer-info">
@@ -1143,6 +1229,7 @@
         <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
+    <!-- INTERACTIVE TAB & AJAX CONTROLLER -->
     <script>
         function switchTab(tabId) {
             var sections = document.querySelectorAll('.content-section');
@@ -1150,7 +1237,7 @@
                 sections[i].classList.remove('active-tab');
             }
 
-            var links = document.querySelectorAll('.main-nav-links a');
+            var links = document.querySelectorAll('.main-nav-links a, .header-btn-group a');
             for (var j = 0; j < links.length; j++) {
                 links[j].classList.remove('active');
             }
