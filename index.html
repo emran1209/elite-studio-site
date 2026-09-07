@@ -968,7 +968,7 @@
             </div>
         </section>
 
-        <!-- TAB 4: PRICING TAB (INFORMATIVE TECHNICAL BREAKDOWNS ONLY - NO PAY BUTTONS) -->
+        <!-- TAB 4: PRICING TAB (INFORMATION & ESTIMATES) -->
         <section id="tab-pricing" class="content-section">
             <h2>Project-Based Pricing Structures</h2>
             <p class="section-desc">Bespoke digital design layouts priced accurately according to technical scope and production time.</p>
@@ -988,7 +988,8 @@
                         </ul>
                     </div>
                     <div class="card-button-group">
-                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a>
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($175)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
                     </div>
                 </div>
                 <div class="pillar-card" style="border: 2px solid #E50914;">
@@ -1004,7 +1005,8 @@
                         </ul>
                     </div>
                     <div class="card-button-group">
-                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a>
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($325)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
                     </div>
                 </div>
                 <div class="pillar-card">
@@ -1020,7 +1022,8 @@
                         </ul>
                     </div>
                     <div class="card-button-group">
-                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a>
+                        <a href="javascript:void(0)" onclick="switchTab('pay')" class="price-btn-solid" style="background-color: #E50914;">Proceed to Deposit ($550)</a>
+                        <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Request Custom Quote</a>
                     </div>
                 </div>
             </div>
@@ -1054,7 +1057,7 @@
             </div>
         </section>
 
-        <!-- TAB 5: DEDICATED CLIENT RETAINER DESK (THE ONLY CHECKOUT PORTAL) -->
+        <!-- TAB 5: DEDICATED PAYMENT DESK (DIRECT ACH / CARD CHECKOUT HUB) -->
         <section id="tab-pay" class="content-section">
             <h2>Client Retainer Deposit Portal</h2>
             <p class="section-desc">Submit your 50% project retainer securely to begin blueprint rendering and 3D design production.</p>
@@ -1102,7 +1105,7 @@
 
             <div style="margin-top: 40px; background: #f5f5f7; border: 1px solid #d2d2d7; border-radius: 8px; padding: 25px; text-align: center;">
                 <h3 style="font-size: 18px; color: #070D1E; margin-bottom: 8px;">Direct Deposit &amp; Bank Transfer Available</h3>
-                <p style="font-size: 15px; color: #48484a; line-height: 1.6; max-width: 800px; margin: 0 auto;">Each secure Stripe link accepts <strong>Direct Bank Transfer (ACH Direct Debit)</strong>, <strong>Major Credit Cards (Visa, MasterCard, Amex)</strong>, and <strong>Apple Pay / Google Pay</strong>. Your transaction confirmation and receipt are issued instantly upon completion.</p>
+                <p style="font-size: 15px; color: #48484a; line-height: 1.6; max-width: 800px; margin: 0 auto;">Each secure Stripe link accepts <strong>Direct Bank Transfer (ACH Direct Debit)</strong>, <strong>Major Credit Cards (Visa, MasterCard, Amex)</strong>, and <strong>Apple Pay / Google Pay</strong>. Your transaction confirmation and invoice are issued instantly upon completion.</p>
             </div>
         </section>
 
@@ -1222,12 +1225,11 @@
 
     </div>
 
-    <!-- FOOTER -->
     <footer style="background-color: #070D1E; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937; margin-top: 60px;">
         <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
     </footer>
 
-    <!-- INTERACTIVE TAB CONTROLLER -->
+    <!-- INTERACTIVE TAB & AJAX CONTROLLER -->
     <script>
         function switchTab(tabId) {
             var sections = document.querySelectorAll('.content-section');
