@@ -657,7 +657,7 @@
             margin-bottom: 10px;
             color: #070D1E;
         }
-        .form-group input, .form-group textarea {
+        .form-group input, .form-group textarea, .form-group select {
             width: 100%;
             padding: 14px;
             background-color: #ffffff;
@@ -666,7 +666,7 @@
             color: #1c1c1e;
             font-size: 16px;
         }
-        .form-group input:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             outline: none;
             border-color: #E50914;
         }
@@ -682,6 +682,8 @@
             display: none;
         }
     </style>
+
+    <!-- SCRIPT CONTROLLER BOUND IN HEAD -->
     <script>
         window.switchTab = function(tabId) {
             var sections = document.querySelectorAll('.content-section');
@@ -828,7 +830,7 @@
                 <h2>Featured Design Concepts</h2>
                 <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
                 <div class="concept-grid">
-                    <!-- NEW CONCEPT: Tech Cyber SUV -->
+                    <!-- Concept 1: Tech Cyber SUV -->
                     <div class="concept-card">
                         <img src="./bronco-cyber-mockup.jpg" alt="The Tech Cyber SUV Concept" onerror="this.onerror=null; this.src='IMG_8992.jpg';">
                         <div class="concept-caption">
@@ -836,6 +838,7 @@
                             <p>Ford Bronco Sport Digital Livery</p>
                         </div>
                     </div>
+                    <!-- Concept 2: Cybertruck Matrix -->
                     <div class="concept-card">
                         <img src="./Hypernimbus%20Cybertruck.jpeg" alt="Hypernimbus Geometric Cybertruck Wrap" onerror="this.onerror=null; this.src='Hypernimbus Cybertruck.jpeg';">
                         <div class="concept-caption">
@@ -843,6 +846,7 @@
                             <p>Custom Tesla Cybertruck EV Concept</p>
                         </div>
                     </div>
+                    <!-- Concept 3: Solar Flare Cybertruck -->
                     <div class="concept-card">
                         <img src="./IMG_1087.jpeg" alt="Matte Black to Sunburst Yellow Cybertruck" onerror="this.onerror=null; this.src='IMG_1087.jpg';">
                         <div class="concept-caption">
@@ -850,6 +854,7 @@
                             <p>Satin Dual-Tone Gradient Layout</p>
                         </div>
                     </div>
+                    <!-- Concept 4: Superbike Livery -->
                     <div class="concept-card">
                         <img src="./IMG_3178.jpeg" alt="Teal Superbike Custom Concept" onerror="this.onerror=null; this.src='IMG_3178.jpg';">
                         <div class="concept-caption">
@@ -862,7 +867,7 @@
 
             <hr class="home-divider-line">
 
-            <!-- Home Teaser B: Services Grid -->
+            <!-- Home Teaser B: Services Overview -->
             <div>
                 <h2>Our Specialized Services</h2>
                 <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -942,7 +947,7 @@
             <h2>Featured Design Concepts</h2>
             <p class="section-desc">Explore recent multi-angle digital renderings and completed design layouts.</p>
             <div class="concept-grid">
-                <!-- NEW CONCEPT: Tech Cyber SUV -->
+                <!-- Concept 1: Tech Cyber SUV -->
                 <div class="concept-card">
                     <img src="./bronco-cyber-mockup.jpg" alt="The Tech Cyber SUV Concept" onerror="this.onerror=null; this.src='IMG_8992.jpg';">
                     <div class="concept-caption">
@@ -950,6 +955,7 @@
                         <p>Ford Bronco Sport Digital Livery</p>
                     </div>
                 </div>
+                <!-- Concept 2: Cybertruck Matrix -->
                 <div class="concept-card">
                     <img src="./Hypernimbus%20Cybertruck.jpeg" alt="Hypernimbus Geometric Cybertruck Wrap" onerror="this.onerror=null; this.src='Hypernimbus Cybertruck.jpeg';">
                     <div class="concept-caption">
@@ -957,6 +963,7 @@
                         <p>Custom Tesla Cybertruck EV Concept</p>
                     </div>
                 </div>
+                <!-- Concept 3: Solar Flare Cybertruck -->
                 <div class="concept-card">
                     <img src="./IMG_1087.jpeg" alt="Matte Black to Sunburst Yellow Cybertruck" onerror="this.onerror=null; this.src='IMG_1087.jpg';">
                     <div class="concept-caption">
@@ -964,6 +971,7 @@
                         <p>Satin Dual-Tone Gradient Layout</p>
                     </div>
                 </div>
+                <!-- Concept 4: Superbike Livery -->
                 <div class="concept-card">
                     <img src="./IMG_3178.jpeg" alt="Teal Superbike Custom Concept" onerror="this.onerror=null; this.src='IMG_3178.jpg';">
                     <div class="concept-caption">
@@ -974,7 +982,7 @@
             </div>
         </section>
 
-        <!-- TAB 3: SERVICES ONLY -->
+        <!-- TAB 3: SERVICES ONLY (VEHICLE-FOCUSED) -->
         <section id="tab-services" class="content-section">
             <h2>Our Specialized Services</h2>
             <p class="section-desc">We deliver digital print-ready vector concepts customized for any vehicle scope.</p>
@@ -1013,13 +1021,13 @@
             </div>
         </section>
 
-        <!-- TAB 4: PRICING TAB -->
+        <!-- TAB 4: PRICING TAB (VEHICLE TIERS ONLY) -->
         <section id="tab-pricing" class="content-section">
             <h2>Project-Based Pricing Structures</h2>
             <p class="section-desc">Bespoke digital design layouts priced accurately according to technical scope and production time.</p>
             
             <div class="pricing-subheading">Premium Vehicle Wrap Layouts</div>
-            <div class="pillars-grid" style="margin-bottom: 60px;">
+            <div class="pillars-grid">
                 <div class="pillar-card">
                     <div>
                         <h3>Tier 1: Accent &amp; Spot Branding</h3>
@@ -1067,34 +1075,6 @@
                     <div class="card-button-group">
                         <a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid" style="background-color: #E50914;">Request Custom Quote</a>
                     </div>
-                </div>
-            </div>
-
-            <div class="pricing-subheading">Corporate Brand Collateral</div>
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div>
-                        <h3>Business Cards</h3>
-                        <div class="price-tag">from $149 <span>/ setup</span></div>
-                        <p>Bespoke double-sided corporate card layouts structured cleanly with premium physical finishes in mind.</p>
-                    </div>
-                    <div class="card-button-group"><a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
-                </div>
-                <div class="pillar-card">
-                    <div>
-                        <h3>Flyers &amp; Brochures</h3>
-                        <div class="price-tag">from $249 <span>/ concept</span></div>
-                        <p>High-impact, eye-catching structural marketing assets custom-designed for local print distribution or digital media handouts.</p>
-                    </div>
-                    <div class="card-button-group"><a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
-                </div>
-                <div class="pillar-card">
-                    <div>
-                        <h3>Corporate Signage</h3>
-                        <div class="price-tag">from $349 <span>/ layout</span></div>
-                        <p>High-visibility corporate structural signage, storefront window graphics, and a-frame layout displays built to showcase your brick-and-mortar presence.</p>
-                    </div>
-                    <div class="card-button-group"><a href="javascript:void(0)" onclick="switchTab('contact')" class="price-btn-solid">Get Started</a></div>
                 </div>
             </div>
         </section>
@@ -1166,3 +1146,165 @@
                     </div>
                 </div>
                 <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>Do you physically print or install vinyl on vehicles?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We are a specialized digital prepress and 3D pre-visualization design studio. We deliver certified, print-ready digital soft copies that any local wrap installer or commercial print shop can print and install without layout errors.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>How many design revisions are included?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Every custom design package includes 2 dedicated rounds of revisions on the 3D digital mockups. We work closely with you on colors, logo sizing, and typography until you are 100% satisfied with the preview before final vector export.
+                    </div>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <span>What types of vehicles do you design for?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We design for all vehicle classes—commercial cargo vans (Ford Transit, Sprinter, Ram ProMaster), box trucks, pickup fleets, trailers, electric vehicles (Tesla Cybertruck, Model 3/Y), sports cars, and motorcycles.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 7: BLOGS ONLY -->
+        <section id="tab-blog" class="content-section">
+            <h2>Studio Insights &amp; Guides</h2>
+            <p class="section-desc">Expert advice on vehicle wrap hierarchy, commercial branding, and vinyl maintenance.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>Maximizing Highway Readability</h3>
+                    <p style="margin-top: 10px;">Learn how choosing high-contrast colors and proper textual asset sizing keeps your business contact details crystal clear at 60 mph.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>Why Pre-Visualization Saves Thousands</h3>
+                    <p style="margin-top: 10px;">Discover how catching graphical warping errors on a digital vehicle blueprint avoids costly physical vinyl print reprints.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 8: REVIEWS ONLY -->
+        <section id="tab-reviews" class="content-section">
+            <h2>Client Experiences</h2>
+            <p class="section-desc">What commercial fleet managers and vehicle owners say about our design layouts.</p>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"The mockups allowed us to see exactly how our logo looked on the highway. Flawless transition from design to print!"</p>
+                    <h4 style="font-weight: 700; color: #070D1E;">&mdash; Local Business Fleet Manager</h4>
+                </div>
+                <div class="pillar-card">
+                    <p style="font-style: italic; margin-bottom: 15px;">"Highly precise vector assets. Our local install shop had zero issues with placement or stretching during application."</p>
+                    <h4 style="font-weight: 700; color: #070D1E;">&mdash; Custom EV Enthusiast</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 9: CONTACT / INTAKE FORM (VEHICLE-FOCUSED DROPDOWN) -->
+        <section id="tab-contact" class="content-section">
+            <div class="footer-section">
+                <div class="footer-info">
+                    <h3>Have a project in mind?</h3>
+                    <p>Tell us about your vehicle make, model, and branding goals, and let's construct a premium design rollout for your business fleet.</p>
+                    <div class="contact-details-box">
+                        <div style="margin-bottom: 12px; font-weight: 700; font-size: 17px;">Email: <a href="mailto:info@eliteautodesignstudio.com" style="color: #E50914; text-decoration: none;">info@eliteautodesignstudio.com</a></div>
+                        <div style="font-weight: 700; font-size: 17px;">Direct Line: <a href="tel:9498385729" style="color: #070D1E; text-decoration: none;">(949) 838-5729</a></div>
+                    </div>
+                </div>
+                <form class="consult-form" id="consultation-form" onsubmit="handleAjaxSubmit(event)">
+                    <input type="hidden" name="access_key" value="dd49db0b-8d91-4214-8a2e-1859eafe90f5">
+                    <input type="hidden" name="subject" value="New Design Inquiry from Website">
+                    <input type="hidden" name="from_name" value="Elite Auto Design Studio Lead">
+
+                    <div class="form-group">
+                        <label for="client-name">Your Name</label>
+                        <input type="text" id="client-name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="client-email">Your Email Address</label>
+                        <input type="email" id="client-email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-tier-select">Project Scope / Package</label>
+                        <select id="service-tier-select" name="package_selected">
+                            <option value="Tier 2: Partial Wrap Design ($650)">Tier 2: Partial Wrap Design ($650)</option>
+                            <option value="Tier 1: Accent & Spot Branding ($350)">Tier 1: Accent &amp; Spot Branding ($350)</option>
+                            <option value="Tier 3: Premium Full Wrap ($1,100)">Tier 3: Premium Full Wrap ($1,100)</option>
+                            <option value="Custom 3D Concept / Fleet Inquiry">Custom 3D Concept / Fleet Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="vehicle-info">Vehicle Year, Make, &amp; Model</label>
+                        <input type="text" id="vehicle-info" name="vehicle" required placeholder="e.g., 2024 Ford Bronco Sport or Tesla Cybertruck">
+                    </div>
+                    <div class="form-group">
+                        <label for="project-details">Project Goals &amp; Ideas</label>
+                        <textarea id="project-details" name="message" required placeholder="Describe your branding goals, color preferences, or wrap ideas..."></textarea>
+                    </div>
+                    <input type="submit" id="submit-btn" class="header-cta-button" style="width: 100%; border: none; cursor: pointer;" value="Submit Free Consultation Request">
+                    <p id="form-status-msg"></p>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #070D1E; color: #6b7280; padding: 40px 24px; text-align: center; font-size: 14px; border-top: 1px solid #1f2937; margin-top: 60px;">
+        <p>&copy; 2026 Elite Auto Design Studio. All Rights Reserved. Designed with absolute passion.</p>
+    </footer>
+
+    <!-- AJAX FORM SUBMISSION SCRIPT -->
+    <script>
+        async function handleAjaxSubmit(e) {
+            e.preventDefault();
+            var form = document.getElementById('consultation-form');
+            var statusMsg = document.getElementById('form-status-msg');
+            var submitBtn = document.getElementById('submit-btn');
+
+            submitBtn.value = "Sending Request...";
+            submitBtn.disabled = true;
+
+            var formData = new FormData(form);
+            var object = Object.fromEntries(formData);
+            var json = JSON.stringify(object);
+
+            try {
+                var response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                });
+                var result = await response.json();
+                if (response.status === 200) {
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#15803d";
+                    statusMsg.innerText = "Thank you! Your request has been received. We will contact you within 24 hours.";
+                    form.reset();
+                } else {
+                    statusMsg.style.display = "block";
+                    statusMsg.style.color = "#E50914";
+                    statusMsg.innerText = result.message || "Submission failed. Please email us directly.";
+                }
+            } catch (error) {
+                statusMsg.style.display = "block";
+                statusMsg.style.color = "#E50914";
+                statusMsg.innerText = "Something went wrong. Please reach out via phone or email directly.";
+            } finally {
+                submitBtn.value = "Submit Free Consultation Request";
+                submitBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
